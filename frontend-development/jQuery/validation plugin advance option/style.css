@@ -1,0 +1,13 @@
+#messagebox{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    padding: 15px;
+    border: 2px solid #666;
+    display: none;
+}
+
+.i{
+    background: green;
+}

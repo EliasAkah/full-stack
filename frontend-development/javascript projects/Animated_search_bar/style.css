@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: aliceblue;
+
+}
+
+.search-bar-container{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, .2), -6px -6px 10px rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 50px;
+    width: 300px;
+    height: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    margin: 10px;
+    position: absolute;
+    transition: width 1.5s;
+    -webkit-transition: width 1.5s;
+    -moz-transition: width 1.5s;
+    -ms-transition: width 1.5s;
+    -o-transition: width 1.5s;
+}
+
+.magnifier{
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+
+}
+
+.mic-icon{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    transition: width 0.4;
+    -webkit-transition: width 0.4;
+    -moz-transition: width 0.4;
+    -ms-transition: width 0.4;
+    -o-transition: width 0.4;
+    transition-delay: 1s;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    margin: 10px 50px;
+    outline: none;
+    /*usetohidetheborderoutlineoftheinputelement*/color: rgb(1000, 100, 100);
+    width: 100%;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition-delay: 0.5s;
+}
+
+.active.search-bar-container{
+    width: 50px;
+}
+
+.active .input{
+    width: 0;
+}
+
+.active .mic-icon{
+    width: 0;
+}

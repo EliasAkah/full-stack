@@ -1,0 +1,122 @@
+body{
+    font-family: Arial;
+    color: #333;
+    padding-top: 200px;
+    margin: 0;
+    min-height: 100vh;
+}
+header{
+    display: flex;
+    background: rgb(204, 204, 204);
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 160px;
+}
+
+nav ul li{
+    display: inline;
+    padding: 4px 10px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: rgb(243, 242, 242);
+    background: rgb(119, 115, 115);
+    
+}
+ul{
+    list-style-type: none ;
+}
+
+#first img, #second img, #third img, #fourth img{
+    height: 200px;
+    width: 200px;
+    float: right;
+    margin: 0;
+}
+
+p{
+    line-height: 1.5em;
+    margin-bottom: 7px;
+    
+}
+
+section article{
+    border: 1px solid rgb(196, 194, 194);
+    display: inline-block;
+    padding: 2%;
+    width: 700px;
+    height: 200px;
+    box-shadow: 2px 2px 3px grey, -2px -2px 3px grey ;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+ section article div{
+    background: yellow;
+    float: left;
+    width: 450px;
+    text-align: left;
+    text-transform: capitalize;
+    margin: 0;
+  
+}
+
+
+section{
+    margin-top: 10%;
+    text-align: center;
+}
+
+
+section[id = "first"]{
+    margin-top: 0%;
+}
+
+section[id = "fifth"]{
+    margin-bottom: 20%;
+    text-align: center;
+    margin-left: 12.6%;
+
+      
+}
+
+#fifth img{
+    height: 300px;
+    width: 300px;
+}
+
+#fifth article{
+    background: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 700px;
+    justify-content: center;
+    gap: 50px;
+}
+
+#fifth article div{
+    float:none;
+}
+
+.selected{
+    background-color: rgba(254, 0, 187, 1.00);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+

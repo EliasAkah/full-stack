@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan_Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loan-container">
+        <h1>Loan Calculator</h1>
+        <label for="loan-amount">Loan Amount $</label><br>
+        <input onchange = "calculateLoan()" class = "input" type="number" id = "loan-amount"  min = "1" max = "500000" value = "10000"><br>
+        <label for="interest-rate">Interest Rate %</label><br>
+        <input onchange = "calculateLoan()" class = "input" type="number" id = "interest-rate" min = "0" max = "100" value = "10" step = ".1"><br>
+        <label for="months-to-pay">Months to pay</label><br>
+        <input onchange = "calculateLoan()" class = "input"  type="number" id = "months-to-pay" min = "6" max = "48" value = "12"><br>
+        <p class = "payment" id = "payment">Monthly payment: </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- the onchange attribute is a javascript eventlistener that listens to the changes that
+occurs in each of the input where is attached causing the function calculateLoan to be called
+ -->
+ <!-- you can also directly write the entire code in your javascript file -->

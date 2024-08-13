@@ -1,0 +1,24 @@
+#slider{
+    width: 400px;
+    overflow: hidden;
+    height: 266px;
+    position: relative;
+    margin: auto;
+    border: 5px solid #4c4c4c
+    
+}
+
+#slider ul{
+    padding: 0;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+#slider > ul > li > img{
+    width: 400px;
+    height: 266px;
+}

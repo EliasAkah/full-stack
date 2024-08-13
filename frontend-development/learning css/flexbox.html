@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UFT-8" />
+        <meta name = "description" content = "flex box project to understand the funtionality of flexbox in web design"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0"/>
+        <title>flexbox</title>
+        <link rel = "stylesheet" href = "flexbox.css" />
+    </head>
+    <body>
+        <h1>Welcome to the world of flexbox</h1>
+        <p>we are going to demonstrate the effects  of the different properties of flexbox. below are list of main properties of flexbox with their individual values</p>
+        <ul>
+            <li>flex-container: we achieve this by setting the display property to flex or inline-flex</li>
+            <li>justify content: use for determining the space between the flexitem. it is also used for aligning the flex items to main axis of the container. below are it's values:
+                <ul>
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>flex-center</li>
+                    <li>space-between</li>
+                    <li>space-around</li>
+                    <li>space-evenly</li>
+                </ul>
+            </li>
+            <li>flex-direction:<b>lex-direction:</b>gives direction of flex items within the container. it's values are: row, reverse-row, column, reverse-column</li>
+            <li><b>align-content:</b>align multiple line flex items along the cross axis of the container. it usses the same values as the  justify content property, but have major difference in  the space between the flex items</li>
+            <li><b>align-items:</b>used to align the flex items to the cross axis of the container(it is perpendicular to the main axis)</li>
+            <li><b>flex items:</b> has propeties such as:  order, flex-shrink, flex-grow; align-self, flex-basis</li>
+            <li>flex-wrap: determines the number of lines the flex items would occupy</li>
+        </ul>
+        <div class =  "container">
+            <div class = "box" id = "box1">1</div>
+            <div class = "box" id = "box2">2</div>
+            <div class = "box" id = "box3">3</div>
+            <div class = "box" id = "box4">4</div>
+        </div>
+    </body>
+</html>

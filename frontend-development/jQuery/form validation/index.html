@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>basic form validation</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous" defer></script>"
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+        <h2>using javascript for validation</h2>
+
+        <form method="POST" action="form.php" id="myform">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <span id="name-err"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <span id="email-err"></span>
+
+            <label for="url">Website</label>
+            <input type="url" id="url" name="url">
+            <span id="url-err"></span>
+
+            <label for="comments">Comments</label><span id="commments-err"></span>
+            <textarea id="comments" name="comments" rows="9" cols="30"
+                placeholder="please enter a comment"></textarea>
+            <input type="submit" id="send" name="send" value="send form">
+        </form>
+
+    </body>
+</html>

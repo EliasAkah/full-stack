@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+}
+h1{
+    color: yellow
+}
+.paragraphs{
+    color: red;
+}
+#type{
+
+    color: green
+}
+#intro{
+    color:blue;
+}
+p[class="big"]{
+    color: purple;
+}
+
+
+*{
+    color: hsl(24, 89%, 22%);
+}
+

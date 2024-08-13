@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: yellow
+}
+.pra{
+    color: #0b4037
+}
+#type{
+
+    color: green;
+}
+#int{
+    color: #1eb79d
+}
+p[class="bi"]{
+    color: hsl(24, 89%, 22%)
+}
+*{
+    color:rgb(79, 92, 15)
+}

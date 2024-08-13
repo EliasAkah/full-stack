@@ -1,0 +1,15 @@
+h1[id = "border"]{
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: hsla(309, 83%, 46%, 0.661);
+    border-top-right-radius: 5px;
+}
+.love{
+    border-right: 5px solid greenyellow;
+    border-left: 5px inset red;
+    border-bottom: 5px groove yellow;
+    border-top: 10px ridge purple;
+    border-top-left-radius:5px;
+    border-radius: 20px;  
+}

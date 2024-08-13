@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="conversion.css" />
+        <script src="conversion.js" defer></script>
+
+    </head>
+    <body>
+
+        <h1>kilometers to mile converter</h1>
+
+        <div id="cont">
+
+            <div id="row1">
+                <p>Type in the number in kilometer and click the button to
+                    convert the distance to miles</p>
+
+                <form action="somefile.php" method="post" id='convert'>
+
+                    <input type="text" id="distance" placeholder="number"
+                        name='distance' size="3" />
+                    <input type="submit" id="btn" name='converdist'
+                        value="Convert Distance">
+
+                </form>
+            </div>
+
+            <div id="row2">
+
+                <h2 id=invisible>Enter the answer here</h2>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
+<!-- 
+                enctype = "multipart/form-data" =  attribte used within the form tag when sending massive to enable the breakdown of the data into multi part and  later assembling.
+                these file includ images and other type of files.
+                method = attribute used to detemine the nature of the data collected whether confidential or not. it contains two values "POST" AND "GET"
+                POST  = confidential data
+                GET = non-confidential data
+                for = "enter the information" = information visual impared user
+                max =  used for maximum quantity allowed
+                min = used for minimum quanttity allowed
+                value = "any number/ string" =  used to tell the starting number of a quantity. it specifies the value to be sent to a server when a form is submitted.
+                minlength = "enter the value" = minimum required value
+                maxlength = "enter the value" = maximum required value
+                type = "function to be performed" = determine the action of the input button will perform
+                placeholder= "enter the information" = shows a hint of what information is required of u to enter.
+                required = tells the user that the information must be filled or entered
+                values of type attribute: reset, text, submit,password,email, tel, date, number(quantity of sth), radio, checkbox, file            
+                element used within form element: label, input,
+                input = determines what kind of information the form is used for.
+                pattern = "{0-9}{3}-{0-9}{3}-{0-9}{3}" = determines the form the telephone number would appear.
+                name = "any string" =  used to group a radio button into groups. the same name value means the same group. which us the option of choosing only one out =many option
+                radio =  type value used to choose options.
+                label = use to give label to an input element. it preceeds the input element.
+                select =  element withi the form element used to create drop down menu.
+                option = used within the select element to create multiple options for the drop down menu.
+                accept "image/png, image/jpeg" = an attribute used to determint the type of file that can be uploaded in aparticular input.
+                textarea = a tag used to used to create a comment box. it uses attributes such as rows = "enter number" and columns = "enter number" to determine the dimension of the
+                comment box.
+                size = "size" =  used with input tag to change the width of the box. we can also use the internal css style = "width:" to achieve this.
+
+                NOTE: the id of the input element must match the value of the for attribute within the label element/tag.
+ -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="spinner.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div id="page">
+            <h1>Contact Me</h1>
+
+            <form action="emailprocessor.php" method="post" id="contactform">
+
+                <p><label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" name="name" class="data"></p>
+
+                <p><label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" name="email" class="data"></p>
+
+                <p><label for="url" id="url-label">Website</label>
+                    <input type="url" id="url" name="url" class="data"></p>
+
+                <p><label for="comment" id="comments-label">Comments</label>
+                    <textarea id="comment" name="comment" rows="8"></textarea></p>
+
+                <p><input type="submit" name="send" class="submitBtn"
+                        value="send it to me!"></p>
+
+            </form>
+
+            <div id="message" class="hide-message">
+                <div class="error">
+                    <h3>Ooops!</h3>
+                    <p>You forgot to gice mea valid email address. Plrase fix
+                        that and try again!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>

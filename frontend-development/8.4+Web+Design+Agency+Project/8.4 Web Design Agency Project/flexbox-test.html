@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+
+}
+.main {
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+
+.child{
+    
+    max-width: 300px;
+    height: 200px;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.child .lover{
+  height: 75%;
+  width: 75%;
+  float: left;
+  margin-right: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <div class = "first child">
+          <img src = "\pictures\lovers.jpg" alt = "lovers"  class = "lover" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus est eos tenetur nemo esse asperiores porro nobis necessitatibus ab repellendus optio assumenda neque doloribus reiciendis rem quo, iusto ut officiis?</p>
+        </div>
+        <div class = "second child">
+          <img src = "\pictures\lovers.jpg" alt = "lovers"  class = "lover" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus est eos tenetur nemo esse asperiores porro nobis necessitatibus ab repellendus optio assumenda neque doloribus reiciendis rem quo, iusto ut officiis?</p>
+        </div>
+    </div>
+</body>
+</html>

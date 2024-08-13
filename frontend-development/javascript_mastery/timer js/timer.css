@@ -1,0 +1,11 @@
+a{
+    background: red;
+    width: 20px;
+    border: 1px solid black;
+    border-radius: 1px 2px 1px 2px;
+    -webkit-border-radius: 1px 2px 1px 2px;
+    -moz-border-radius: 1px 2px 1px 2px;
+    -ms-border-radius: 1px 2px 1px 2px;
+    -o-border-radius: 1px 2px 1px 2px;
+    text-decoration: none;
+}

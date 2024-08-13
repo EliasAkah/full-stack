@@ -1,0 +1,308 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(240, 239, 239);
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-image: url(bg-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.p1{
+    text-align: center;
+    color: white;
+}
+
+#p2{
+    font-size: 4rem;
+    margin-bottom: 40px;
+    font-family: Arial, san-serif;
+    font-weight: bolder;  
+    animation-name: Fade;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    opacity: 1;
+}
+
+#p3{
+    font-size: 3rem;
+    margin: 40px;
+    font-family: Arial, san-serif;
+    font-weight: lighter;
+    animation-name: Fade;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    opacity: 1;
+}
+
+#akah{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#greet{
+    color: rgb(18, 208, 205);
+
+}
+
+#img1{
+    float:left;
+    margin-right: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#pg{
+    text-align: center;
+    color: rgb(18, 208, 205);
+    margin-bottom: 75px;
+    font-weight: bold;
+    font-family: Arial, san-serif;
+    font-size: 2rem
+}
+
+.grid{
+    margin-bottom: 70px;
+}
+
+#port{
+    float:left;
+    margin-right: 50px;
+}
+
+.port{
+    margin-bottom: 75px;
+}
+
+#dogs{
+    float: left;
+    margin-right: 50px;
+}
+
+
+.dogs{
+    margin-bottom: 85px;
+}
+
+.projects{
+    background-color: rgb(240, 239, 239);
+    color: black;
+}
+
+.hero{
+    background-color:rgb(240, 239, 239);
+    color: black;
+}
+
+#info{
+    color:rgb(18, 208, 205);
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, san-serif;
+    font-weight: bold;
+}
+
+.p4{
+    color: black;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right:50px;
+}
+
+.about{
+    margin-bottom: 85px;
+}
+
+#contact{
+    color: rgb(18, 208, 205);
+    text-align: center;
+}
+
+#p5{
+    color:rgb(18, 208, 205);
+    text-align: center;
+    font-size: 1rem;
+    margin: 15px 0px;
+}
+
+#p6{
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.img{
+    animation-name: ImageAnimation;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+#link{
+    background-color:blue;
+    height: 20px;
+    width: 20px;
+    padding: 1px 4px;
+    color:white;
+    border-radius: 7px    ;
+    -webkit-border-radius: 7px    ;
+    -moz-border-radius: 7px    ;
+    -ms-border-radius: 7px    ;
+    -o-border-radius: 7px    ;
+}
+
+a#link{
+    animation-name: grow;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.link{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    background-color: linear-gradient(300dg, blue, red,  hsla(121, 99%, 66%, 0.8));
+    background-size: 100% 100%;
+    animation-name: grow;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+}
+
+.footer{
+    background-color: black;
+    padding: 40px 0 50px 0;
+    margin: 0px;
+    display: grid;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+a{
+    padding: 15px 15px 15px 0px;
+    margin: 15px 15px 15px 0px;;  
+    color: blue
+}
+
+#copy{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.glow a:hover{
+    animation-name: Color-change;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+
+
+@keyframes grow{
+    25%{
+        transform: scale(0,1);
+        -webkit-transform: scale(0,1);
+        -moz-transform: scale(0,1);
+        -ms-transform: scale(0,1);
+        -o-transform: scale(0,1);
+}
+
+    50%{
+       transform: scale(1, 0);
+       -webkit-transform: scale(1, 0);
+       -moz-transform: scale(1, 0);
+       -ms-transform: scale(1, 0);
+       -o-transform: scale(1, 0);
+}
+    
+
+    100%{
+        transform: scale(1,1);
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+}
+    }
+
+@keyframes ImageAnimation{
+    from{
+        height: 100px;
+        width: 100px;
+    }
+
+    to{
+        height: 100px;
+        width: 150px;
+    }
+}
+
+@keyframes Fade{
+    from{
+        opacity: 0;
+    }
+}
+
+@keyframes Color-change{
+    
+    25%, 50%, 75%, 100%{
+        color: rgb(10, 117, 204);
+    }
+
+}
+
+
+
+@media (min-width: 319px) and (max-width: 578px) {
+    .flex-container{
+    height: 50vh;
+    background-image: url(1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#p2{
+    font-size: 2rem;
+    font-family: 'Times New Roman', serif; 
+    font-weight: bolder;
+    margin-bottom: 5px;  
+}
+
+#p3{
+    font-size: 1rem ;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-family: Arial, san-serif; 
+    font-weight: bolder;  
+}
+    }

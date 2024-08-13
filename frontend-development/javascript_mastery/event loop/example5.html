@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>example 2</h1>
+        <p id="text"></p>
+
+        <script>
+        document.getElementsByTagName('h1')[0].innerHTML = "example 4";
+        document.getElementsByTagName('h1')[0].style.textTransform = "uppercase";
+        
+        console.log('mathematical operation');
+
+        let math1 = Math.ceil(Math.random() * 10);
+        console.log(`the first async function will wait at least ${math1} seconds`);
+
+        let math2 = Math.ceil(Math.random() * 10);
+        console.log(`the second async function will wait at least ${math2} seconds`);
+
+        setTimeout(function(){
+            console.log(`finishing async 1 after: ${math1 * 1000} milliseconds`);
+        }, math1 * 1000);
+
+        setTimeout(function(){
+            console.log(`finishing async 2 after: ${math2 * 1000} milliseconds`);
+        }, math2 * 1000);
+
+        console.log("print last");
+
+        
+
+    </script>
+    </body>
+</html>

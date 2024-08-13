@@ -1,0 +1,48 @@
+button:hover{
+    background-color: blue;
+    color: rgb(235, 16, 16);
+    border: none;
+    padding: 4px 10px;
+    
+}
+
+button{ 
+    padding: 8px 15px;
+    border-radius: 15px;
+    background-color: red;
+}
+
+button:active{
+    color:white;;
+    background-color: green;
+}
+
+a:link{
+    text-decoration: none;
+    padding: 0px 15px;
+    border: 2px ridge;
+    border-radius: 10px;
+    border-color: none;
+    color:white;
+    background-color: blue;
+    cursor:pointer; 
+}
+
+a:visited{
+    background-color: grey;
+    color: black;
+    color:white;
+    background-color: blue;
+    cursor:pointer;
+}
+
+
+
+a:visited{
+background-color: grey;
+color: black;
+
+}
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valid  ation form to be filled</title>
+
+        <link rel="stylesheet" href="style.css">
+        <!-- <script src="script.js" defer></script> -->
+
+    </head>
+    <body>
+
+        <h2>Request Form</h2>
+        <span class="error">*required informations</span>
+
+        <br><br>
+        <form method="post" action="frontstorage.php">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <span id="nameErr" class="error"><?php echo $nameErr;?></span>
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <span id="emailErr" class="error"><?php echo $emailErr;?></span>
+            <br><br>
+
+            <label for="telephone">Mobile No:</label>
+            <input type="tel" id="telephone" name="telephone">
+            <span id="telephoneErr" class="error"><?php echo $telephoneErr;?></span>
+            <br><br>
+
+            <label for="url">Website</label>
+            <input type="url" id="url" name="url">
+            <span id="urlErr" class="error"><?php echo $urlErr;?></span>
+            <br><br>
+
+            Gender:
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">female</label>
+            <input type="radio" id="others" name="gender" value="others">
+            <label for="others">Others</label>
+            <span id="genderErr" class="error"><?php echo $genderErr;?></span>
+            <br><br>
+
+            <label for="comments">Comments</label>
+            <span id="commentsErr" class="error"></span>
+            <br><br>
+            <textarea id="comments" name="comments" rows="9" cols="30"
+                placeholder="please enter a comment"></textarea>
+            <br><br>
+
+            Agree to terms of Service:
+            <input type="checkbox" name="agree">
+            <span id="agreeErr" class="error"><?php echo $agreeErr;?></span>
+            <br><br>
+
+            <input type="submit" name="submit" value="submit">
+            <br><br>
+
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+input{
+    display: block;
+    margin-bottom: 1.5%;
+}
+
+label{
+    display: block;
+}
+
+textarea{
+    margin-bottom: 1.5%; 
+}
+
+input:last-child{
+    margin-bottom: 0;
+}
+.error {
+    color: red;
+}

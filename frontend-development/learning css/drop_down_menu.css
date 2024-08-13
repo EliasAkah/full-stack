@@ -1,0 +1,37 @@
+#drop{
+    display: inline-block;
+    position:sticky;
+}
+#drop button{
+    color:white;
+    padding: 10px 15px;
+    background-color: pink;
+    border-radius: 5px;
+
+}
+#drop a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+
+}
+#drop #child{
+    background-color: blue;
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    min-width: 300px;
+    box-shadow: 4px 4px 2px black;
+}
+#drop:hover #child{
+    display:block;
+}
+
+#child a:hover {
+    background-color: red;
+    color: white;
+}
+
+#drop:hover button{
+     background-color: rgb(0, 255, 68);
+}

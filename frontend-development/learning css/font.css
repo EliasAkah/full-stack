@@ -1,0 +1,18 @@
+h1{
+    font-family: "New Romans", fantasy, monospace;
+    font-size: 2em;
+}
+
+#style{
+    font-style: oblique;
+}
+.family{
+    font-family: Arial, Helvetica, sans-serif
+}
+p[value = "size"]{
+    font-size: 1.5em
+}
+*{
+    font-weight: 900;
+    font-size: 1rem;
+}

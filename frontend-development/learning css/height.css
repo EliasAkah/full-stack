@@ -1,0 +1,24 @@
+h2{
+    color: green;
+}
+
+.me{
+    border: 5px ridge;
+    height: auto;
+    width:  50%;
+    padding: 15px;
+    text-align: center;
+    float: left;
+    background-color: pink;
+
+    min-height: 50%;
+    max-width: 50%;
+}
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: blue;
+    height: 100vh;
+}

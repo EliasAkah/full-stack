@@ -1,0 +1,140 @@
+body{
+    background-color: black;
+}
+.nigeria{
+    width: 600px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+}
+
+.nigeria div[id = "box"]{
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 200px;
+}
+
+ #nig{
+    width: 200px;
+   text-align: center;
+   font-size: 2rem;
+   position: absolute;
+   left: 200px;
+   top: 100%;
+   
+}
+
+p{
+    color: white;
+    text-transform: uppercase;
+}
+#nig p{
+    animation-name: grow, colorchange1;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+
+#swiz{
+    width: 600px;
+    height: 300px;
+    background-color: red;
+    position: absolute;
+    bottom: 2rem;
+    right: 0px;
+}
+
+#plus img{
+    color: white;
+    width:100%;
+    position: absolute;   
+}
+
+#plus{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50px;
+    left: 200px;
+}
+#let{
+    width: 200px;
+   text-align: center;
+   font-size: 2rem;
+   position: absolute;
+   left: 200px;
+   top: 100%;
+}
+
+#let p{
+    animation-name: grow, colorchange;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+
+@keyframes grow{
+    25%{
+        transform: scale(0);
+}
+}
+
+@keyframes colorchange{
+    100%{
+        color: red;
+    }
+    
+
+
+}
+
+@keyframes colorchange1{
+    100%{
+        color: green;
+    }
+}
+
+#viet{
+    width: 600px;
+    height: 300px;
+    background-color: red;
+    position: absolute;
+    left: 34.2%;
+    z-index: 1;
+}
+
+#vi {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50px;
+    left: 200px;
+}
+
+#vi img{
+    width: 100%;
+    position: absolute;
+
+}
+
+#v{
+    width: 200px;
+   text-align: center;
+   font-size: 2rem;
+   position: absolute;
+   left: 200px;
+   top: 100%;
+
+}
+
+#v p{
+    animation-name: grow, colorchange;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+

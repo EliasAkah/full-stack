@@ -1,0 +1,62 @@
+body{
+    background: url(https://images.unsplash.com/photo-1617527019968-052733f9cfe8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGljZXxlbnwwfHwwfHx8MA%3D%3D);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+
+}
+h2{
+    text-transform: capitalize;
+    margin-top: 3%;
+    align-items: center;
+    text-align: center;
+}
+
+#gamecontrol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: rgba(21, 128, 195, 0.04);
+    padding: 5px 0 30px 10px;
+}
+
+
+
+#game{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(172, 98, 120, 0.635);
+    padding: 10px 0 10px 10px;
+}
+
+#actions{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgba(253, 145, 174, 0.565);
+    padding: 10px 0 10px 10px;
+    line-height: 50px;
+}
+
+/* #gamecontrol, #actions, #game{
+    display: flex;
+    justify-content: center;
+} */
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+button{
+
+}
+

@@ -1,0 +1,79 @@
+header{
+    background-color: grey;
+    color: green;
+    text-align: center;
+    padding: 15px;
+}
+
+h2{
+    color: red;
+}
+
+aside{
+    width: 20%;
+    display:block;
+    float: left;
+    min-height:100%;
+    padding: 15px
+}
+
+section{
+    width: 40%;
+    display:block;
+    float: left;
+    min-height:100%;
+    padding: 15px;
+}
+
+article{
+    width: 40%;
+    display:block;
+    float: left;
+    min-height:100%;
+    padding: 15px;
+}
+footer{
+    text-align: center;
+    clear: both;
+    background-color: grey;
+    display: block;
+    padding: 15px;
+    color: blue;
+}
+footer a{
+    text-decoration: none;
+}
+
+body{
+   
+    margin: 0px;
+
+}
+
+*{
+   box-sizing: border-box;
+}
+@media screen and (max-width: 600px){
+    aside,section,article{
+        width: 100%;
+    }
+}
+
+nav{
+    background-color: purple;
+    color: white;
+    
+    display: block;
+    text-align: center;
+    overflow:hidden;
+    margin: 0px;
+
+}
+nav a, form{
+    display: block;
+    text-decoration:none;
+    color: white;
+    padding: 15px;
+    float: left;
+
+}

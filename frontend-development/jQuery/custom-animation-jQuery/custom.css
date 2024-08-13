@@ -1,0 +1,54 @@
+nav ul li a {
+    display: block;
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+    width: 149px;
+    line-height: 50px;
+    border-right: 1px solid black;
+    text-decoration: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul {
+
+    margin: 0px;
+    padding: 0px;
+    margin-right: 41px;
+    margin-bottom: 20px;
+    border-left: 1px solid black;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background: black;
+}
+
+#box2 {
+    width: 250px;
+    height: 200px;
+    background: blue;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    position: absolute;
+}
+
+p {
+    font-size: 20px;
+
+
+}

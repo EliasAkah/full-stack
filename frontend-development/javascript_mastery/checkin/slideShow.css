@@ -1,0 +1,119 @@
+body{
+    padding-top: 50px;
+    font-family: Arial;
+    color: #292828;
+}
+
+#slide-wrapper{
+    width: 1000px;
+    height: 358px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    /* background: yellow;  */
+}
+
+ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#slide-wrapper ul{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -ms-transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: left 700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#slide-wrapper ul li{
+    background-size: cover;
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    float: left;
+   
+} 
+
+#slide-wrapper ul li:nth-child(1){
+    background-image: url(image/green.jpg);
+}
+#slide-wrapper ul li:nth-child(2){
+    background-image: url(image/image2.jpg);
+}
+#slide-wrapper ul li:nth-child(3){
+    background-image: url(image/image7.png);
+}
+#slide-wrapper ul li:nth-child(4){
+    background-image: url(image/image4.png);
+}
+#slide-wrapper ul li:nth-child(5){
+    background-image: url(image/image5.png);
+}
+
+#slide-wrapper ul li:nth-child(6){
+    background-image: url(image/image6.png);
+}
+
+
+
+.content{
+    background: white;
+    color: black;
+    position: absolute;
+    width: 25%;
+    z-index: 1;
+    opacity: 0.5;
+    background: rgb(255, 255, 255);
+    padding: 0 2.5% 0 1.5%;
+    top: 8%;
+    left: 3%;
+}
+
+.content > p{
+    width: 100%;
+    margin: 0 0 4% 0;
+}
+.content > h2{
+    margin: 5% 0 2% 0;
+    text-transform: capitalize;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+#slider-controls{
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    height: 18%;
+    background: rgb(48, 41, 41);
+    margin: 0;
+} 
+
+#slider-controls > #next{
+    float: right;
+}
+
+#slider-controls > #prev{
+    float: left;
+}
+
+#slider-controls > a{
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: rgba(144, 132, 132, 0.862);
+    padding: 6px 10% 6px 10%;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Basics</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        label[for = "fname"]{
+            display: block;
+            margin-bottom: 1%;
+        }
+        label[for = "favcolor"]{
+            display: block;
+            margin-bottom: 1%;
+        }
+
+        fieldset{
+            margin-bottom: 1%;
+        }
+        select{
+            border-radius: 0px;
+        }
+        label[for = "cheese"] > select{
+            display: block;
+            margin-bottom: 1%;
+        }
+
+        label[for = "comments"] > textarea{
+            display: block;
+            margin-bottom: 1.5%;
+        }
+
+
+    </style>
+    </head>
+    <body>
+        <h1>Form Basics</h1>
+
+        <form method="post" action="processor.php" id="myform">
+            <label for="fname">first Name:
+                <input type="text" id="fname" name="fname" placeholder="bill"
+                    required>
+            </label>
+
+            <label for="favcolor">Favorite color:
+                <input type="color" id="favcolor" name="favcolor">
+            </label>
+
+            <fieldset>
+                <legend>Do you wnat spam?</legend>
+                <input type="radio" id="spam-yes" name="spam" value="yes">
+                <label for="spam-yes">Yes, Send me spam!</label>
+
+                <input type="radio" id="spam-no" name="spam" value="no" checked>
+                <label for="spam-no">No, don't Send spam!</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Favorite Animal</legend>
+                <input type="checkbox" id="dog" name="animal[]" value="Dog">
+                <label for="dog">Dog</label>
+
+                <input type="checkbox" id="cat" name="animal[]" value="Cat"
+                    checked>
+                <label for="cat">Cat</label>
+
+                <input type="checkbox" id="rabbit" name="animal[]"
+                    value="Rabbit">
+                <label for="rabbit">Rabbit</label>
+            </fieldset>
+
+            <label for="cheese">Favorite Cheese:
+                <select id="cheese" name="favcheese">
+                    <option selected>------</option>
+                    <option value="American">American</option>
+                    <option value="Swiss">Swiss</option>
+                    <option value="Brie">Brie</option>
+                </select>
+            </label>
+
+            <label for="comments">please tell us what you think:
+                <textarea id="comments" name="comments" row="20" column="100"
+                    placeholder="comment here"></textarea>
+            </label>
+
+            <input type="submit" name="submit" id="submit" value="send form">
+
+        </form>
+    </body>
+</html>

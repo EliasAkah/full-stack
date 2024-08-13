@@ -1,0 +1,68 @@
+<!-- 
+  TODO: Create a motivational post website.
+Style it how ever you like. 
+Look at the goal image for inspiration.
+But it must have the following features:
+1. The main h1 text should be using the Regular Libre Baskerville Font from Google Fonts:
+  https://fonts.google.com/specimen/Libre+Baskerville
+2. The text should be white and background black.
+3. Add your own image into the images folder inside assets. It should have a 5px white border.
+4. The text should be center aligned.
+5. Create a div to contain the h1, p and img elements. Adjust the margins so that the image and text are centered on the page. 
+  Hint: You horizontally center a div by giving it a width of 50% and a margin-left of 25%.
+  Hint: Set the image to have a width of 100% so it fills the div. 
+6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
+-->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name = "description" content = "creating a picture using margin, padding and border" />
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0" />
+    <title>div element</title>
+    <style>
+      html{
+            font-size: 13px;
+             line-height: 1.6;
+      }
+      body{
+        background-color: black;
+        margin: 0px;
+      }
+      h1{
+        font-family: 'Libre Baskerville', serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        font-size: 2r2m;
+      }
+      .color{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 100px;
+        
+        
+      }
+      p{
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+      }
+      img{
+        width: 100%;
+        border: 5px solid white;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class = "color">
+      <img src = "\pictures\lovers.jpg" type = "img/jpg" alt =  "lovers enjoying the moment"/>
+      <h1>that special moment</h1>
+      <p>time flies when you are with the perfect one.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .container{
+            height: 400px;
+            width: 400px;
+            background: blue; 
+    
+        }
+        .child{
+            height: 200px;
+            width: 200px;
+            background: red;
+            animation-name: left-to-right;
+            animation-direction: alternate;/*defines if the animation should play in normal, reverse or alternate between the two*/
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out; /*acceleration curve*/
+            animation-delay: 0.5s;/*time it takes for animation to begin*/
+            animation-iteration-count: infinite; /*numbrer of time it should occur*/
+            animation-fill-mode: none;/*describes how element styles are applied before(backwards) and after (forwards)*/
+            
+        }
+
+        .container:hover .child{
+            animation-play-state:paused; /*determines if animation is running or paused*/
+        }
+
+        @keyframes left-to-right{
+            0% {
+                
+                background: yellow;
+                transform: translateY(80%) translateX(80%);
+            }
+
+            100% {
+                background: green;
+                transform: translateY(20%) translateX(20%);
+            }
+
+        }
+/*animation-timing-function:
+Linear: Progresses at a constant pace from start to finish. It applies no acceleration or deceleration.
+
+Ease: This is the default timing function. It starts slow, accelerates through the middle, and then slows down towards the end. This is the most common choice for animations as it feels natural.
+
+Ease-In: Begins slowly and accelerates as it progresses.
+
+Ease-Out: Starts fast and slows down towards the end.
+
+Ease-In-Out: Combines the characteristics of ease-in and ease-out. It starts slowly, accelerates in the middle, and then slows down towards the end.
+
+//animation-fill-mode:
+None: This is the default value. It means that no styles are applied before or after the animation runs. This can be useful if you want the element to snap back to its original state after the animation completes.
+
+Forwards: The styles defined in the last keyframe of the animation are applied to the element after the animation finishes. This means that the element will retain the styles of the final keyframe even after the animation ends.
+
+Backwards: The styles defined in the first keyframe of the animation are applied to the element before the animation starts. This ensures that the element's initial state matches the styles of the first keyframe before the animation begins.
+
+Both: Combines the behavior of both forwards and backwards. The styles defined in the first keyframe are applied before the animation starts, and the styles defined in the last keyframe are applied after the animation finishes.
+
+*/
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="child"></div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="vacation.css" />
+        <script src="vacation.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+
+            <h1>Vacation Destinations Wish List</h1>
+            <p>found exciting places to visit on your next vacation? use
+                the form below to add them to your whishlist</p>
+
+        </header>
+
+        <main>
+
+            <form action="somephpfile.php" method="post"
+                enctype="multipart/form-data" id="destination_details_forms">
+
+                <label for="name" id="destination">destination
+                    name</label>
+                <input type="text" id="name"
+                    placeholder="enter the name of the destination"
+                    required />
+
+                <label for="location" id="locate">location</label>
+                <input type="text" id="location"
+                    placeholder="where is it located" required />
+
+                <label for="photo" id="pht">photo</label>
+                <input type="url" id="photo"
+                    placeholder="enter image url of the place" />
+
+                <label for="describe">description</label>
+                <textarea type="text" id="description"
+                    placeholder="Describe its location" required></textarea>
+
+                <button type="submit">Add to List</button>
+            </form>
+
+            <article>
+
+                <h2 id="title">Enter destination details</h2>
+                <div id="destinations_container">
+
+                </div>
+
+            </article>
+        </main>
+
+    </body>
+</html>

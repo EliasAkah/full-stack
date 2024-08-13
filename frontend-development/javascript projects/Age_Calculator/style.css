@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding:  20px;
+    background: rgb(242, 241, 241);
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 50px;
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /*width becomes 100% when the size of the input is less than 300px else the width remains 300px*/
+}
+
+button{
+    padding: 10px 20px;
+    background: rgba(19, 137, 246, 0.958);
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    transition:  background-color .3s ease;
+    -webkit-transition:  background-color .3s ease;
+    -moz-transition:  background-color .3s ease;
+    -ms-transition:  background-color .3s ease;
+    -o-transition:  background-color .3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0062cc;
+}
+
+#result{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}

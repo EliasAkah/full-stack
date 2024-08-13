@@ -1,0 +1,16 @@
+#combinators p{
+    color: hsla(300, 76%, 51%, 0.682);
+}
+#combinators >p{
+    color: yellow;
+    text-align: left;
+    margin-left: 0px;
+}
+
+#combinators ~p{
+    color: hsla(6, 86%, 46%, 0.863);
+}
+
+#combinators +p{
+    color: hsla(241, 63%, 51%, 0.863);
+}

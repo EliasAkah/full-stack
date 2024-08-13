@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Basics</title>
+        
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous" defer></script>
+        
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+        defer></script>
+
+        <script src="script.js" defer></script>
+
+        <style>
+
+
+        fieldset{
+            margin-bottom: 1%;
+        }
+        select{
+            border-radius: 0px;
+        }
+        label[for = "cheese"] > select{
+            display: block;
+            margin-bottom: 1%;
+        }
+
+        label[for = "comments"] > textarea{
+            display: block;
+            margin-bottom: 1.5%;
+        }
+
+
+
+
+    </style>
+    </head>
+    <body>
+        <h1>My Awsome Form</h1>
+
+        <form method="post" action="advance.php" id="myform">
+
+            <div class = "form-section">
+
+                <label for="email">Full Name</label><br>
+                <input type="text" id="email" name="contact"><br><br>
+    
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="contact"><br><br>
+    
+                <label for="">Phone Number</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+
+            </div>
+
+
+            <div class = "form-section">
+                <fieldset>
+                    <legend>preferred method of contact</legend>
+                    <input type="radio" id="emailcontact" name="contacttype" value ="email" checked>
+                    <label for="emailcontact">Email </label><br>
+    
+                    <input type="radio" id="phonecontact" name="contacttype" value ="email">
+                    <label for="phonecontact">Phone</label><br>
+    
+                    <input type="radio" id="nocontact" name="contacttype" value ="none">
+                    <label for="nocontact">Do not contact </label><br>
+    
+                </fieldset>
+    
+                <fieldset>
+    
+                    <legend>Pick Three Favorite Cheeses</legend>
+    
+                    <input type="checkbox" id="cheddar" name="cheese[]" value="Cheddar">
+                    <label for="cheddar">Cheddar</label><br>
+    
+                    <input type="checkbox" id="swiss" name="cheese[]" value="Swiss"
+                        checked>
+                    <label for="swiss">Swiss</label><br>
+    
+                    <input type="checkbox" id="colby" name="cheese[]"
+                        value="Colby">
+                    <label for="colby">Colby</label><br>
+    
+                    <input type="checkbox" id="monterey" name="cheese[]"
+                    value="Monterey Jack">
+                    <label for="monterey">Monterey Jack</label><br>
+    
+                    <input type="checkbox" id="blue" name="cheese[]"
+                    value="Blue Cheese">
+                    <label for="blue">Blue Cheese</label><br>
+
+                    <input type="checkbox" id="feta" name="cheese[]"
+                    value="Feta Cheese">
+                    <label for="feta"></label>Feta Cheese</label><br>
+    
+                    <input type="checkbox" id="brie" name="cheese[]"
+                    value="Brie">
+                    <label for="brie"></label>Brie</label><br>
+    
+                    <input type="checkbox" id="american" name="cheese[]"
+                    value="American">
+                    <label for="american"></label>American</label><br>
+    
+                    <input type="checkbox" id="gouda" name="cheese[]"
+                    value="Gouda">
+                    <label for="gouda"></label>Gouda</label>
+    
+                </fieldset><br>
+    
+                <label for="cheesetype">Favorite Cheese Type</label><br>
+                <select id="cheesetype" name="cheesetype">
+                    <option class = "i" value = "">------</option>
+                    <option class = "i" value="fresh">Fresh</option>
+                    <option class = "i" value="semi-soft">Semi-Soft</option>
+                    <option class = "i" value="soft">Soft</option>
+                    <option class = "i" value="natural">Natural Rind</option>
+                    <option class = "i" value="hard">Hard</option>
+                    <option class = "i" value="blue">Blue</option>
+                </select><br><br>
+            </div>
+            
+            <div class = "form-section">
+                <label for="comments">please tell us what you think:
+                    <textarea id="comments" name="comments" row="20" column="100"
+                        placeholder="comment here"></textarea>
+                </label><br>
+    
+                <input type="submit" name="submit" id="submit" value="send form">
+            </div>
+
+            <div id = "messagebox">
+                <h4>please fix these errors</h4>
+                <ul></ul>
+            </div>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "jQuery",
+			"path": "."
+		}
+	],
+	"settings": {
+		"livePreview.defaultPreviewPath": "/custom-animation-jQuery/custom.html"
+	}
+}

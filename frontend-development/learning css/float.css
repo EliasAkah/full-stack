@@ -1,0 +1,20 @@
+body{
+    border:2px solid purple;
+    display: flow-root;
+    background-color: black;
+    color:yellow;
+    height: 100vh;
+}
+#img1{
+    float:left;
+    margin-right: 10px;
+    margin-left: 0px;
+    border: 2px ridge purple;
+}
+#img2{
+    float: right;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border: 3px ridge purple;
+}

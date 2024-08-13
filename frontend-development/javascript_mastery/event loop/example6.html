@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            #third p {
+                color: red;
+            }
+            #fourth p{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>example 2</h1>
+        <p id="text"></p>
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div id="fourth"></div>
+
+        <script>
+        document.getElementsByTagName('h1')[0].innerHTML = "example 6";
+        document.getElementsByTagName('h1')[0].style.textTransform = "uppercase";
+        
+        let container1 = document.getElementById('first');
+        container1.innerHTML = '<button id = "set1">setTimeInterval</button>';
+        container1.innerHTML += '<button id = "stop1">stop1</button>';
+        document.getElementById('set1').style.marginRight = "20px";
+
+
+
+        let container2 = document.getElementById('second');
+        container2.innerHTML = '<button id = "set2">setTimeOut</button>';
+        container2.innerHTML += '<button id = "stop2">stop2</button>';
+        document.getElementById('set2').style.marginRight = "20px";
+        container2.style.marginTop = "30px";
+
+
+
+        let container3 = document.getElementById('third');
+        let container4 = document.getElementById('fourth');
+
+        let badIdea;
+        let goodIdea;
+
+
+        set1.addEventListener('click', () => {
+            badIdea = setInterval(() => {
+                container3.innerHTML += '<p>do async calls this way</p>';
+            }, 1500);
+        });
+
+
+
+        set2.addEventListener('click', () => {
+            goodIdea = setTimeout(() => {
+                container4.innerHTML += '<p>do async calls this way</p>';
+            }, 1500);
+        });
+
+        document.getElementById('stop1').onclick = function() {
+            clearInterval(badIdea);
+        };
+      
+        document.getElementById('stop2').onclick = function(){
+            clearTimeout(goodIdea);
+        };
+        
+        </script>
+    </body>
+</html>

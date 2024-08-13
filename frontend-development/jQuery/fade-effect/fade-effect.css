@@ -1,0 +1,97 @@
+/* nav ul li a {
+    display: block;
+    width: 149px;
+    text-align: center;
+    background: #BCBCBC;
+    color: #333;
+    border-right: 1px solid #777676;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+
+nav ul {
+    overflow: hidden;
+    border-left: 1px solid #777676;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 41px;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    float: left;
+}
+
+/* a {
+    text-decoration: none;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+} */
+
+/* nav ul li a:hover {
+    background: #D5D4D4;
+}
+*/
+#box1 {
+    width: 450px;
+    height: 300px;
+    background: rgb(61, 179, 206);
+    margin-left: 41px;
+
+}
+
+
+
+nav ul li a {
+    display: inline;
+    background-color: rgb(191, 191, 191);
+    /*float: left;
+    */
+    color: rgb(255, 2, 2);
+    line-height: 50px;
+    border-right: 1px solid rgb(107, 101, 101);
+    /* border-top: 1px solid rgb(107, 101, 101);
+    border-bottom: 1px solid rgb(107, 101, 101); */
+    text-align: center;
+    display: block;
+    height: 50px;
+    width: 149px;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    /* display: block; */
+    float: left;
+}
+
+nav ul {
+    border-left: 1px solid black;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 41px;
+    margin-bottom: 10px;
+    /* since ul contains all the list element the overflow attribute is used to prevent the list inside it from overflowing
+    also, border left is used to creat exterior line for the left outer part of ul since the right exterior line was already created
+    by the anchor element */
+}
+
+a {
+    text-decoration: none;
+    padding: 20px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul li a:hover {
+    background: rgb(214, 213, 213)
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>Welcome to Prototype and i nheritance</h2>
+
+        <script>
+        function iphone(){}// constructor
+
+        iphone.prototype.faceid = function(){
+            console.log("unlock my phone with my face");
+        }
+
+        iphone.prototype.video = function(){
+            console.log("take 4k video with my iphone");
+        }
+
+        iphone.prototype.stocksApp = function(){
+            console.log("find out what the stock market is doing");
+        }
+
+        let myphone = new iphone();// myphone inherits all the properties and values of the constructor iphone
+
+        myphone.faceid();
+        myphone.video();
+        myphone.stocksApp();
+        myphone.app = "instagram";
+        console.log(myphone);
+        
+        /*myphone.stocksApp = function(){
+            console.log("upgrade to pro version");
+        }*/
+
+        myphone.stocksApp = undefined;
+        //myphone.stocksApp();
+
+        var myAnimals = ["chicken", "dog", "llama"];
+
+        console.log(myAnimals);
+
+    </script>
+    </body>
+</html>

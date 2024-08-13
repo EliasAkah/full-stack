@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "description" contentent = "testing the modrian grid work">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(300deg, black, green, red);
+            background-size: 180% 180%;
+            animation: gradient-animation 18s ease infinite;
+        }
+
+        .container{
+            display: grid;
+            height : 680px;
+            width: 650px;
+            background-color: black;
+            grid-template-rows: 215px 230px 102.5px 102.5px;
+            grid-template-columns: 163px 407px 20px 30px 1fr;
+            gap: 9.5px;
+        }
+
+        @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        }
+
+        .red{
+            background-color: red;
+            grid-area: 1/2/3/5
+            
+        }
+        .yellow{
+            background-color: yellow;
+            grid-area: 4/3/5/5;
+        }
+        .blue{
+            background-color: blue;
+            grid-area: 3/1/5/2;
+
+        }
+
+        .white{
+            background-color: white;
+            grid-area: 3/2/5/3
+        }
+
+        .white1{
+            background-color: white;
+            grid-area: 1/1/2/2
+        }
+
+        .white2{
+            background-color: white;
+            grid-area: 2/1/3/2;
+        }
+
+        .white3{
+            background-color: white;
+            grid-area: 3/3/4/5;
+            margin-bottom: 1px;
+        }
+
+        @media (min-width: 420px) and (max-width: 768px){
+            .container{
+            display: grid;
+            height: 340px;
+            width: 340px;
+            grid-template-columns: 107.5px 115px 51.25px 51.25px;
+            grid-template-rows: 81.5px 203.5px 10px 15px;
+            gap: 4.9px;
+            background-color: black;
+            }
+
+            .yellow{
+            background-color: yellow;
+            grid-area: 4/3/6/5;
+            }
+            .blue{
+                background-color: blue;
+                grid-area: 3/1/6/2;
+
+            }
+
+            .white{
+                background-color: white;
+                grid-area: 3/2/6/3
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1400px){
+            .container{
+            display: grid;
+            height: 449.8px;
+            width: 449.8px;
+            grid-template-columns: 143.33px 153.33px 68.33px 68.33px;
+            grid-template-rows: 108.67px 271.33px 13.33px 20px;
+            gap: 5.5px;
+            background-color: black;
+            }
+            .yellow{
+            background-color: yellow;
+            grid-area: 4/3/6/5;
+            }
+            .blue{
+                background-color: blue;
+                grid-area: 3/1/6/2;
+
+            }
+
+            .white{
+                background-color: white;
+                grid-area: 3/2/6/3
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "item white"></div>
+        <div class = "item white1"></div>
+        <div class = "item white2"></div>
+        <div class = "item white3"></div>
+        <div class = "item red"></div>
+        <div class = "item yellow"></div>
+        <div class = "item blue"></div>
+        
+</body>
+</html>
+
+
+
+

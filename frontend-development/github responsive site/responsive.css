@@ -1,0 +1,375 @@
+
+body{
+height: 100vh;
+margin: 0;
+}
+li{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+i{
+    color: grey;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ul[class = "nav-ul"]{
+    /* background: yellowgreen; */
+    
+}
+
+ul[id = "nav-ul2"]{
+    /* background: green; */
+    
+}
+span{
+    margin-right: 10px;
+}
+#search{
+    margin-right: 10px;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    background: rgb(11, 11, 11);
+    justify-content: space-evenly;
+}
+header{
+    background: black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+#span3{
+    color:grey;
+}
+label{
+    display: block;
+
+}
+form > input{
+    margin-bottom: 1.8%;
+    width: 220px;
+    
+}
+button[type = "submit"]{
+    display: block;
+    width: 230px;
+    margin-bottom: 2%;
+    padding: 1.5% 0;
+    background: rgba(20, 221, 20, 0.769);
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+div[id = "section1-div"]{
+    background: hsla(249, 100%, 4%, 0.96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+form{
+    background: white;
+    padding: 10px;
+    margin: 2%;
+    display: inline-block;
+    border-radius: 1px;
+}
+#built{
+    width: 330px;
+    padding: 130px;
+}
+h2{
+    text-transform: capitalize;
+    margin-top: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+    
+}
+#built h2, .span2{
+    color: rgba(255, 255, 255, 0.979);
+}
+
+#built p{
+    color:rgb(196, 196, 196);
+    width: 350px;
+}
+#span0, #span1{
+    display: block;
+    
+}
+#form1 p{
+    font-size: 10px;
+    width: 220px;
+    margin-top: 0;
+}
+#form1 p:last-child{
+    text-align: center;
+    width: 230px;
+}
+
+#second2{
+    text-align: center;
+    background: rgb(246, 246, 246);
+    
+}
+
+a[id = "team"]{
+    background: white;
+    color: blue;
+    border: 0.5px solid grey;
+    padding: 3px 8px;   
+}
+
+.span2{
+    font-weight: bold;
+}
+
+#second2 p[id = "bring"]{
+    margin-top: 1%;
+}
+
+#second2  h2{
+    margin: 0 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+
+#second2 div[id = "second2-div"]{
+    /* background: green; */
+    padding: 1.5% 0 1.5% 0;
+    
+}
+
+#nav-ul2{
+    display: none;
+}
+
+#form-btn2{
+    display: none;
+}
+
+/* for tablet css */
+
+@media screen and (min-width: 769px) and (max-width: 1280px){
+    div[id = "section1-div"]{
+        background: hsla(249, 100%, 4%, 0.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+             
+    }
+
+    h2{
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-bottom: 1.5%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:500;
+    }
+    #built h2, .span2{
+        color: rgba(255, 255, 255, 0.979);
+    }
+
+    #open::before{
+        display: block;
+    }
+    
+    #built p{
+        color:rgb(196, 196, 196);
+        width: 460px;
+        text-align: center;
+        margin: 0;
+    }
+
+    #span0{
+        display: inline; 
+    }
+
+    #built{
+        /* background: green; */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 2% 0 0 0;
+        width: 500px;
+
+    }
+
+    form{
+        background: white;
+        padding: 10px;
+        margin: 1.5% 0 3% 0;
+        display: inline-block;
+        border-radius: 1px;
+    }
+
+    nav ul li a{
+        display: none;
+    }
+
+    #nav-ul2 input, span{
+        display: none;
+    }
+
+    #nav-ul1{
+        /* background: green; */
+        padding: 0% 0 0 1%;
+    }
+
+    #nav-ul2{
+        /* background: red; */
+        padding: 0;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    nav{
+        /* background: yellow; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #form1 p{
+        font-size: 10px;
+        width: 220px;
+        margin-top: 0;
+    }
+    #form1 p:last-child{
+        text-align: center;
+        width: 230px;
+    }
+
+    #form-btn2{
+        display: none;
+    }
+    
+}
+
+/* phone screen css*/
+
+@media screen and (min-width: 325px) and (max-width: 768px){
+    body p{
+        font-size: 12px;
+    }
+    body h2{
+        font-size: 19px;
+    }
+    div[id = "section1-div"]{
+        background: hsla(249, 100%, 4%, 0.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+             
+    }
+
+    h2{
+        text-transform: capitalize;
+        margin-top: 0;
+        margin-bottom: 1.5%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight:500;
+    }
+    #built h2, .span2{
+        color: rgba(255, 255, 255, 0.979);
+    }
+
+    #open::before{
+        display: block;
+    }
+    
+    #built p{
+        color:rgb(196, 196, 196);
+        width: 460px;
+        text-align: center;
+        margin: 0;
+    }
+
+    #span0{
+        display: inline; 
+    }
+
+    #built{
+        /* background: green; */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 2% 0 0 0;
+        width: 500px;
+
+    }
+
+    form{
+        display: none;
+    }
+
+    form label, input{
+        display: none;
+    }
+
+    form > p{
+        display: none;
+    }
+    #form-btn2{
+        display: block;
+        width: 150px;
+        margin: 2% 0 2.5% 0;
+        padding: 0.5% 0;;
+        background: rgba(20, 221, 20, 0.769);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+      
+    nav ul li a{
+        display: none;
+    }
+
+    #nav-ul2 input, span{
+        display: none;
+    }
+
+    #nav-ul1{
+        /* background: green; */
+        padding: 0% 0 0 1%;
+    }
+
+    #nav-ul2{
+        /* background: red; */
+        padding: 0;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    nav{
+        /* background: yellow; */
+        display: flex;
+        justify-content: space-between;
+    }
+}

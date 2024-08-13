@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            #third p {
+                color: red;
+            }
+            #fourth p{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>example 2</h1>
+        <p id="text"></p>
+        <div id="second"></div>
+        <div id="third"></div>
+
+        <script>
+        window.addEventListener('load', () => {
+            document.getElementsByTagName('h1')[0].innerHTML = "example 6";
+            document.getElementsByTagName('h1')[0].style.textTransform = "uppercase";
+            
+            let container2 = document.getElementById('second');
+            container2.innerHTML = '<button id = "set2">setTimeOut</button>';
+            container2.innerHTML += '<button id = "stop2">stop2</button>';
+            document.getElementById('set2').style.marginRight = "20px";
+            container2.style.marginTop = "30px";
+
+
+            let container3 = document.getElementById('third');
+            let stopsetTimeOutset;
+            let stopRecursion;
+
+
+            set2.addEventListener('click', doRecursion);
+
+            function doRecursion(){
+                stopsetTimeOutset = setTimeout(() => {
+                    container3.innerHTML += '<p>do async calls this way</p>'; 
+                    if(stopRecursion != 'stop'){
+                        doRecursion();
+                    }
+
+                }, 1500);
+
+            }
+
+            stop2.addEventListener('click', function(){
+                clearTimeout(stopsetTimeOutset);
+                stopRecursion = 'stop';
+            });
+        });
+        
+
+        
+        </script>
+    </body>
+</html>

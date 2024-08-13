@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    background: black;
+    height: 100vh;
+}
+
+span{
+    background:url('https://cdn4.iconfinder.com/data/icons/twitter-29/512/166_Heart_Love_Like_Twitter-128.png');
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    left: ;
+    top: ;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animate 6s linear;
+    -webkit-animation: animate 6s linear;
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(45deg);
+        transform: translate(-50%, -50%);
+        -webkit-filter: hue-rotate(45deg);
+}
+
+    100%{
+        filter: hue-rotate(720deg);
+        transform: translate(-50%, -5000%);
+        -webkit-transform: translate(-50%, -5000%);
+        -moz-transform: translate(-50%, -5000%);
+        -ms-transform: translate(-50%, -5000%);
+        -o-transform: translate(-50%, -5000%);
+        -webkit-filter: hue-rotate(720deg);
+}
+}

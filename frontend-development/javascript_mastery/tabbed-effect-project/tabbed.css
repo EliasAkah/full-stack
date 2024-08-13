@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 100px 0;
+    font-family: Arial;
+    background: red;
+    color: #333;
+}
+
+p{
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+#tabs{
+    width: 400px;
+    margin: auto;
+}
+
+#tabs>ul>li>a {
+    display: block;
+    background: grey;
+    margin-right: 2px;
+    color: rgb(209, 207, 207);
+    height: 30px;
+    line-height: 30px;
+    text-decoration:none;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    padding: 0 5px;
+}
+
+#tabs>ul {
+    list-style-type: none;
+    display: flex; /*the flex makes the ul element a block element */
+    
+}
+
+#tabs>div {
+    padding:15px;
+    background: #EAEAEA;
+    transition: opacity 200ms linear;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -ms-transition: opacity 200ms linear;
+    -o-transition: opacity 200ms linear;
+}
+
+#tabs .active{
+    background: #EAEAEA;
+    color: #333;
+}
+
+#tabs .hidden{
+    display: none;
+}
+
+#tabs .visible{
+    display: block;
+}
+
+#tabs .visuallyhidden{
+    opacity: 0;
+}
+
+
+
+
+
+
+

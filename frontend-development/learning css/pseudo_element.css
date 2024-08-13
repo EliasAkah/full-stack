@@ -1,0 +1,67 @@
+#team::first-letter{
+    font-size: 4em;
+    color:blue;
+
+}
+#team{
+    font-size: 2em;
+    color:blue;
+
+}
+#good::first-line{
+    background-color: yellow;
+    color: red;
+}
+#banana::after{
+    content: "🍌";
+}
+#good ul{
+    color: blue;
+    background-color: red;
+    display:block;
+
+
+}
+#mango::after{
+    content: "🥭";
+}
+
+#water_melon::after{
+    content: "🍉";
+}
+
+#orange::after{
+    content: "🍊";
+}
+
+#paw-paw::after{
+    content: "♟️";
+}
+
+#cake::after{
+    content: "🎂";
+}
+
+#good li::before{
+ content: "✔️";
+    
+}
+ul {
+    list-style-type: none;
+}
+
+li::marker{
+    display: none;
+}
+
+#good li:hover{
+    background-color: blue;
+    color: white;
+    
+
+}
+#good li:not(:hover){
+    background-color: gray;
+    color: black; 
+    
+}

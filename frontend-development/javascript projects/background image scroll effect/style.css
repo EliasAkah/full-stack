@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.bg-image{
+    width: 100%;
+    height: 100vh;
+    background: url('https://media.istockphoto.com/id/636208094/photo/tropical-jungle.webp?b=1&s=170667a&w=0&k=20&c=J_P91vroRfy9sYWY3rT_uhnirl-fmQMWuA53xBQHO2A=');
+    background-position: center;
+    background-size: 160%;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 50px;
+}
+
+p{
+    color: gray;
+}
+.container{
+    padding: 100px;
+}
+
+@media (max-width: 500px){
+    .container{
+        padding: 10px;
+    }
+}

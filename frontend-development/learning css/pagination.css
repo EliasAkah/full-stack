@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    color: hsl(120, 74%, 16%);
+}
+p{
+    margin:0px;
+    text-align: center;
+    float: center;
+    color: purple;
+    font-size: 1rem;
+    font-style: oblique;
+    font-family: 'Fasthand', Arial, cursive;
+    font-weight: bolder;
+    text-decoration:none;
+    display: block;
+}
+.pag{
+   text-align: center;
+
+}
+.pag a{
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    display: inline-block;
+}
+.pag a#active{
+
+    color:white;
+    background-color: green;
+    border-radius: 5px;
+
+
+}
+.pag a:hover:not(#active){
+    color:yellow;
+    background-color: blue;
+}
+a:visited{
+    color: red;
+}
+a:not(:visited)
+{
+    color: black;
+}
+p::selected{
+    background-color: blue;
+    color: white
+}

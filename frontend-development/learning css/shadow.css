@@ -1,0 +1,10 @@
+h1[class = "shadow"]{
+    text-shadow: 4px 3px 2px rgb(224, 34, 224), -4px -3px 3px rgb(230, 51, 39);
+}
+#box{
+    box-shadow: 7px 5px 5px red;
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+   
+}

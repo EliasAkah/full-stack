@@ -1,0 +1,26 @@
+.gallery img{
+    height: 200px;
+    width:100%;
+    
+}
+
+.gallery{
+    border:1px solid red;
+    display:inline-block;
+    margin: 0px;
+    width: 250px;
+    margin-bottom: 10px;
+    
+}
+.gallery #title{
+  text-align: center;
+  padding:1px;
+}
+
+.gallery img:hover{
+    padding: 10px;
+}
+
+.gallery #title:hover{
+    color: blue
+}

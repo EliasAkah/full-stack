@@ -1,0 +1,8 @@
+button {
+    height: 15px;
+    width: 50px;
+    margin: 10px;
+    display: inline;
+    text-align: center;
+    padding: 0px;
+}

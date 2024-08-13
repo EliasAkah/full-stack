@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="description" content />
+        <link rel="stylesheeet" href="style.css" />
+    </head>
+    <body>
+        <h1>Hello, world!</h1>
+
+        <script src="index.js" charset="UTF-8"></script>
+    </body>
+</html>
+
+<!--
+    inline javascript: onload="alert('Hello, Girl');"
+    internal  javascript: <script type = "text/javascript"> javascript code </script>
+    external javascript: <script src = "index.js" charset = "utf-8"></script>
+
+    properties: this describes something about the object;
+    methods: states what the object can do.
+    firstElementChild, lastElementChild, varName.innnerHTML = "discribed change", varName.style.color = "colour"
+    we use dot(.) to change the porperty of the object in javasscript.
+    get property: car.color;
+    set property: car.numberOfDoors = "0"; when value is added to the get property.
+    call method: car.driver(); method is something an object can do.
+
+    properties are represented by: innerHTML, style, firstChild.
+    methods are represented by: click(), appendChild, setAttribute.
+    getElementsByTagName("tagname")[position in the array].property or method.
+    getElementsByClassName("className")[position within the array].property or method.
+
+    getElementById("id name").properties or methods.
+    querySelector("selector name").properties or methods. it can combine multiple hierachical selectors.
+    querySelectorAll("selector name")[position within the array].properties or methods
+    classList.add("className").
+    classList.remove("className").
+    classList.toggle("className").: if className is not applied apply it, if it is applied do not apply.
+
+    textContent: does not give output of both text and tag within a given tag, rather it gives output of only the text within  a tag.
+    innerHTML: give output of both text and tag within a given tag.
+    querySelector("selector name").attributes: use to check how many attributes that are present within a given selector.
+    querySelector("selector name").getAttribute("attribute name"): use to print out the content of a given attribute.
+    querySelector("selector name").setAttribute("attribute name", "the new content u want to assign to the attibute"): use to assiggn a
+    new content to the targetted attribute.
+
+
+-->
+
+<!--
+    document.querySelector("h1").setAttribute("href", "https://www.yahoo.com");
+
+var selectorLength = document.querySelectorAll("li").length;
+for (var i = 0; i < selectorLength; i++) {
+    document.querySelectorAll("li")[i].addEventListener("click", welcomeGuest);
+}
+
+function welcomeGuest() {
+    alert("Welcome to the Church of God!");
+}
+-->
