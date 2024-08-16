@@ -3,6 +3,7 @@ import { useState } from "react";
 import Log from "./components/Log.jsx";
 import { WINNING_COMBINATIONS } from "./winning-combination.js";
 import GameOver from "./components/GameOver.jsx";
+import Player from "./components/Player.jsx";
 
 const PLAYERS = {
   X: "Player 1",
@@ -21,6 +22,7 @@ function deriveActivePlayer(gameTurns) {
     currentPlayer = "O";
   }
   return currentPlayer;
+
 }
 
 function deriveGameBoard(gameTurns) {
@@ -47,7 +49,7 @@ function deriveWinner(gameBoard, player) {
       gameBoard[combination[2].row][combination[2].column];
     if (
       firstSquareSymbol &&
-      (firstSquareSymbol === secondSquareSymbol) &
+      (firstSquareSymbol === secondSquareSymbol) &&
         (firstSquareSymbol === thirdSquareSymbol)
     ) {
       winner = player[firstSquareSymbol];
@@ -102,7 +104,7 @@ function App() {
           />
           <Player
             name={PLAYERS.O}
-            symbol="0"
+            symbol="O"
             isactive={activePlayer === "O"}
             onChangeName={handlePlayerNameChange}
           />
