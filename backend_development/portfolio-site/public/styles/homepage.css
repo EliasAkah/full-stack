@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(243, 241, 241);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+/* ** BLOG SESSION*/
+.blog{
+    margin: 40px;
+}
+.blog input,
+.blog textarea{
+    width: 100%;
+    min-width: 100px;
+    max-width: none;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.836);
+    padding: 10px;
+}
+
+.blog input{
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    font-size: 2rem;
+    font-weight: Bolder;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blog input:focus{
+    outline: none;
+}
+
+.blog textarea{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.blog textarea::placeholder{
+    color: grey;
+    text-transform: capitalize;
+}
+
+.blog textarea:focus{
+    outline: none;
+}
+
+.blog button{
+    padding: 10px 20px;
+    font-size: 2rem;
+    background-color: rgb(29, 29, 241);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+#new-post{
+    background-color: rgb(52, 68, 245);
+    padding: 10px 20px;
+    line-height: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 200px;
+    margin-left: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+#output{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+
+#post-sequence{
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    margin: 20px;
+    padding: 10px 10px;
+    width: 50%;
+}
+
+.text-container {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+}
+
+#post-content{
+    height: 100px;
+}
