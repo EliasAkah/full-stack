@@ -18,9 +18,12 @@
                 <a href = "/content?title=<%= encodeURIComponent(title) %>&content=<%= encodeURIComponent(content) %>" id = "output"><button type = "submit">Read more</button></a>
             </div>
         </div>
-        <a href = "/new-post"><button type = "submit" id = "new-post">Create a Post</button></a>
-    <%}else{%>
-        <a href = "/new-post"><button type = "submit" id = "new-post">Create a Post</button></a>
+        <%-button%>
+    <%}else if(locals.createPost && locals.createPost.length > 0){%>
+        <%createPost.forEach(createPost => {%>
+            <%- createPost.form %>
+        <%})%>
+        <%-button%>
     <%}%>
 </body>
 </html>
