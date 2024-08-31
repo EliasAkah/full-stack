@@ -14,8 +14,9 @@ export default {
         buttonWidth: "200px",
         buttonHeight: "150px",
         div1Width: "30%",
-        div2Width: "70%",
+        div2Width: "65%",
         div1Height: "90%",
+        button1Width: ""
       },
       lineHeight:{
         buttonLineHeight: "150px",
@@ -26,6 +27,9 @@ export default {
       padding:{
         horizPadding: "30px",
         vertPadding: "50px"
+      },
+      borderColor:{
+        bottomColor: "rgb(17, 2, 2)"
       }
     },
   },
