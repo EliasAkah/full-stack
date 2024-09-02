@@ -16,7 +16,8 @@ export default {
         div1Width: "30%",
         div2Width: "65%",
         div1Height: "90%",
-        button1Width: ""
+        button1Width: "",
+        div3width: "90%"
       },
       lineHeight:{
         buttonLineHeight: "150px",

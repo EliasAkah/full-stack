@@ -1,9 +1,19 @@
-import  {useState, useEffect} from 'react'
+import  {useState, useRef} from 'react'
 import React from "react-dom"
 import SideBar from "./SideBar.jsx"
 
 function Form() {
   const [addProject, setAddProject] = useState(false);
+  const [titleList, setTitleList] = useState([])
+  const inputRef = useRef();
+
+  function handleProjectUpdate(){
+    const title = inputRef.current.value
+
+    if(title){
+      setTitleList(prevTitle => [...prevTitle, title])
+    }
+  }
 
   function updateAddProject(){
     setAddProject(true);
@@ -12,19 +22,19 @@ function Form() {
   return React.createPortal(
     <div className = "flex w-full h-full">
       {/* <button onClick = {updateAddProject}>Turn On add Project</button> */}
-      <SideBar updateProject = {updateAddProject} />
+      <SideBar updateProject = {updateAddProject} titleList = {titleList}/>
       { 
         (addProject) ?
           <div className = "flex flex-col justify-center h-full w-div2Width ">
-            <form action="Submit"  method = "post" className = "w-full ml-divMargin">
+            <form className = "w-full ml-divMargin">
               <p className = "flex justify-end w-10/12">
                 <button className = "bg-transparent text-black px-5 py-2 tracking-wider">Cancel</button>
-                <button className = "bg-black w- text-white px-5 py-2 rounded-sm tracking-wider">Save</button>
+                <button className = "bg-black w- text-white px-5 py-2 rounded-sm tracking-wider" onClick = {handleProjectUpdate}>Save</button>
               </p>
 
               <p className = "w-10/12">
                 <label htmlFor="tile" className = "uppercase block flex-1 w-full font-semibold ">Title</label>
-                <input type = "text" className = "bg-neutral-400 flex-1 w-full focus:outline-none focus:border-b-2 border-0 focus:border-bottomColor focus:text-amber-950 mb-4" />               
+                <input ref = {inputRef}type = "text" className = "bg-neutral-400 flex-1 w-full focus:outline-none focus:border-b-2 border-0 focus:border-bottomColor focus:text-amber-950 mb-4" />               
               </p>
 
               <p className = "w-10/12">
@@ -44,7 +54,7 @@ function Form() {
             <h1 className = "font-bold capitalize mt-4 text-3xl" tracking-wide>No project selected</h1>
             <p className='mt-4 text-xl tracking-wide'>Select a project or get started with a new one</p>
             <p>
-            <button className = "bg-primary py-3 px-3 text-gray-400 capitalize w-buttonWidth h-buttonHeight rounded-xl m-5 tracking-wide">Create new project</button>
+            <button className = "bg-primary py-3 px-3 text-gray-400 capitalize w-buttonWidth h-buttonHeight rounded-xl m-5 tracking-wide" onClick = {updateAddProject}>Create new project</button>
             </p>
           </div>
         }      
