@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            height: 100vh;
+            margin: 50px;
+            background: linear-gradient(to right, black, blue)
+        }
+        #id{
+            display: flex;
+            flex-direction: column;
+        }
+        p{
+            font-size: 30px;
+            font-weight: bolder;
+            color: red;
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <% if (locals.data) { %>
+        <h1>COCKTAIL FOR THE DAY</h1>
+        <div id = "container">
+            <img src = <%= data.strDrinkThumb %>>
+            <p><%= data.strDrink%>  <span>(<%= data.strAlcoholic %>)</span></p>
+        </div>
+    <% }else{%>
+        <%= error %>
+    <% } %>
+</body>
+</html>
