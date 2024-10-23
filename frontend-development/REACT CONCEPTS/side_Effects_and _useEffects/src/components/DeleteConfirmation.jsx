@@ -1,4 +1,8 @@
-import {useEffect} from  "react"
+import {useEffect, useState} from  "react"
+import ProgressBar from "./ProgressBar.jsx"
+
+//defining TIMER outside function component to ensure that it can be used on any part of the function component
+const TIMER =  3000
 
 export default function DeleteConfirmation({ onConfirm, onCancel }) {
   useEffect(() => {
@@ -26,6 +30,7 @@ export default function DeleteConfirmation({ onConfirm, onCancel }) {
           Yes
         </button>
       </div>
+      <ProgressBar time = {TIMER} />
     </div>
   );
 }
