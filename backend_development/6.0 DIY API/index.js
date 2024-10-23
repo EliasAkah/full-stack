@@ -3,29 +3,130 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
+const masterKey = "1f8ebe0c-04a6-424d-aa87-e414f33aa125";
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.json());
+
 
 //1. GET a random joke
 app.get("/random", (req, res) => {
   let randomIndex =  Math.floor(Math.random() * jokes.length);
-  res.send(res.json(jokes[randomIndex]))
+  
+  //Converting to the randomly selected code to json file format
+  const jsonFormat =  res.json(jokes[randomIndex])
+
+  //sending the file to the user interface
+  res.send(jsonFormat)
 })
 
 //2. GET a specific joke
+app.get("/jokes/:id", (req, res) => {
+  console.log(req.params)
+  const parsedId = parseInt(req.params.id)
+  if(isNaN(parsedId)) return res.status(400).send({msg: "Bad Request. invalid ID."});
+  const findUser = jokes.find(joke => joke.id === parsedId)
+  if(!findUser) return res.sendStatus(404);
+  return res.send(res.json(findUser));
+  
 
+})
 //3. GET a jokes by filtering on the joke type
-
+app.get('/filter', (req, res) => {
+  const typeOfJoke = req.query.Type
+  const filterJokes = jokes.filter(joke => joke.jokeType === typeOfJoke)
+  res.json(filterJokes)
+})
 //4. POST a new joke
+app.post("/jokes",  (req, res) => {
+  console.log(req.body)
+  const {body} = req;
+  //finding out the last id value of the last joke in jokes array
+  const lastID = jokes[jokes.length - 1].id
+  //creating a new joke object with a new id and an expected dynamic keys and values 
+  //adding the new joke to the orginal jokes array(i.e updating the original joke array with a new joke object)
+  jokes.push(newJoke);
+  //converting the joke object to a json format
+  res.json(jokes)
+})
 
 //5. PUT a joke
+app.put("/jokes/:id", (req, res) => {
+  const { params: {id}} = req
+  //converting the id to an int
+  const intId = parseInt(id)
+  //checking if the id is not an int
+  if(isNaN(intId)) return res.status(400).send({msg: "Bad Request. invalid ID."});
+  //finding index of the joke which id matches that of the params id
+  const findJokeIndex = jokes.findIndex(joke => joke.id === intId)
+  //checking if the joke does not exist
+  if(findJokeIndex === -1) return res.sendStatus(404);
+  //creating an updated version of the found joke by keeping the id intact and shallow coping body (contains keys and values that can make up the object) ensuring that they can be changed.
+  const replacementJoke = {id: intId, jokeText: req.body.text, jokeType: req.body.type}
+  jokes[findJokeIndex] = replacementJoke
+  //converting the joke to json file format.
+  res.json(replacementJoke)
+})
 
 //6. PATCH a joke
-
+app.patch("/jokes/:id", (req, res) => {
+  const {body, params: {id}} = req
+  //converting the id to an int
+  const intId = parseInt(id)
+  //checking if the id is not an int
+  if(isNaN(intId)) return res.status(400).send({msg: "Bad Request. invalid ID."});
+  //finding and returning the code in the list of code which id is equal to the params id
+  const existingCode = jokes.find((joke) => joke.id === intId);
+  //displaying he edited value of the key if a change occurs or displaying the initial value of the key if know changes occur and assign the new object to a variable called replacementJoke
+  const replacementJoke = {
+    id: intId,
+    jokeText: req.body.text || existingCode.jokeText,
+    jokeType: req.body.type || existingCode.jokeType,
+  }
+  //finding index of the joke which id matches that of the params id
+  const findJokeIndex = jokes.findIndex(joke => joke.id === intId)
+  //checking if the joke does not exist
+  if(findJokeIndex === -1) return res.sendStatus(404);
+  // //coping all the keys and values of the chosen joke while allowing us to iclude others. ensuring that the unaltered values remain intertect while changing others
+  // const replacementJoke = {...jokes[findJokeIndex], ...body}
+  jokes[findJokeIndex] = replacementJoke
+  console.log(jokes[findJokeIndex])
+  //converting the joke to json file format.
+  res.json(replacementJoke)
+})
 //7. DELETE Specific joke
-
+app.delete("/jokes/:id", (req, res) => {
+  const { params: {id}} = req
+  //converting the id to an int
+  const intId = parseInt(id)
+  //checking if the id is not an int
+  if(isNaN(intId)) return res.status(400).send({msg: "Bad Request. invalid ID."});
+  //finding index of the joke which id matches that of the params id
+  const findJokeIndex = jokes.findIndex(joke => joke.id === intId)
+  //checking if the joke does not exist in jokes array
+  if(findJokeIndex === -1) return res.sendStatus(404).json({error: `joke with id: ${id} not found. no jokes were deleted `});
+  //deleting a specific joke using the splice method to detect the starting index, number of values to delete and, a replacement value if necessary
+ jokes.splice(findJokeIndex, 1)
+  //converting the joke to json file format.
+  //sending the string equivalent of the status code '200'
+  res.sendStatus(200)
+})
 //8. DELETE All jokes
+app.delete("/all", (req, res) => {
+  //getting hold of the 'key, query parameter in the url and assigning it to a variable
+  const userKey = req.query.key;
+  //deleting a specific joke using the splice method to detect the starting index, number of values to delete and, a replacement value if necessary
+  if(userKey === masterKey){
+    jokes.splice(0);
+    //or jokes = []
+    res.sendStatus(200);
+  }else{
+    res.status(404).json({
+      error: `You are not authorised to perform this action`}
+  )
+  }
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
