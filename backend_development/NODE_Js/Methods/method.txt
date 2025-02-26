@@ -1,0 +1,21 @@
+deleteOne(filter?, options?) => Delete a document from a collection
+deleteMany(filter?, options?) => Delete multiple documents from a collection
+drop(options?) => Drop the collection from the database, removing it permanently. New accesses will create a new collection.
+
+
+Document count:
+countDocuments(filter?, options?) => Gets the number of documents matching the filter(loops through all the doc)
+* uses the $match aggregation pipeline stage, therefore cannot use
+    $where, $near, $nearSphere, which are therefore replaced by with ($expr), ($geoWithin with $center), ($geoWithin with $centerSphere) respectively.
+*improve it performance by avoiding a collection scan, using hint e.g "collection.countDocuments({}, { hint: "_id_" }";
+    can only work on countDocuments() with an empty query parameter
+)
+
+estimatedDocumentCount(options?) => Gets an estimate of the count of documents in a collection using collection metadata.
+* This will always run a count command on all server versions.
+
+Retrieving distinct values:
+distinct(key,query, options) => The distinct command returns a list of distinct values for the given key across a collection.
+* Type Parameters => Key string 
+* use dot notation to target a particular key in an embedded document e.g "const distinctValues = myColl.distinct("awards.wins", query);"
+

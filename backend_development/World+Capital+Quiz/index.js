@@ -5,33 +5,27 @@ import pg from "pg"
 const app = express();
 const port = 3000;
 
+///my old number 08904286438
 //creating a client object
 const db = new pg.Client({
-  user: "postgres",
+  user: "postgres", //elias
   host: 'localhost',
   database: 'world',
-  password: "08038838681",
+  password: "123456",
   port: 5432
 })
+ 
+db.connect();
 
-let quiz = [
-  { country: "France", capital: "Paris" },
-  { country: "United Kingdom", capital: "London" },
-  { country: "United States of America", capital: "New York" },
-];
-
-async () => {
-  try {
-    await db.connect();
-    console.log("Connected to PostgreSQL");
-    const result = await db.query("SELECT * FROM capitals");
-    quiz = result.rows;  // Update quiz array with data from database
-  } catch (err) {
-    console.error('Error executing query', err.stack);
-  } finally {
-    db.end(); // Close the connection after the query is done
+let quiz = [];
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
   }
-};
+  db.end();
+});
 
 let totalCorrect = 0;
 

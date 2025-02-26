@@ -1,3 +1,16 @@
 {
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "World Capital",
+            "database": "world",
+            "username": "postgres",
+            "password": "123456",
+            "connectionTimeout": 30
+        }
+    ]
 }

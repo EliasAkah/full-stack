@@ -1,0 +1,20 @@
+import bodyParser from "body-parser"
+import express from "express";
+
+const app = express();
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.static("public"));
+app.use(express.json());
+
+app.use((req,res, next) => {
+    res.send("hello world" `${req.method} and ${req.body}`)
+    next();
+})
+
+
+app.e()//route handler for http post request use for submiting data that is to be process to a specified resoura
+
+
+
+import 
