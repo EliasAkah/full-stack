@@ -1,12 +1,10 @@
+import Places from "./Places.jsx";
+import Error from "./Error.jsx";
+import { sortPlacesByDistance } from "../loc.js";
+import { fetchAvailablePlaces } from "../http.js";
+import { useFetch } from "../hooks/useFetch.js";
 
-
-import Places from './Places.jsx';
-import Error from './Error.jsx';
-import { sortPlacesByDistance } from '../loc.js';
-import { fetchAvailablePlaces } from '../http.js';
-import { useFetch } from '../hooks/useFetch.js';
-
-async function fetchSortedPlaces(){
+async function fetchSortedPlaces() {
   const places = await fetchAvailablePlaces();
 
   return new Promise((resolve) => {
@@ -16,19 +14,21 @@ async function fetchSortedPlaces(){
         position.coords.latitude,
         position.coords.longitude
       );
-
-      resolve(sortedPlaces)
+      console.log("check me out", places);
+      resolve(sortedPlaces);
     });
   });
-
 }
-  
-export default function AvailablePlaces({ onSelectPlace }) {
 
- const {isFetching, error, FetchedData: availablePlaces} = useFetch(fetchSortedPlaces, [])
+export default function AvailablePlaces({ onSelectPlace }) {
+  const {
+    isFetching,
+    error,
+    fetchedData: availablePlaces,
+  } = useFetch(fetchSortedPlaces, []);
 
   if (error) {
-    return <Error title="An error occurred!" message={error.message} />
+    return <Error title="An error occurred!" message={error.message} />;
   }
 
   return (
