@@ -1,0 +1,63 @@
+    const formData = new FormData(event.target); => targeting the form element along with all the input elements inside to acess their values
+
+    // const email = formData.get("email"); => fetches the value of the element within form element with the name "eamil"
+
+    const acquisitionChannel = formData.getAll("acquisition");  => loops through all the elements within a form that has the same name and returns an array that contains their values
+
+    const data = Object.fromEntries(formData.entries()); => loops through all the elements within form element and accessing their value and assign them as an object
+    // to the data object variable defined. it does not include the value of an elements that have the same "name" attribut.
+
+    data.acquistion = acquisitionChannel; =>creating a new property (acquisition) in the "data" object variable and assigning the value "acquisitionChannel".
+    //where acquisitionChannel is an array of values of input elements
+
+    console.log(data);
+
+    //resetting the form after submission
+    event.target.reset();
+
+
+    ////ensuring that emailIsInvalid is true only when a text has entered the input element and when their is no "@" special in any of the inputs entered into the input element
+  const emailIsInvalid =
+    didEdit.email &&
+    !enteredValue.email.includes("@") &&
+    enteredValue.email.trim().length > 0;
+
+  const passwordInvalid =
+    didEdit.password &&
+    enteredValue.password.trim().length < 6 &&
+    enteredValue.password.trim().length > 0;
+
+  //function that is executed when a form is submitted
+  function handleFormSubmit(event) {
+    event.preventDefault(); // stops An element from carry out its default operation but rather carryout the javascript code or react program written below it.
+
+    console.log(enteredValue);
+
+    //resetting the form
+    setEnteredValue({
+      email: "",
+      password: "",
+    });
+  }
+
+  //fetching and updating the enteredValue object each a value is enterd for each input using a single callback function
+  function handleInputChange(identifier, value) {
+    setEnteredValue((prevValue) => ({
+      ...prevValue,
+      [identifier]: value, //dynamically modifiy each of the object data each there is a change in the value entered
+    }));
+
+    //ensuring that the error disappears whenever refocus on the input element, since when we do that we have an opportunity to write the right email address
+    setDidEdit((prevEdit) => ({
+      ...prevEdit,
+      [identifier]: false,
+    }));
+  }
+
+  function handleLostFocusValidation(identifier) {
+    //ensuring that the didEdit value is true
+    setDidEdit((prevEdit) => ({
+      ...prevEdit,
+      [identifier]: true,
+    }));
+  }
