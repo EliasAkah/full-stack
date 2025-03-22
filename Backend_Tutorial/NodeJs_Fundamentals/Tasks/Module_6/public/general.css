@@ -1,0 +1,21 @@
+ul {
+  list-style-type: square;
+}
+li {
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+li::marker {
+  color: blue;
+  font-size: 3.4rem;
+}
+
+p {
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

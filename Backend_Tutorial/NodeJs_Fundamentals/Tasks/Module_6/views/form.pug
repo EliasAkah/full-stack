@@ -1,0 +1,9 @@
+extends layouts/main-layout.pug
+
+block bodyContent
+    form(action="/users", method = "POST")
+        label(for="firstName") First Name
+            input#firstName(type="text", name = "firstName" value = "")
+        label(for="lastName") Last Name
+            input#lastName(type="text", name = "lastName" value = "")
+        button(type = "submit") Submit

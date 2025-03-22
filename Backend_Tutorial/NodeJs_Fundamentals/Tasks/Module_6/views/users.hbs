@@ -1,0 +1,12 @@
+{{#if hasBothNames}}
+  <ul>
+    <li>{{firstName}}</li>
+    <li>{{lastName}}</li>
+  </ul>
+{{else if firstName.length}}
+  <p>Please Enter an your LastName</p>
+{{else if lastName.length}}
+  <p>Please Enter an your firtName</p>
+{{else}}
+  <p>Please Enter an your firtName and LastName</p>
+{{/if}}

@@ -1,0 +1,18 @@
+<%- include("./subpart/head.ejs") %>
+
+<body>
+  <%if(firstName !== "" && lastName !== ""){%>
+  <ul>
+    <!-- include a list value here dynamically -->
+    <li><%= firstName %></li>
+    <li><%= lastName %></li>
+  </ul>
+  <%}else if(firstName !== "" && lastName === ""){%>
+  <p>Please Enter an your LastName</p>
+  <%}else if(firstName === "" && lastName !== ""){%>
+  <p>Please Enter an your firtName</p>
+  <%}else{%>
+  <p>Please Enter an your firtName and LastName</p>
+<%}%>
+<%- include("./subpart/end.ejs") %>
+

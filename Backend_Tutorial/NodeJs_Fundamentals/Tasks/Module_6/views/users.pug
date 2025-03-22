@@ -1,0 +1,15 @@
+extends layouts/main-layout.pug
+
+block bodyContent
+    if firstName !== "" && lastName !== ""
+        ul
+            li #{firstName}
+            li #{lastName}
+    else if firstName !== "" && lastName == ""
+        p Please Enter an your LastName
+    else if firstName === "" && lastName !== ""
+        p Please Enter an your FirstName
+    else
+        p Please Enter both FirstName and LastName
+
+
