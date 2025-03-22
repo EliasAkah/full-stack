@@ -11,7 +11,13 @@ router.get("/", (req, res, next) => {
   const products = adminData.products;
   console.log(rootDir);
   //using render to send a template engine file to the Client side of the browser
-  res.render("shop", {products: products, docTitle: "Shop"});
+  res.render("shop", {
+    products: products,
+    docTitle: "Shop",
+    path: "/",
+    formCSS: true,
+    shopActive: true,
+  });
 });
 
 module.exports = router;
