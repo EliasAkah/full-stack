@@ -2,7 +2,7 @@ import { Product } from "../modles/product.mjs";
 
 //controller that handles the post request for /add-product url
 export function getAddProduct(req, res, next) {
-  res.render("add-product", {
+  res.render("admin/add-product", {
     pageTitle: "Add Product",
     path: "/admin/add-product",
     formsCSS: true,
@@ -20,7 +20,7 @@ export function postAddProduct(req, res, next) {
 
 export function shopGetProduct(req, res, next) {
   Product.fetchAll((products) => {
-    res.render("shop", {
+    res.render("shop/product-list", {
       prods: products,
       pageTitle: "Shop",
       path: "/",
@@ -29,6 +29,13 @@ export function shopGetProduct(req, res, next) {
       productCSS: true,
     });
   });
+}
+
+
+export function getAdminProducts(req, res, next){
+  Product.fetchAll((products) => {
+    res.render('admin/products', {products: products, pageTitle: "Admin Products", path: "/admin/Products"})
+  })
 }
 const productController = { getAddProduct, postAddProduct, shopGetProduct };
 
