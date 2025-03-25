@@ -1,5 +1,5 @@
 import express from "express";
-import { productController } from "../controllers/products.mjs";
+import { productController } from "../controllers/admin.mjs";
 
 const router = express.Router();
 
@@ -9,4 +9,6 @@ router.get("/add-product", productController.getAddProduct);
 // /admin/add-product => POST
 router.post("/add-product", productController.postAddProduct);
 
-export {router as adminRoutes};
+router.get("/products", productController.getAdminProducts);
+
+export { router as adminRoutes };

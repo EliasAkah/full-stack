@@ -14,13 +14,16 @@ function getProductFromFile(cb) {
   // return products; //returns the products array contain all stored product objects
 }
 export class Product {
-  constructor(t) {
-    this.title = t; //assigns the argument passed to the class when a new object was created. the title is a property the created would and the t is the value of the title property
+  constructor(title, image, price, description) {
+    this.title = title; //assigns the argument passed to the class when a new object was created. the title is a property the created would and the t is the value of the title property
+    this.imageURL = image; //assigns the argument passed to the class when a new object was created. the title is a property the created would and the t is the value of the title property
+    this.price = price; //assigns the argument passed to the class when a new object was created. the title is a property the created would and the t is the value of the title property
+    this.description = description; //assigns the argument passed to the class when a new object was created. the title is a property the created would and the t is the value of the title property
   }
 
   save() {
     getProductFromFile((products) => {
-      products.push(this);//this means that the object that was create was moved into the products array. "this" key word here means the current object
+      products.push(this); //this means that the object that was create was moved into the products array. "this" key word here means the current object
       fs.writeFile(p, JSON.stringify(products), (err) => {
         caches.log(err);
       });
