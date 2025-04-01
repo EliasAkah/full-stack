@@ -1,4 +1,5 @@
-import { useActionState, startTransition, useRef } from "react";
+import { useActionState, startTransition, useRef, useOptimistic } from "react";
+import FormButton from "./FormButton.jsx";
 
 export default function Form({ handleFormClose, openStatusModal, totalCost }) {
   const [formState, formAction, isPending] = useActionState(handleFormAction, {
@@ -162,14 +163,7 @@ export default function Form({ handleFormClose, openStatusModal, totalCost }) {
           ))}
         </ul>
       )}
-      <div className="modal-actions">
-        <button className="text-button" onClick={handleFormClose}>
-          Close
-        </button>
-        <button className="button" type="submit">
-          {isPending ? "Submitting..." : "Submit Order"}
-        </button>
-      </div>
+      <FormButton  handleFormClose = {handleFormClose}/>
     </form>
   );
 }
