@@ -1,18 +1,23 @@
-import { useActionState } from "react";
+import { useActionState, startTransition, useRef } from "react";
 
-export default function Form({ handleFormClose, openStatusModal }) {
-  function handleFormAction(prevformState, formData) {
+export default function Form({ handleFormClose, openStatusModal, totalCost }) {
+  const [formState, formAction, isPending] = useActionState(handleFormAction, {
+    errors: [],
+  });
+
+  const formRef = useRef();
+
+  async function handleFormAction(prevformState, formData) {
     const data = Object.fromEntries(formData.entries());
     console.log(data);
-    const { FullName, emailAddress, street, postalCode, city } = data;
-    console.log(data);
-    let errors = [];
+    const { name, email, street, "postal-code": postalCode, city } = data;
 
+    let errors = [];
     //if fullName is empty
-    if (!FullName.trim()) {
+    if (!name.trim()) {
       errors.push("Enter Your Full Name");
     }
-    if (!emailAddress.trim()) {
+    if (!email.trim()) {
       errors.push("Enter Your Email Address");
     }
     if (!street.trim()) {
@@ -25,51 +30,101 @@ export default function Form({ handleFormClose, openStatusModal }) {
       errors.push("Enter Your City");
     }
 
+    // If validation fails, return errors immediately (Prevents unnecessary API calls)
     if (errors.length > 0) {
       return {
         errors,
         enteredValues: {
-          FullName,
-          emailAddress,
+          name,
+          email,
           street,
-          postalCode,
+          "postal-code": postalCode,
           city,
         },
       };
     }
 
-    return {
-      errors: null,
-    };
+    try {
+      const itemsResponse = await fetch("http://localhost:3000/items");
+      if (!itemsResponse.ok) throw new Error("Failed to fetch items.");
+
+      const itemsArray = await itemsResponse.json();
+
+      // Frontend validation: Block form submission if no items exist
+      if (!itemsArray.length) {
+        return {
+          errors: ["Cannot place an order without items."],
+          enteredValues: {},
+        };
+      }
+
+      data.customer = { name, email, street, "postal-code": postalCode, city };
+      data.items = itemsArray;
+      console.log(data);
+
+      console.log("Sent Data:", JSON.stringify({ order: data }, null, 2));
+
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate async delay
+
+      const response = await fetch("http://localhost:3000/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ order: data }),
+      });
+
+      if (!response.ok) throw new Error("Failed to submit order.");
+
+      const resData = await response.json();
+      console.log(resData.message);
+      formRef.current.reset();
+      openStatusModal();
+      handleFormClose();
+      return { errors: [], enteredValues: {} };
+    } catch (error) {
+      console.error("Error:", error.message);
+      return {
+        errors: ["An unexpected error occurred. Please try again."],
+        enteredValues: {},
+      };
+    }
   }
-  const [formState, formAction, isPending] = useActionState(handleFormAction, {
-    errors: null,
-  });
+
   return (
-    <form action={formAction}>
-      <h3>Checkout</h3>
+    <form
+      ref={formRef}
+      onSubmit={(e) => {
+        e.preventDefault();
+        startTransition(async () => {
+          const result = await formAction(new FormData(e.target));
+          console.log("Form submission result:", result);
+        });
+      }}
+    >
+      <h2>Checkout</h2>
       <p>
-        Total Amount: <span>$89.95</span>
+        Total Amount: <span>${totalCost}</span>
       </p>
-      <div>
-        <label htmlFor="FullName">First Name</label>
+      <div className="control">
+        <label htmlFor="name">First Name</label>
         <input
           type="text"
-          name="FullName"
-          id="FullName"
-          defaultValue={formState.enteredValues?.FullName}
+          name="name"
+          id="name"
+          defaultValue={formState.enteredValues?.name}
         />
       </div>
-      <div>
-        <label htmlFor="emailAddress">E-mail Address</label>
+      <div className="control">
+        <label htmlFor="email">E-mail Address</label>
         <input
           type="email"
-          name="emailAddress"
-          id="emailAddress"
-          defaultValue={formState.enteredValues?.emailAddress}
+          name="email"
+          id="email"
+          defaultValue={formState.enteredValues?.email}
         />
       </div>
-      <div>
+      <div className="control">
         <label htmlFor="street">Street</label>
         <input
           type="text"
@@ -78,26 +133,28 @@ export default function Form({ handleFormClose, openStatusModal }) {
           defaultValue={formState.enteredValues?.street}
         />
       </div>
-      <div>
-        <label htmlFor="postalCode">
-          <p>Postal Code</p>
+      <div className="control-row">
+        <div className="control">
+          <label htmlFor="postal-code">Postal Code</label>
           <input
             type="number"
-            name="postalCode"
-            id="postalCode"
-            defaultValue={formState.enteredValues?.postalCode}
+            name="postal-code"
+            id="postal-code"
+            defaultValue={formState.enteredValues?.["postal-code"]}
           />
-        </label>
-        <label htmlFor="city">
-          <p>City</p>
+        </div>
+
+        <div className="control">
+          <label htmlFor="city">City</label>
           <input
             type="text"
             name="city"
             id="city"
             defaultValue={formState.enteredValues?.city}
           />
-        </label>
+        </div>
       </div>
+
       {formState.errors?.length > 0 && (
         <ul>
           {formState.errors.map((error) => (
@@ -105,9 +162,11 @@ export default function Form({ handleFormClose, openStatusModal }) {
           ))}
         </ul>
       )}
-      <div>
-        <button onClick={handleFormClose}>Close</button>
-        <button onClick={openStatusModal} type="submit">
+      <div className="modal-actions">
+        <button className="text-button" onClick={handleFormClose}>
+          Close
+        </button>
+        <button className="button" type="submit">
           {isPending ? "Submitting..." : "Submit Order"}
         </button>
       </div>

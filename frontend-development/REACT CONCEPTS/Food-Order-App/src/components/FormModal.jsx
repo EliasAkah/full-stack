@@ -1,12 +1,15 @@
-import { useImperativeHandle, useRef, useState } from "react";
+import { useImperativeHandle, useRef, useContext } from "react";
 
 import Form from "./Form.jsx";
 import StatusModal from "./StatusModal.jsx";
+import { FoodDetailContext } from "../store/Modifiy-Data";
 
-export default function FormModal({ ref, handleFormClose }) {
+export default function FormModal({ ref, handleFormClose, totalCost }) {
+  const { itemList, populateOrders, setItemList } =
+    useContext(FoodDetailContext);
+
   const formDialogRef = useRef();
   const statusRef = useRef();
-  const [openStatus, setOpenStatus] = useState(false);
 
   useImperativeHandle(
     ref,
@@ -24,34 +27,29 @@ export default function FormModal({ ref, handleFormClose }) {
   );
 
   function openStatusModal() {
-    setOpenStatus(true);
-    setTimeout(() => {
-      handleFormClose();
-      statusRef.current?.openStatus();
-    }, 2000);
-
-    
+    console.log("Opening status modal...", statusRef.current); // Debugging line
+    statusRef.current?.openStatus();
   }
 
   function closeStatusModal() {
     statusRef.current?.closeStatus();
-    setOpenStatus(false);
+    setItemList([]);
   }
 
   return (
     <>
-      {openStatus && (
-        <StatusModal
-          ref={statusRef}
-          closeStatus={closeStatusModal}
-          handleFormClose={handleFormClose}
-        />
-      )}
-      <dialog ref={formDialogRef} onClose={handleFormClose}>
+      <StatusModal
+        ref={statusRef}
+        closeStatus={closeStatusModal}
+        handleFormClose={handleFormClose}
+      />
+
+      <dialog className="modal cart" ref={formDialogRef} onClose={handleFormClose}>
         <Form
           closeStatusModal={closeStatusModal}
           openStatusModal={openStatusModal}
           handleFormClose={handleFormClose}
+          totalCost={totalCost}
         />
       </dialog>
     </>
