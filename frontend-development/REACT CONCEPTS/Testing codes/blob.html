@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormData Blob Example</title>
+  </head>
+  <body>
+    <h2>FormData with Blob Example</h2>
+    <button id="uploadBtn">Create & Log FormData</button>
+    <button id="multiply" onclick="handleMultiplication()">multiply</button>
+    <h1 id="triceValue"></h1>
+
+    <script>
+      document.getElementById("uploadBtn").addEventListener("click", () => {
+        // Create a FormData object
+        const formData = new FormData();
+
+        // Create a Blob containing text data
+        const textBlob = new Blob(["This is a sample text file."], {
+          type: "text/plain",
+        });
+
+        // Append Blob to FormData with a filename
+        formData.append("myTextFile", textBlob, "sample.txt");
+
+        // Log the FormData entries
+        console.log([...formData.entries()]);
+      });
+
+      function handleMultiplication() {
+        function multiplier(factor) {
+          return (number) => number * factor;
+        }
+        let twice = multiplier(2);
+        let thrice = twice(5);
+        console.log(thrice);
+
+        const header1 = document.getElementById("triceValue");
+        header1.textContent = thrice;
+      }
+    </script>
+  </body>
+</html>
