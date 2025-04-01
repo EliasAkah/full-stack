@@ -1,11 +1,12 @@
-    const formData = new FormData(event.target); => targeting the form element along with all the input elements inside to acess their values
+    const formData = new FormData(event.target); => targeting the form element inorder the values of all the input elements inside it
 
-    // const email = formData.get("email"); => fetches the value of the element within form element with the name "eamil"
+    // const email = formData.get("email"); => fetches the value of the form element with the name "eamil"
 
-    const acquisitionChannel = formData.getAll("acquisition");  => loops through all the elements within a form that has the same name and returns an array that contains their values
+    const acquisitionChannel = formData.getAll("acquisition");  => loops through all the elements within a form that has the same name and returns an array that contains
+     // their respectiv values as they are selected, or entered
 
     const data = Object.fromEntries(formData.entries()); => loops through all the elements within form element and accessing their value and assign them as an object
-    // to the data object variable defined. it does not include the value of an elements that have the same "name" attribut.
+    // to the data object variable defined. it does not include the value of those elements that have the same "name" attribut.
 
     data.acquistion = acquisitionChannel; =>creating a new property (acquisition) in the "data" object variable and assigning the value "acquisitionChannel".
     //where acquisitionChannel is an array of values of input elements
