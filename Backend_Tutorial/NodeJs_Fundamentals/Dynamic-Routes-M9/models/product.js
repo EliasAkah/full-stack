@@ -1,14 +1,21 @@
 const fs = require("fs");
 const path = require("path");
+const express = require("express");
 
-const p = path.join(
-  path.dirname(process.mainModule.filename),
+const productPath = path.join(
+  path.dirname(require.main.filename),
   "data",
   "products.json"
 );
 
+const cartPath = path.join(
+  path.dirname(require.main.filename),
+  "data",
+  "cart.json"
+);
+
 const getProductsFromFile = (cb) => {
-  fs.readFile(p, (err, fileContent) => {
+  fs.readFile(productPath, (err, fileContent) => {
     if (err) {
       cb([]);
     } else {
@@ -17,6 +24,19 @@ const getProductsFromFile = (cb) => {
   });
 };
 
+function addProductToCart(product) {
+  fs.writeFile(cartPath, JSON.stringify(product), "utf-8");
+}
+
+function getProductFromCart(cb) {
+  fs.readFile(cartPath, (error, fileContent) => {
+    if (error) {
+      cb([]);
+    } else {
+      cb(JSON.parse(fileContent));
+    }
+  });
+}
 module.exports = class Product {
   constructor(title, imageUrl, description, price) {
     this.title = title;
@@ -29,7 +49,7 @@ module.exports = class Product {
     this.id = Math.random().toString();
     getProductsFromFile((products) => {
       products.push(this);
-      fs.writeFile(p, JSON.stringify(products), (err) => {
+      fs.writeFile(productPath, JSON.stringify(products), (err) => {
         console.log(err);
       });
     });
@@ -37,5 +57,23 @@ module.exports = class Product {
 
   static fetchAll(cb) {
     getProductsFromFile(cb);
+  }
+
+  static findById(id, cb) {
+    getProductsFromFile((products) => {
+      const findId = products.find((p) => p.id === id);
+      cb(findId);
+    });
+  }
+
+  static addCartProduct(product) {
+    addProductToCart(product);
+  }
+
+  static getCatProduct(id, cb) {
+    getProductFromCart((cartProducts) => {
+      const findId = cartProducts.find((p) => p.id === id);
+      cb(findId);
+    });
   }
 };

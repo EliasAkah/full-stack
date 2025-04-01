@@ -1,0 +1,21 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <%if(prod){%>
+            <article style = "text-align: center">
+                <h1><%= prod.title%></h1>
+                <hr>
+                <div>
+                    <img src="<%= prod.imageUrl %>" alt="<%= prod.title%>">
+                </div>
+                <h2><%= prod.price%></h2>
+                <p><%= prod.description%></p>
+                <%- include('../includes/add-to-cart.ejs') %>
+            </article>
+        <%}else{%>
+            <h1>No product Details ...</h1>
+        <%}%>
+<form action=""></form>
+        <%- include('../includes/end.ejs') %>
