@@ -1,11 +1,10 @@
-import Article from "./components/Article.jsx";
-import Navigation from "./components/Navigation.jsx";
+
+import ProvideContext from "./components/ProvideContext.jsx";
 function App() {
   return (
-    <div>
-      <Navigation />
-      <Article />
-    </div>
+    <>
+      <ProvideContext />
+    </>
   );
 }
 
