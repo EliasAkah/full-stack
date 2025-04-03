@@ -1,4 +1,4 @@
-const Product = require("../models/product");
+const Product = require("../models/product.js");
 const Cart = require("../models/cart.js");
 const { get } = require("../routes/shop.js");
 
@@ -37,14 +37,17 @@ exports.getCart = (req, res, next) => {
   Cart.getCart((cart) => {
     Product.fetchAll((products) => {
       const cartProducts = [];
-      for (product of products) {
+      for (let product of products) {
         //checking if a product in the product.json file is inside cart.json file
         const cartProductData = cart.products.find(
           (prod) => prod.id === product.id
         );
+
+        console.log("cartProduct dea");
         if (cartProductData) {
           //populate the cartProduct with a new object
           cartProducts.push({ productData: product, qty: cartProductData.qty });
+          console.log("cartProducts", cartProducts);
         }
       }
       res.render("shop/cart", {
@@ -82,7 +85,6 @@ exports.getDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   Product.findById(prodId, (product) => {
     Cart.deleteProduct(prodId, product.price);
+    res.redirect("/cart");
   });
-
-  res.redirect("/cart");
 };

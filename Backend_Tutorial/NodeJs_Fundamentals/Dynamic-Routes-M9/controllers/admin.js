@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const currencyFormatter = require("../util/currencyFormatter.js");
 
 exports.getAddProduct = (req, res, next) => {
   res.render("admin/edit-product", {
@@ -55,8 +56,8 @@ exports.postEditProduct = (req, res, next) => {
     prodId,
     updatedTitle,
     updatedImageUrl,
-    updatedDesc,
-    updatedPrice
+    updatedPrice,
+    updatedDesc
   );
   updatedProject.save(); //saves the updated project to the necessary jason file.
 
@@ -69,6 +70,7 @@ exports.getProducts = (req, res, next) => {
       prods: products,
       pageTitle: "Admin Products",
       path: "/admin/products",
+      currencyFormatter: currencyFormatter,
     });
   });
 };
