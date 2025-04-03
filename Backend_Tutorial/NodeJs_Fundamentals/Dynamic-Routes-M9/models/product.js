@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const express = require("express");
+const Cart = require("./cart.js");
 
 const productPath = path.join(
   path.dirname(require.main.filename),
@@ -38,7 +38,8 @@ function getProductFromCart(cb) {
   });
 }
 module.exports = class Product {
-  constructor(title, imageUrl, description, price) {
+  constructor(id, title, imageUrl, price, description) {
+    this.id = id;
     this.title = title;
     this.imageUrl = imageUrl;
     this.description = description;
@@ -46,12 +47,45 @@ module.exports = class Product {
   }
 
   save() {
-    this.id = Math.random().toString();
     getProductsFromFile((products) => {
-      products.push(this);
-      fs.writeFile(productPath, JSON.stringify(products), (err) => {
-        console.log(err);
-      });
+      if (this.id) {
+        const existingProductIndex = products.findIndex(
+          (product) => product.id === this.id
+        );
+        const updatedProducts = [...products];
+        updatedProducts[existingProductIndex] = this; // replacing the existing product with values of the new instance(object) created from the class
+        fs.writeFile(productPath, JSON.stringify(updatedProducts), (err) => {
+          console.log(err);
+        });
+      } else {
+        //if the new object does not have an id property or id is null.  one is created for it when it calls the save() method. json file is updated as well
+        this.id = Math.random().toString();
+        products.push(this);
+        fs.writeFile(productPath, JSON.stringify(products), (err) => {
+          console.log(err);
+        });
+      }
+    });
+  }
+
+  static delete(id) {
+    getProductsFromFile((products) => {
+      const product = products.find((product) => product.id === id); //products is an array of objects. it is collected from the products.json file
+      const existingProductIndex = products.findIndex(
+        (product) => product.id === id
+      );
+      const deletedProducts = [...products];
+      if (existingProductIndex !== -1) {
+        deletedProducts.splice(existingProductIndex, 1);
+
+        fs.writeFile(productPath, JSON.stringify(deletedProducts), (err) => {
+          if (!err) {
+            Cart.deleteProduct(id, product.price);
+          }
+        });
+      } else {
+        console.log("NO product is found");
+      }
     });
   }
 
