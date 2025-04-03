@@ -14,8 +14,6 @@ module.exports = class Cart {
       if (!err) {
         try {
           cart = JSON.parse(fileContent);
-          if (!cart.products) cart.products = []; //ensures that products and totalPrice exists
-          if (!cart.totalPrice) cart.totalPrice = 0;
         } catch (parseError) {
           console.error("Error parsing cart.json, resetting cart:", parseError);
         }
@@ -51,12 +49,13 @@ module.exports = class Cart {
       if (err) {
         cb(null);
       } else {
-        const cart = JSON.parse(fileContent);
-        cb(cart);
+        cb(JSON.parse(fileContent));
       }
     });
   }
+
   static deleteProduct(id, productPrice) {
+    console.log("the moved product price: ", productPrice, id);
     fs.readFile(filePath, (err, fileContent) => {
       if (err) {
         return;
@@ -73,8 +72,11 @@ module.exports = class Cart {
         return;
       }
 
-      const productQty = product.qty;
+      updatedProducts.products = updatedProducts.products.filter(
+        (prod) => prod.id !== id
+      );
 
+      const productQty = product.qty;
       updatedProducts.totalPrice =
         updatedProducts.totalPrice - productPrice * productQty;
 

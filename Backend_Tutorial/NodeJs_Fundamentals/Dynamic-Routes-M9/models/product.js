@@ -70,17 +70,18 @@ module.exports = class Product {
 
   static delete(id) {
     getProductsFromFile((products) => {
-      const product = products.find((product) => product.id === id); //products is an array of objects. it is collected from the products.json file
       const existingProductIndex = products.findIndex(
         (product) => product.id === id
       );
+      const productPrice = products[existingProductIndex].price;
+      console.log("our product price", productPrice, id);
+
       const deletedProducts = [...products];
       if (existingProductIndex !== -1) {
         deletedProducts.splice(existingProductIndex, 1);
-
         fs.writeFile(productPath, JSON.stringify(deletedProducts), (err) => {
           if (!err) {
-            Cart.deleteProduct(id, product.price);
+            Cart.deleteProduct(id, productPrice);
           }
         });
       } else {
@@ -95,8 +96,15 @@ module.exports = class Product {
 
   static findById(id, cb) {
     getProductsFromFile((products) => {
-      const findId = products.find((p) => p.id === id);
-      cb(findId);
+      console.log("id that passed", id);
+      const product = products.find((p) => p.id === id);
+      console.log(
+        "checking the product added to cart",
+        product,
+        product.price,
+        product.id
+      );
+      cb(product);
     });
   }
 
