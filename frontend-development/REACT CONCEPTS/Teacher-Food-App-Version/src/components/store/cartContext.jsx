@@ -38,7 +38,10 @@ function cartReducer(state, action) {
 
     const updatedItems = [...state.items];
     if (existingItem.quantity > 1) {
-      const updatedItem = { ...existingItem, quantity: existingItem - 1 };
+      const updatedItem = {
+        ...existingItem,
+        quantity: existingItem.quantity - 1,
+      };
       updatedItems[existingItemindex] = updatedItem; //replace old object at existingItemIndex with updatedItem
     } else {
       updatedItems.splice(existingItemindex, 1); //removes item object with index number equal to "existingItemindex"
@@ -55,11 +58,11 @@ export function CartContextProvider({ children }) {
   });
 
   function addItem(item) {
-    dispatchcartAction({ type: "ADD_ITEM", item: item });
+    dispatchcartAction({ type: "ADD_ITEM", item });
   }
 
   function removeItem(id) {
-    dispatchcartAction({ type: "ADD_ITEM", id });
+    dispatchcartAction({ type: "REMOVE_ITEM", id });
   }
 
   const cartValue = {
