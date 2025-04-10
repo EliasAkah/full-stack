@@ -1,22 +1,25 @@
-import { useState, useEffect } from "react";
-
 import MealItem from "./MealItem.jsx";
+import useHttp from "./useHttp.jsx";
+import Error from "./UI/Error.jsx";
 
+const requestConfig = {};
 export default function Meals() {
-  const [loadMeals, setLoadMeals] = useState([]);
+  const {
+    data: loadMeals,
+    isLoading,
+    error,
+  } = useHttp("http://localhost:3000/meals", requestConfig, []);
 
-  useEffect(() => {
-    async function fetchMeals() {
-      const response = await fetch("http://localhost:3000/meals");
-      if (!response.ok) {
-        //
-      }
+  console.log("The fetched Data", loadMeals);
+  console.log("Loading State", isLoading);
 
-      const meals = await response.json();
-      setLoadMeals(meals);
-    }
-    fetchMeals();
-  }, []);
+  if (isLoading) {
+    return <p className="center">Fetching Data...</p>;
+  }
+
+  if (error) {
+    return <Error title="Failed to Fetch Meals" message={error} />;
+  }
 
   return (
     <ul id="meals">
@@ -25,3 +28,9 @@ export default function Meals() {
     </ul>
   );
 }
+
+//alternative of [] is
+
+//if(!data){
+//  return <p>The array is empty</p>
+//}
