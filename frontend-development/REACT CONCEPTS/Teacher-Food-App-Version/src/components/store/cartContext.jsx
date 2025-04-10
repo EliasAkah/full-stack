@@ -2,8 +2,9 @@ import { createContext, useReducer } from "react";
 
 export const cartContext = createContext({
   items: [],
-  addItems: (item) => {},
-  removeItems: (id) => {},
+  addItem: (item) => {},
+  removeItem: (id) => {},
+  clearCart: () => {},
 });
 
 //writing a reducer function
@@ -37,6 +38,7 @@ function cartReducer(state, action) {
     const existingItem = state.items[existingItemindex];
 
     const updatedItems = [...state.items];
+
     if (existingItem.quantity > 1) {
       const updatedItem = {
         ...existingItem,
@@ -47,6 +49,10 @@ function cartReducer(state, action) {
       updatedItems.splice(existingItemindex, 1); //removes item object with index number equal to "existingItemindex"
     }
     return { ...state, items: updatedItems };
+  }
+
+  if (action.type === "CLEAR-ITEM") {
+    return { ...state, items: [] };
   }
 
   return state; //return current state if no state is updated;
@@ -65,10 +71,15 @@ export function CartContextProvider({ children }) {
     dispatchcartAction({ type: "REMOVE_ITEM", id });
   }
 
+  function clearCart() {
+    dispatchcartAction({ type: "CLEAR-ITEM" });
+  }
+
   const cartValue = {
     items: cartState.items,
     addItem,
     removeItem,
+    clearCart,
   };
 
   console.log(cartValue);
