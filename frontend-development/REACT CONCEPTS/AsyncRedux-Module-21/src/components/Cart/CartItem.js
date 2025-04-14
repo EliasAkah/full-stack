@@ -6,9 +6,15 @@ import {
   decreaseItemQuantity,
 } from "../../store/shoppingSlice.js";
 const CartItem = (props) => {
+  
   const items = useSelector((state) => state.shopCart.items);
-
   const dispatch = useDispatch();
+
+  console.log(items);
+  
+  if (!items) {
+    return <div>Cart is empty</div>;
+  }
 
   return (
     <ul>

@@ -7,7 +7,7 @@ import { addMultipleProducts } from "../../store/productSlice.js";
 import { addItemToCart } from "../../store/shoppingSlice.js";
 
 const ProductItem = (props) => {
-  const { productState, description} = props;
+  const { productState, description } = props;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const ProductItem = (props) => {
               <div className={classes.actions}>
                 <button
                   onClick={() => {
-                    dispatch(addItemToCart(item.id));
+                    dispatch(addItemToCart(item));
                   }}
                 >
                   Add to Cart
