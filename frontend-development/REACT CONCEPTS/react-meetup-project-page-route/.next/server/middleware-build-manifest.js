@@ -1,1 +1,45 @@
-self.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-c67a75d1b6f99dc8.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:["static/lnVTPNcAyEmixmtdzsWBE/_buildManifest.js","static/lnVTPNcAyEmixmtdzsWBE/_ssgManifest.js"],rootMainFiles:[],pages:{"/":["static/chunks/webpack-69bfa6990bb9e155.js","static/chunks/framework-b759e809ec16812b.js","static/chunks/main-2405cebcd27988c1.js","static/css/30a596c35ae2476b.css","static/chunks/pages/index-0c615801eb6b1183.js"],"/[meetupId]":["static/chunks/webpack-69bfa6990bb9e155.js","static/chunks/framework-b759e809ec16812b.js","static/chunks/main-2405cebcd27988c1.js","static/css/181180052d07d175.css","static/chunks/pages/[meetupId]-ef4e2fd6bda025dd.js"],"/_app":["static/chunks/webpack-69bfa6990bb9e155.js","static/chunks/framework-b759e809ec16812b.js","static/chunks/main-2405cebcd27988c1.js","static/css/ca1c0eb780e8e596.css","static/chunks/pages/_app-f4b953a07c62be6e.js"],"/_error":["static/chunks/webpack-69bfa6990bb9e155.js","static/chunks/framework-b759e809ec16812b.js","static/chunks/main-2405cebcd27988c1.js","static/chunks/pages/_error-a4ba2246ff8fb532.js"],"/new-meetup":["static/chunks/webpack-69bfa6990bb9e155.js","static/chunks/framework-b759e809ec16812b.js","static/chunks/main-2405cebcd27988c1.js","static/css/6b06f286d8345586.css","static/chunks/pages/new-meetup-59b95e8884ece109.js"]},ampFirstPages:[]};
+globalThis.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/[meetupId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/[meetupId].js"
+    ],
+    "/_app": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/new-meetup": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/new-meetup.js"
+    ]
+  },
+  "ampFirstPages": []
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];
