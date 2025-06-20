@@ -41,7 +41,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: true,
+    fallback: "blocking",
     paths: meetupsIds.map((meetupsId) => ({
       params: { meetupId: meetupsId._id.toString() },
     })),
@@ -82,3 +82,4 @@ export default MeetupDetails;
 //fallback => use tell if all dynamic path has been listed or not
 //fallback:true => means all path has not been listed, thus nextjs is allowed to authomatically add them to the paths array.
 //fallback:false => means all path has been listed, thus nextjs is not allowed to authomatically add them to the paths array.
+//fallback:"blocking" => means all path has not been listed, thus nextjs is allowed to authomatically add them to the paths array.
