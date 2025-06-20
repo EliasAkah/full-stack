@@ -29,3 +29,5 @@ function MeetupItem(props) {
 }
 
 export default MeetupItem;
+
+//.push(), and .replace() are use to navigate programtically
