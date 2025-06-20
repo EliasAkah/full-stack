@@ -16,7 +16,7 @@ function HomePage(props) {
 }
 
 //a function with reserved name getStaticProps use to handle page pre-rendering during project
-export async function getStaticProps() {
+export async function getServerSideProps() {
   //fetch data from ApI
   const client = new MongoClient(
     "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
@@ -44,7 +44,6 @@ export async function getStaticProps() {
           id: meetup._id.toString(),
         })), //returns an array of objects
       },
-      revalidate: 5, //ensures ur page is regenerated after the number of secs assigned to the revalidat property after deployment
     };
   } finally {
     await client.close();
@@ -98,3 +97,8 @@ export default HomePage;
 //MongoClient must be used inside getStaticProps and getServerSideProps function block since they will need to call it again each time the page is revalidated
 //if it is left outside those function it will only be called once which during pre-render and may cause error issues llike ❌ MongoExpiredSessionError
 // ❌ MongoTopologyClosedError Because the same instance is being reused after it’s been closed when the page is revalidated. the same should be done for getStaticPaths.
+
+//Development (next dev)	Next.js runs all data fetching functions (getStaticProps, getServerSideProps) on every request for easier debugging.
+//Production (on Vercel)	getStaticProps only runs at build time, and then after revalidate time passes, and only when a new request is made.
+
+// getServerSideProps() => This forces the homepage to re-fetch from MongoDB on every request, avoiding the delay from ISR.

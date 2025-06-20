@@ -21,46 +21,8 @@ function MeetupDetails(props) {
   );
 }
 
-//function that defines all the dynmic page that are to be pregenerated during project build
-export async function getStaticPaths() {
-  //fetch data from the server side or ApI
-  const client = new MongoClient(
-    "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
-  );
-
-  try {
-    await client.connect();
-    const db = client.db("meetups");
-    const meetups = await db.collection("meetups").find().toArray(); //reurns an array of objects with each object containing only the id of their repective document
-
-    if (!meetups) {
-      return {
-        notFound: true,
-      };
-    }
-    console.log("these are meet up IDs:", meetups);
-
-    const idArray = meetups.map((meetupsId) => ({
-      params: { meetupId: meetupsId._id.toString() },
-    }));
-    console.log("these are meet up IDs:", idArray);
-
-    return {
-      paths: idArray,
-      fallback: "blocking",
-    };
-  } catch (error) {
-    console.error("Error in getStaticPaths:", error);
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
-  } finally {
-    await client.close(); // ✅ properly closes client per call
-  }
-}
-// pre-generate page during build process
-export async function getStaticProps(context) {
+// pre-generate page at every request
+export async function getServerSideProps(context) {
   //fetch data from the server side or ApI
   const client = new MongoClient(
     "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
@@ -71,6 +33,7 @@ export async function getStaticProps(context) {
   try {
     await client.connect();
     const db = client.db("meetups");
+
     const meetup = await db
       .collection("meetups")
       .findOne({ _id: new ObjectId(meetupID) }); //returns a document which _id === meetupID(meetupID is wrapped with ObjectId to ensure that the value corresponds with the _id in the database)
@@ -90,7 +53,6 @@ export async function getStaticProps(context) {
         title: meetup.title,
         description: meetup.description,
       },
-      revalidate: 5,
     };
   } catch (error) {
     console.error("Error in getStaticProps:", error);
@@ -112,3 +74,10 @@ export default MeetupDetails;
 //fallback:true => means all path has not been listed, thus nextjs is allowed to authomatically add them to the paths array.
 //fallback:false => means all path has been listed, thus nextjs is not allowed to authomatically add them to the paths array.
 //fallback:"blocking" => means all path has not been listed, thus nextjs is allowed to authomatically add them to the paths array.
+
+// Why Use getServerSideProps?
+// No need to worry about revalidate timing.
+
+// Page is generated at request time (not at build time).
+
+// Always shows the latest data from your MongoDB.
