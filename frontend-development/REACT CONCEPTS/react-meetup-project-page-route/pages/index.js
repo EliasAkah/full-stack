@@ -3,17 +3,12 @@ import Head from "next/head";
 
 import MeetupList from "../components/meetups/MeetupList";
 
-const url =
-  "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps";
-
-const client = new MongoClient(url);
-
 function HomePage(props) {
   return (
     <>
       <Head>
         <title>React MeetUps</title>
-        <meta name = "description" content = "A List of Prominent React MeetUps" />
+        <meta name="description" content="A List of Prominent React MeetUps" />
       </Head>
       <MeetupList meetups={props.meetups} />
     </>
@@ -23,25 +18,37 @@ function HomePage(props) {
 //a function with reserved name getStaticProps use to handle page pre-rendering during project
 export async function getStaticProps() {
   //fetch data from ApI
-  await client.connect();
-  const db = client.db("meetups");
-  const meetups = await db.collection("meetups").find().toArray(); //convert fetched objects into an array;
+  const client = new MongoClient(
+    "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
+  );
 
-  console.log("these are meet up details:", meetups);
+  try {
+    await client.connect();
+    const db = client.db("meetups");
+    const meetups = await db.collection("meetups").find().toArray(); //convert fetched objects into an array;
 
-  client.close();
+    if (!meetups) {
+      return {
+        notFound: true,
+      };
+    }
 
-  return {
-    props: {
-      meetups: meetups.map((meetup) => ({
-        title: meetup.title,
-        address: meetup.address,
-        image: meetup.image,
-        id: meetup._id.toString(),
-      })), //returns an array of objects
-    },
-    revalidate: 1, //ensures ur page is regenerated after the number of secs assigned to the revalidat property after deployment
-  };
+    console.log("these are meet up details:", meetups);
+
+    return {
+      props: {
+        meetups: meetups.map((meetup) => ({
+          title: meetup.title,
+          address: meetup.address,
+          image: meetup.image,
+          id: meetup._id.toString(),
+        })), //returns an array of objects
+      },
+      revalidate: 5, //ensures ur page is regenerated after the number of secs assigned to the revalidat property after deployment
+    };
+  } finally {
+    await client.close();
+  }
 }
 
 //a function that is use to regenerate a static page at every request or when data changes frequently
@@ -87,3 +94,7 @@ export default HomePage;
 //getStaticProps will pre-render the user with the data that is received from the database
 //the code in getStaticProps will execute each time the page is regenerated and not for any coming request.
 //it also runs when we revalidate and during the build process.
+
+//MongoClient must be used inside getStaticProps and getServerSideProps function block since they will need to call it again each time the page is revalidated
+//if it is left outside those function it will only be called once which during pre-render and may cause error issues llike ❌ MongoExpiredSessionError
+// ❌ MongoTopologyClosedError Because the same instance is being reused after it’s been closed when the page is revalidated. the same should be done for getStaticPaths.
