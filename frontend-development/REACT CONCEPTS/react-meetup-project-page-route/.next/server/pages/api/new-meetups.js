@@ -1,59 +1,55 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 266;
-exports.ids = [266];
+exports.id = "pages/api/new-meetups";
+exports.ids = ["pages/api/new-meetups"];
 exports.modules = {
 
-/***/ 4604:
+/***/ "(api-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fnew-meetups&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fnew-meetups.js&middlewareConfigBase64=e30%3D!":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fnew-meetups&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fnew-meetups.js&middlewareConfigBase64=e30%3D! ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   routeModule: () => (/* binding */ routeModule)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/route-modules/pages-api/module.compiled */ \"(api-node)/./node_modules/next/dist/server/route-modules/pages-api/module.compiled.js\");\n/* harmony import */ var next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/server/route-kind */ \"(api-node)/./node_modules/next/dist/server/route-kind.js\");\n/* harmony import */ var next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dist/build/templates/helpers */ \"(api-node)/./node_modules/next/dist/build/templates/helpers.js\");\n/* harmony import */ var _pages_api_new_meetups_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/api/new-meetups.js */ \"(api-node)/./pages/api/new-meetups.js\");\n\n\n\n// Import the userland code.\n\n// Re-export the handler (should be the default export).\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_new_meetups_js__WEBPACK_IMPORTED_MODULE_3__, 'default'));\n// Re-export config.\nconst config = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_api_new_meetups_js__WEBPACK_IMPORTED_MODULE_3__, 'config');\n// Create and export the route module that will be consumed.\nconst routeModule = new next_dist_server_route_modules_pages_api_module_compiled__WEBPACK_IMPORTED_MODULE_0__.PagesAPIRouteModule({\n    definition: {\n        kind: next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.PAGES_API,\n        page: \"/api/new-meetups\",\n        pathname: \"/api/new-meetups\",\n        // The following aren't used in production.\n        bundlePath: '',\n        filename: ''\n    },\n    userland: _pages_api_new_meetups_js__WEBPACK_IMPORTED_MODULE_3__\n});\n\n//# sourceMappingURL=pages-api.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaS1ub2RlKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtcm91dGUtbG9hZGVyL2luZGV4LmpzP2tpbmQ9UEFHRVNfQVBJJnBhZ2U9JTJGYXBpJTJGbmV3LW1lZXR1cHMmcHJlZmVycmVkUmVnaW9uPSZhYnNvbHV0ZVBhZ2VQYXRoPS4lMkZwYWdlcyUyRmFwaSUyRm5ldy1tZWV0dXBzLmpzJm1pZGRsZXdhcmVDb25maWdCYXNlNjQ9ZTMwJTNEISIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUErRjtBQUN2QztBQUNFO0FBQzFEO0FBQ3VEO0FBQ3ZEO0FBQ0EsaUVBQWUsd0VBQUssQ0FBQyxzREFBUSxZQUFZLEVBQUM7QUFDMUM7QUFDTyxlQUFlLHdFQUFLLENBQUMsc0RBQVE7QUFDcEM7QUFDTyx3QkFBd0IseUdBQW1CO0FBQ2xEO0FBQ0EsY0FBYyxrRUFBUztBQUN2QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMLFlBQVk7QUFDWixDQUFDOztBQUVEIiwic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGFnZXNBUElSb3V0ZU1vZHVsZSB9IGZyb20gXCJuZXh0L2Rpc3Qvc2VydmVyL3JvdXRlLW1vZHVsZXMvcGFnZXMtYXBpL21vZHVsZS5jb21waWxlZFwiO1xuaW1wb3J0IHsgUm91dGVLaW5kIH0gZnJvbSBcIm5leHQvZGlzdC9zZXJ2ZXIvcm91dGUta2luZFwiO1xuaW1wb3J0IHsgaG9pc3QgfSBmcm9tIFwibmV4dC9kaXN0L2J1aWxkL3RlbXBsYXRlcy9oZWxwZXJzXCI7XG4vLyBJbXBvcnQgdGhlIHVzZXJsYW5kIGNvZGUuXG5pbXBvcnQgKiBhcyB1c2VybGFuZCBmcm9tIFwiLi9wYWdlcy9hcGkvbmV3LW1lZXR1cHMuanNcIjtcbi8vIFJlLWV4cG9ydCB0aGUgaGFuZGxlciAoc2hvdWxkIGJlIHRoZSBkZWZhdWx0IGV4cG9ydCkuXG5leHBvcnQgZGVmYXVsdCBob2lzdCh1c2VybGFuZCwgJ2RlZmF1bHQnKTtcbi8vIFJlLWV4cG9ydCBjb25maWcuXG5leHBvcnQgY29uc3QgY29uZmlnID0gaG9pc3QodXNlcmxhbmQsICdjb25maWcnKTtcbi8vIENyZWF0ZSBhbmQgZXhwb3J0IHRoZSByb3V0ZSBtb2R1bGUgdGhhdCB3aWxsIGJlIGNvbnN1bWVkLlxuZXhwb3J0IGNvbnN0IHJvdXRlTW9kdWxlID0gbmV3IFBhZ2VzQVBJUm91dGVNb2R1bGUoe1xuICAgIGRlZmluaXRpb246IHtcbiAgICAgICAga2luZDogUm91dGVLaW5kLlBBR0VTX0FQSSxcbiAgICAgICAgcGFnZTogXCIvYXBpL25ldy1tZWV0dXBzXCIsXG4gICAgICAgIHBhdGhuYW1lOiBcIi9hcGkvbmV3LW1lZXR1cHNcIixcbiAgICAgICAgLy8gVGhlIGZvbGxvd2luZyBhcmVuJ3QgdXNlZCBpbiBwcm9kdWN0aW9uLlxuICAgICAgICBidW5kbGVQYXRoOiAnJyxcbiAgICAgICAgZmlsZW5hbWU6ICcnXG4gICAgfSxcbiAgICB1c2VybGFuZFxufSk7XG5cbi8vIyBzb3VyY2VNYXBwaW5nVVJMPXBhZ2VzLWFwaS5qcy5tYXAiXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fnew-meetups&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fnew-meetups.js&middlewareConfigBase64=e30%3D!\n");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "NewMeetUp": () => (/* binding */ NewMeetUp),
-  "default": () => (/* binding */ new_meetups)
-});
+/***/ }),
 
-;// CONCATENATED MODULE: external "mongodb"
-const external_mongodb_namespaceObject = require("mongodb");
-;// CONCATENATED MODULE: ./pages/api/new-meetups.js
+/***/ "(api-node)/./pages/api/new-meetups.js":
+/*!**********************************!*\
+  !*** ./pages/api/new-meetups.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-const url = "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps";
-const client = new external_mongodb_namespaceObject.MongoClient(url);
-async function NewMeetUp(req, res) {
-    if (req.method === "POST") {
-        const data = req.body;
-        try {
-            await client.connect();
-            const db = client.db("meetups"); //creates a database if not created;
-            const meetupsCollection = db.collection("meetups");
-            const result = await meetupsCollection.insertOne(data); //add only one document to the collection in meetups database
-            console.log("inserted Data: ", result);
-            return res.status(201).json({
-                message: "Successfully added a new meetup"
-            });
-        } catch (error) {
-            console.error("❌ MongoDB Error:", error);
-            res.status(500).json({
-                message: "Internal Server Error"
-            });
-        } finally{
-            await client.close();
-        }
-    } else {
-        res.status(405).json({
-            message: "Method not allowed"
-        });
-    }
-}
-/* harmony default export */ const new_meetups = (NewMeetUp); //api folder provides us with an api route. each of the file in this folder
- // provides an api route that can be used to retrieve data from and write data to the database or file.
- //files in api folder only runs on the server side none of codes written here will ever reflect on the client side
- //thus is safe to use ur credentials here.
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   NewMeetUp: () => (/* binding */ NewMeetUp),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nconst url = \"REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps\";\nconst client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(url);\nasync function NewMeetUp(req, res) {\n    if (req.method === \"POST\") {\n        const data = req.body;\n        try {\n            await client.connect();\n            const db = client.db(\"meetups\"); //creates a database if not created;\n            const meetupsCollection = db.collection(\"meetups\");\n            const result = await meetupsCollection.insertOne(data); //add only one document to the collection in meetups database\n            console.log(\"inserted Data: \", result);\n            return res.status(201).json({\n                message: \"Successfully added a new meetup\"\n            });\n        } catch (error) {\n            console.error(\"❌ MongoDB Error:\", error);\n            res.status(500).json({\n                message: \"Internal Server Error\"\n            });\n        } finally{\n            await client.close();\n        }\n    } else {\n        res.status(405).json({\n            message: \"Method not allowed\"\n        });\n    }\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NewMeetUp); //api folder provides us with an api route. each of the file in this folder\n // provides an api route that can be used to retrieve data from and write data to the database or file.\n //files in api folder only runs on the server side none of codes written here will ever reflect on the client side\n //thus is safe to use ur credentials here.\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaS1ub2RlKS8uL3BhZ2VzL2FwaS9uZXctbWVldHVwcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQXNDO0FBRXRDLE1BQU1DLE1BQ0o7QUFFRixNQUFNQyxTQUFTLElBQUlGLGdEQUFXQSxDQUFDQztBQUV4QixlQUFlRSxVQUFVQyxHQUFHLEVBQUVDLEdBQUc7SUFDdEMsSUFBSUQsSUFBSUUsTUFBTSxLQUFLLFFBQVE7UUFDekIsTUFBTUMsT0FBT0gsSUFBSUksSUFBSTtRQUVyQixJQUFJO1lBQ0YsTUFBTU4sT0FBT08sT0FBTztZQUNwQixNQUFNQyxLQUFLUixPQUFPUSxFQUFFLENBQUMsWUFBWSxvQ0FBb0M7WUFDckUsTUFBTUMsb0JBQW9CRCxHQUFHRSxVQUFVLENBQUM7WUFDeEMsTUFBTUMsU0FBUyxNQUFNRixrQkFBa0JHLFNBQVMsQ0FBQ1AsT0FBTyw2REFBNkQ7WUFDckhRLFFBQVFDLEdBQUcsQ0FBQyxtQkFBbUJIO1lBRS9CLE9BQU9SLElBQ0pZLE1BQU0sQ0FBQyxLQUNQQyxJQUFJLENBQUM7Z0JBQUVDLFNBQVM7WUFBa0M7UUFDdkQsRUFBRSxPQUFPQyxPQUFPO1lBQ2RMLFFBQVFLLEtBQUssQ0FBQyxvQkFBb0JBO1lBQ2xDZixJQUFJWSxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDO2dCQUFFQyxTQUFTO1lBQXdCO1FBQzFELFNBQVU7WUFDUixNQUFNakIsT0FBT21CLEtBQUs7UUFDcEI7SUFDRixPQUFPO1FBQ0xoQixJQUFJWSxNQUFNLENBQUMsS0FBS0MsSUFBSSxDQUFDO1lBQUVDLFNBQVM7UUFBcUI7SUFDdkQ7QUFDRjtBQUVBLGlFQUFlaEIsU0FBU0EsRUFBQyxDQUV6QiwyRUFBMkU7Q0FDM0UsdUdBQXVHO0NBQ3ZHLGtIQUFrSDtDQUNsSCwwQ0FBMEMiLCJzb3VyY2VzIjpbIi9ob21lL2VsaWFzX2FrYWgvRnVsbCBTdGFjay9mcm9udGVuZC1kZXZlbG9wbWVudC9SRUFDVCBDT05DRVBUUy9yZWFjdC1tZWV0dXAtcHJvamVjdC1wYWdlLXJvdXRlL3BhZ2VzL2FwaS9uZXctbWVldHVwcy5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gXCJtb25nb2RiXCI7XG5cbmNvbnN0IHVybCA9XG4gIFwibW9uZ29kYitzcnY6Ly9kYXZpZGFrYWg6MDgwMzg4Mzg2ODElNDBEYXZAY2x1c3RlcjEuZG05c2dwcC5tb25nb2RiLm5ldC8/cmV0cnlXcml0ZXM9dHJ1ZSZ3PW1ham9yaXR5JmFwcE5hbWU9TWVldFVwc1wiO1xuXG5jb25zdCBjbGllbnQgPSBuZXcgTW9uZ29DbGllbnQodXJsKTtcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIE5ld01lZXRVcChyZXEsIHJlcykge1xuICBpZiAocmVxLm1ldGhvZCA9PT0gXCJQT1NUXCIpIHtcbiAgICBjb25zdCBkYXRhID0gcmVxLmJvZHk7XG5cbiAgICB0cnkge1xuICAgICAgYXdhaXQgY2xpZW50LmNvbm5lY3QoKTtcbiAgICAgIGNvbnN0IGRiID0gY2xpZW50LmRiKFwibWVldHVwc1wiKTsgLy9jcmVhdGVzIGEgZGF0YWJhc2UgaWYgbm90IGNyZWF0ZWQ7XG4gICAgICBjb25zdCBtZWV0dXBzQ29sbGVjdGlvbiA9IGRiLmNvbGxlY3Rpb24oXCJtZWV0dXBzXCIpO1xuICAgICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgbWVldHVwc0NvbGxlY3Rpb24uaW5zZXJ0T25lKGRhdGEpOyAvL2FkZCBvbmx5IG9uZSBkb2N1bWVudCB0byB0aGUgY29sbGVjdGlvbiBpbiBtZWV0dXBzIGRhdGFiYXNlXG4gICAgICBjb25zb2xlLmxvZyhcImluc2VydGVkIERhdGE6IFwiLCByZXN1bHQpO1xuXG4gICAgICByZXR1cm4gcmVzXG4gICAgICAgIC5zdGF0dXMoMjAxKVxuICAgICAgICAuanNvbih7IG1lc3NhZ2U6IFwiU3VjY2Vzc2Z1bGx5IGFkZGVkIGEgbmV3IG1lZXR1cFwiIH0pO1xuICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICBjb25zb2xlLmVycm9yKFwi4p2MIE1vbmdvREIgRXJyb3I6XCIsIGVycm9yKTtcbiAgICAgIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgbWVzc2FnZTogXCJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3JcIiB9KTtcbiAgICB9IGZpbmFsbHkge1xuICAgICAgYXdhaXQgY2xpZW50LmNsb3NlKCk7XG4gICAgfVxuICB9IGVsc2Uge1xuICAgIHJlcy5zdGF0dXMoNDA1KS5qc29uKHsgbWVzc2FnZTogXCJNZXRob2Qgbm90IGFsbG93ZWRcIiB9KTtcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBOZXdNZWV0VXA7XG5cbi8vYXBpIGZvbGRlciBwcm92aWRlcyB1cyB3aXRoIGFuIGFwaSByb3V0ZS4gZWFjaCBvZiB0aGUgZmlsZSBpbiB0aGlzIGZvbGRlclxuLy8gcHJvdmlkZXMgYW4gYXBpIHJvdXRlIHRoYXQgY2FuIGJlIHVzZWQgdG8gcmV0cmlldmUgZGF0YSBmcm9tIGFuZCB3cml0ZSBkYXRhIHRvIHRoZSBkYXRhYmFzZSBvciBmaWxlLlxuLy9maWxlcyBpbiBhcGkgZm9sZGVyIG9ubHkgcnVucyBvbiB0aGUgc2VydmVyIHNpZGUgbm9uZSBvZiBjb2RlcyB3cml0dGVuIGhlcmUgd2lsbCBldmVyIHJlZmxlY3Qgb24gdGhlIGNsaWVudCBzaWRlXG4vL3RodXMgaXMgc2FmZSB0byB1c2UgdXIgY3JlZGVudGlhbHMgaGVyZS5cbiJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsInVybCIsImNsaWVudCIsIk5ld01lZXRVcCIsInJlcSIsInJlcyIsIm1ldGhvZCIsImRhdGEiLCJib2R5IiwiY29ubmVjdCIsImRiIiwibWVldHVwc0NvbGxlY3Rpb24iLCJjb2xsZWN0aW9uIiwicmVzdWx0IiwiaW5zZXJ0T25lIiwiY29uc29sZSIsImxvZyIsInN0YXR1cyIsImpzb24iLCJtZXNzYWdlIiwiZXJyb3IiLCJjbG9zZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api-node)/./pages/api/new-meetups.js\n");
 
+/***/ }),
+
+/***/ "mongodb":
+/*!**************************!*\
+  !*** external "mongodb" ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = require("mongodb");
+
+/***/ }),
+
+/***/ "next/dist/compiled/next-server/pages-api.runtime.dev.js":
+/*!**************************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages-api.runtime.dev.js" ***!
+  \**************************************************************************/
+/***/ ((module) => {
+
+module.exports = require("next/dist/compiled/next-server/pages-api.runtime.dev.js");
 
 /***/ })
 
@@ -64,7 +60,7 @@ async function NewMeetUp(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(4604));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next"], () => (__webpack_exec__("(api-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES_API&page=%2Fapi%2Fnew-meetups&preferredRegion=&absolutePagePath=.%2Fpages%2Fapi%2Fnew-meetups.js&middlewareConfigBase64=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,245 +1,180 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 405;
-exports.ids = [405];
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
 exports.modules = {
 
-/***/ 2430:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"item": "MeetupItem_item__pvgsv",
-	"image": "MeetupItem_image__0jYm_",
-	"content": "MeetupItem_content__fvTRB",
-	"actions": "MeetupItem_actions__IeeH4"
-};
-
-
-/***/ }),
-
-/***/ 6672:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"list": "MeetupList_list__C2D8b"
-};
-
-
-/***/ }),
-
-/***/ 9673:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"card": "Card_card__73YTa"
-};
-
-
-/***/ }),
-
-/***/ 4117:
+/***/ "(pages-dir-node)/./components/layout/Layout.js":
+/*!*************************************!*\
+  !*** ./components/layout/Layout.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9673);
-/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Card_module_css__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function Card(props) {
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: (_Card_module_css__WEBPACK_IMPORTED_MODULE_1___default().card),
-        children: props.children
-    });
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MainNavigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MainNavigation */ \"(pages-dir-node)/./components/layout/MainNavigation.js\");\n/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Layout.module.css */ \"(pages-dir-node)/./components/layout/Layout.module.css\");\n/* harmony import */ var _Layout_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Layout_module_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction Layout(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_MainNavigation__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/Layout.js\",\n                lineNumber: 7,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n                className: (_Layout_module_css__WEBPACK_IMPORTED_MODULE_2___default().main),\n                children: props.children\n            }, void 0, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/Layout.js\",\n                lineNumber: 8,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/Layout.js\",\n        lineNumber: 6,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbGF5b3V0L0xheW91dC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQThDO0FBQ0o7QUFFMUMsU0FBU0UsT0FBT0MsS0FBSztJQUNuQixxQkFDRSw4REFBQ0M7OzBCQUNDLDhEQUFDSix1REFBY0E7Ozs7OzBCQUNmLDhEQUFDSztnQkFBS0MsV0FBV0wsZ0VBQVk7MEJBQUdFLE1BQU1JLFFBQVE7Ozs7Ozs7Ozs7OztBQUdwRDtBQUVBLGlFQUFlTCxNQUFNQSxFQUFDIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9jb21wb25lbnRzL2xheW91dC9MYXlvdXQuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IE1haW5OYXZpZ2F0aW9uIGZyb20gJy4vTWFpbk5hdmlnYXRpb24nO1xuaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9MYXlvdXQubW9kdWxlLmNzcyc7XG5cbmZ1bmN0aW9uIExheW91dChwcm9wcykge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8TWFpbk5hdmlnYXRpb24gLz5cbiAgICAgIDxtYWluIGNsYXNzTmFtZT17Y2xhc3Nlcy5tYWlufT57cHJvcHMuY2hpbGRyZW59PC9tYWluPlxuICAgIDwvZGl2PlxuICApO1xufVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXQ7XG4iXSwibmFtZXMiOlsiTWFpbk5hdmlnYXRpb24iLCJjbGFzc2VzIiwiTGF5b3V0IiwicHJvcHMiLCJkaXYiLCJtYWluIiwiY2xhc3NOYW1lIiwiY2hpbGRyZW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/layout/Layout.js\n");
 
 /***/ }),
 
-/***/ 7032:
+/***/ "(pages-dir-node)/./components/layout/Layout.module.css":
+/*!*********************************************!*\
+  !*** ./components/layout/Layout.module.css ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"main\": \"Layout_main__RMpyO\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbGF5b3V0L0xheW91dC5tb2R1bGUuY3NzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9jb21wb25lbnRzL2xheW91dC9MYXlvdXQubW9kdWxlLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJtYWluXCI6IFwiTGF5b3V0X21haW5fX1JNcHlPXCJcbn07XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/layout/Layout.module.css\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./components/layout/MainNavigation.js":
+/*!*********************************************!*\
+  !*** ./components/layout/MainNavigation.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MainNavigation_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MainNavigation.module.css */ \"(pages-dir-node)/./components/layout/MainNavigation.module.css\");\n/* harmony import */ var _MainNavigation_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_MainNavigation_module_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ \"(pages-dir-node)/./node_modules/next/link.js\");\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction MainNavigation() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"header\", {\n        className: (_MainNavigation_module_css__WEBPACK_IMPORTED_MODULE_1___default().header),\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: (_MainNavigation_module_css__WEBPACK_IMPORTED_MODULE_1___default().logo),\n                children: \"React Meetups\"\n            }, void 0, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                lineNumber: 8,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"nav\", {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"ul\", {\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {\n                                href: \"/\",\n                                children: \"All Meetups\"\n                            }, void 0, false, {\n                                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                                lineNumber: 12,\n                                columnNumber: 13\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                            lineNumber: 11,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {\n                                href: \"/new-meetup\",\n                                children: \"Add New Meetup\"\n                            }, void 0, false, {\n                                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                                lineNumber: 15,\n                                columnNumber: 13\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                            lineNumber: 14,\n                            columnNumber: 11\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                    lineNumber: 10,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n                lineNumber: 9,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/layout/MainNavigation.js\",\n        lineNumber: 7,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MainNavigation);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbGF5b3V0L01haW5OYXZpZ2F0aW9uLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQWtEO0FBRXJCO0FBRTdCLFNBQVNFO0lBQ1AscUJBQ0UsOERBQUNDO1FBQU9DLFdBQVdKLDBFQUFjOzswQkFDL0IsOERBQUNLO2dCQUFJRCxXQUFXSix3RUFBWTswQkFBRTs7Ozs7OzBCQUM5Qiw4REFBQ087MEJBQ0MsNEVBQUNDOztzQ0FDQyw4REFBQ0M7c0NBQ0MsNEVBQUNSLGtEQUFJQTtnQ0FBQ1MsTUFBSzswQ0FBSTs7Ozs7Ozs7Ozs7c0NBRWpCLDhEQUFDRDtzQ0FDQyw0RUFBQ1Isa0RBQUlBO2dDQUFDUyxNQUFLOzBDQUFjOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTXJDO0FBRUEsaUVBQWVSLGNBQWNBLEVBQUMiLCJzb3VyY2VzIjpbIi9ob21lL2VsaWFzX2FrYWgvRnVsbCBTdGFjay9mcm9udGVuZC1kZXZlbG9wbWVudC9SRUFDVCBDT05DRVBUUy9yZWFjdC1tZWV0dXAtcHJvamVjdC1wYWdlLXJvdXRlL2NvbXBvbmVudHMvbGF5b3V0L01haW5OYXZpZ2F0aW9uLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjbGFzc2VzIGZyb20gXCIuL01haW5OYXZpZ2F0aW9uLm1vZHVsZS5jc3NcIjtcblxuaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuXG5mdW5jdGlvbiBNYWluTmF2aWdhdGlvbigpIHtcbiAgcmV0dXJuIChcbiAgICA8aGVhZGVyIGNsYXNzTmFtZT17Y2xhc3Nlcy5oZWFkZXJ9PlxuICAgICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMubG9nb30+UmVhY3QgTWVldHVwczwvZGl2PlxuICAgICAgPG5hdj5cbiAgICAgICAgPHVsPlxuICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvXCI+QWxsIE1lZXR1cHM8L0xpbms+XG4gICAgICAgICAgPC9saT5cbiAgICAgICAgICA8bGk+XG4gICAgICAgICAgICA8TGluayBocmVmPVwiL25ldy1tZWV0dXBcIj5BZGQgTmV3IE1lZXR1cDwvTGluaz5cbiAgICAgICAgICA8L2xpPlxuICAgICAgICA8L3VsPlxuICAgICAgPC9uYXY+XG4gICAgPC9oZWFkZXI+XG4gICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IE1haW5OYXZpZ2F0aW9uO1xuIl0sIm5hbWVzIjpbImNsYXNzZXMiLCJMaW5rIiwiTWFpbk5hdmlnYXRpb24iLCJoZWFkZXIiLCJjbGFzc05hbWUiLCJkaXYiLCJsb2dvIiwibmF2IiwidWwiLCJsaSIsImhyZWYiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/layout/MainNavigation.js\n");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ pages),
-  "getStaticProps": () => (/* binding */ getStaticProps)
-});
+/***/ }),
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "mongodb"
-var external_mongodb_ = __webpack_require__(8013);
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__(968);
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(1853);
-// EXTERNAL MODULE: ./components/ui/Card.js
-var Card = __webpack_require__(4117);
-// EXTERNAL MODULE: ./components/meetups/MeetupItem.module.css
-var MeetupItem_module = __webpack_require__(2430);
-var MeetupItem_module_default = /*#__PURE__*/__webpack_require__.n(MeetupItem_module);
-;// CONCATENATED MODULE: ./components/meetups/MeetupItem.js
+/***/ "(pages-dir-node)/./components/layout/MainNavigation.module.css":
+/*!*****************************************************!*\
+  !*** ./components/layout/MainNavigation.module.css ***!
+  \*****************************************************/
+/***/ ((module) => {
 
+eval("// Exports\nmodule.exports = {\n\t\"header\": \"MainNavigation_header__JBIUU\",\n\t\"logo\": \"MainNavigation_logo__aeMOX\",\n\t\"active\": \"MainNavigation_active__y3Fl_\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbGF5b3V0L01haW5OYXZpZ2F0aW9uLm1vZHVsZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9jb21wb25lbnRzL2xheW91dC9NYWluTmF2aWdhdGlvbi5tb2R1bGUuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImhlYWRlclwiOiBcIk1haW5OYXZpZ2F0aW9uX2hlYWRlcl9fSkJJVVVcIixcblx0XCJsb2dvXCI6IFwiTWFpbk5hdmlnYXRpb25fbG9nb19fYWVNT1hcIixcblx0XCJhY3RpdmVcIjogXCJNYWluTmF2aWdhdGlvbl9hY3RpdmVfX3kzRmxfXCJcbn07XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/layout/MainNavigation.module.css\n");
 
+/***/ }),
 
+/***/ "(pages-dir-node)/./components/meetups/MeetupItem.js":
+/*!******************************************!*\
+  !*** ./components/meetups/MeetupItem.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function MeetupItem(props) {
-    const router = (0,router_.useRouter)();
-    //handling page navigation programatically
-    function handleShowDetails() {
-        router.push("/" + props.id);
-    }
-    return /*#__PURE__*/ jsx_runtime_.jsx("li", {
-        className: (MeetupItem_module_default()).item,
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Card/* default */.Z, {
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                    className: (MeetupItem_module_default()).image,
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                        src: props.image,
-                        alt: props.title
-                    })
-                }),
-                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: (MeetupItem_module_default()).content,
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                            children: props.title
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("address", {
-                            children: props.address
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                    className: (MeetupItem_module_default()).actions,
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                        onClick: handleShowDetails,
-                        children: "Show Details"
-                    })
-                })
-            ]
-        })
-    });
-}
-/* harmony default export */ const meetups_MeetupItem = (MeetupItem); //.push(), and .replace() are use to navigate programtically
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ \"(pages-dir-node)/./node_modules/next/router.js\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _ui_Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/Card */ \"(pages-dir-node)/./components/ui/Card.js\");\n/* harmony import */ var _MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MeetupItem.module.css */ \"(pages-dir-node)/./components/meetups/MeetupItem.module.css\");\n/* harmony import */ var _MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nfunction MeetupItem(props) {\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();\n    //handling page navigation programatically\n    function handleShowDetails() {\n        router.push('/' + props.id);\n    }\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n        className: (_MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().item),\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_ui_Card__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: (_MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().image),\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                        src: props.image,\n                        alt: props.title\n                    }, void 0, false, {\n                        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                        lineNumber: 17,\n                        columnNumber: 11\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                    lineNumber: 16,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: (_MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().content),\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                            children: props.title\n                        }, void 0, false, {\n                            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                            lineNumber: 20,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"address\", {\n                            children: props.address\n                        }, void 0, false, {\n                            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                            lineNumber: 21,\n                            columnNumber: 11\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                    lineNumber: 19,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: (_MeetupItem_module_css__WEBPACK_IMPORTED_MODULE_3___default().actions),\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                        onClick: handleShowDetails,\n                        children: \"Show Details\"\n                    }, void 0, false, {\n                        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                        lineNumber: 24,\n                        columnNumber: 11\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n                    lineNumber: 23,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n            lineNumber: 15,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupItem.js\",\n        lineNumber: 14,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MeetupItem); //.push(), and .replace() are use to navigate programtically\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBJdGVtLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUF3QztBQUVWO0FBQ2dCO0FBRTlDLFNBQVNHLFdBQVdDLEtBQUs7SUFDdkIsTUFBTUMsU0FBU0wsc0RBQVNBO0lBRXhCLDBDQUEwQztJQUMxQyxTQUFTTTtRQUNQRCxPQUFPRSxJQUFJLENBQUMsTUFBTUgsTUFBTUksRUFBRTtJQUM1QjtJQUNBLHFCQUNFLDhEQUFDQztRQUFHQyxXQUFXUixvRUFBWTtrQkFDekIsNEVBQUNELGdEQUFJQTs7OEJBQ0gsOERBQUNXO29CQUFJRixXQUFXUixxRUFBYTs4QkFDM0IsNEVBQUNZO3dCQUFJQyxLQUFLWCxNQUFNUyxLQUFLO3dCQUFFRyxLQUFLWixNQUFNYSxLQUFLOzs7Ozs7Ozs7Ozs4QkFFekMsOERBQUNMO29CQUFJRixXQUFXUix1RUFBZTs7c0NBQzdCLDhEQUFDaUI7c0NBQUlmLE1BQU1hLEtBQUs7Ozs7OztzQ0FDaEIsOERBQUNHO3NDQUFTaEIsTUFBTWdCLE9BQU87Ozs7Ozs7Ozs7Ozs4QkFFekIsOERBQUNSO29CQUFJRixXQUFXUix1RUFBZTs4QkFDN0IsNEVBQUNvQjt3QkFBT0MsU0FBV2pCO2tDQUFtQjs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUtoRDtBQUVBLGlFQUFlSCxVQUFVQSxFQUFDLENBRTFCLDREQUE0RCIsInNvdXJjZXMiOlsiL2hvbWUvZWxpYXNfYWthaC9GdWxsIFN0YWNrL2Zyb250ZW5kLWRldmVsb3BtZW50L1JFQUNUIENPTkNFUFRTL3JlYWN0LW1lZXR1cC1wcm9qZWN0LXBhZ2Utcm91dGUvY29tcG9uZW50cy9tZWV0dXBzL01lZXR1cEl0ZW0uanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvcm91dGVyXCI7XG5cbmltcG9ydCBDYXJkIGZyb20gJy4uL3VpL0NhcmQnO1xuaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9NZWV0dXBJdGVtLm1vZHVsZS5jc3MnO1xuXG5mdW5jdGlvbiBNZWV0dXBJdGVtKHByb3BzKSB7XG4gIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpO1xuXG4gIC8vaGFuZGxpbmcgcGFnZSBuYXZpZ2F0aW9uIHByb2dyYW1hdGljYWxseVxuICBmdW5jdGlvbiBoYW5kbGVTaG93RGV0YWlscygpe1xuICAgIHJvdXRlci5wdXNoKCcvJyArIHByb3BzLmlkKVxuICB9XG4gIHJldHVybiAoXG4gICAgPGxpIGNsYXNzTmFtZT17Y2xhc3Nlcy5pdGVtfT5cbiAgICAgIDxDYXJkPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5pbWFnZX0+XG4gICAgICAgICAgPGltZyBzcmM9e3Byb3BzLmltYWdlfSBhbHQ9e3Byb3BzLnRpdGxlfSAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuY29udGVudH0+XG4gICAgICAgICAgPGgzPntwcm9wcy50aXRsZX08L2gzPlxuICAgICAgICAgIDxhZGRyZXNzPntwcm9wcy5hZGRyZXNzfTwvYWRkcmVzcz5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtjbGFzc2VzLmFjdGlvbnN9PlxuICAgICAgICAgIDxidXR0b24gb25DbGljayA9IHtoYW5kbGVTaG93RGV0YWlsc30+U2hvdyBEZXRhaWxzPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9DYXJkPlxuICAgIDwvbGk+XG4gICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IE1lZXR1cEl0ZW07XG5cbi8vLnB1c2goKSwgYW5kIC5yZXBsYWNlKCkgYXJlIHVzZSB0byBuYXZpZ2F0ZSBwcm9ncmFtdGljYWxseVxuIl0sIm5hbWVzIjpbInVzZVJvdXRlciIsIkNhcmQiLCJjbGFzc2VzIiwiTWVldHVwSXRlbSIsInByb3BzIiwicm91dGVyIiwiaGFuZGxlU2hvd0RldGFpbHMiLCJwdXNoIiwiaWQiLCJsaSIsImNsYXNzTmFtZSIsIml0ZW0iLCJkaXYiLCJpbWFnZSIsImltZyIsInNyYyIsImFsdCIsInRpdGxlIiwiY29udGVudCIsImgzIiwiYWRkcmVzcyIsImFjdGlvbnMiLCJidXR0b24iLCJvbkNsaWNrIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/meetups/MeetupItem.js\n");
 
-// EXTERNAL MODULE: ./components/meetups/MeetupList.module.css
-var MeetupList_module = __webpack_require__(6672);
-var MeetupList_module_default = /*#__PURE__*/__webpack_require__.n(MeetupList_module);
-;// CONCATENATED MODULE: ./components/meetups/MeetupList.js
+/***/ }),
 
+/***/ "(pages-dir-node)/./components/meetups/MeetupItem.module.css":
+/*!**************************************************!*\
+  !*** ./components/meetups/MeetupItem.module.css ***!
+  \**************************************************/
+/***/ ((module) => {
 
+eval("// Exports\nmodule.exports = {\n\t\"item\": \"MeetupItem_item__6H_ll\",\n\t\"image\": \"MeetupItem_image__JVMnP\",\n\t\"content\": \"MeetupItem_content__e0u1a\",\n\t\"actions\": \"MeetupItem_actions__FNp3S\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBJdGVtLm1vZHVsZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIi9ob21lL2VsaWFzX2FrYWgvRnVsbCBTdGFjay9mcm9udGVuZC1kZXZlbG9wbWVudC9SRUFDVCBDT05DRVBUUy9yZWFjdC1tZWV0dXAtcHJvamVjdC1wYWdlLXJvdXRlL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBJdGVtLm1vZHVsZS5jc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiaXRlbVwiOiBcIk1lZXR1cEl0ZW1faXRlbV9fNkhfbGxcIixcblx0XCJpbWFnZVwiOiBcIk1lZXR1cEl0ZW1faW1hZ2VfX0pWTW5QXCIsXG5cdFwiY29udGVudFwiOiBcIk1lZXR1cEl0ZW1fY29udGVudF9fZTB1MWFcIixcblx0XCJhY3Rpb25zXCI6IFwiTWVldHVwSXRlbV9hY3Rpb25zX19GTnAzU1wiXG59O1xuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/meetups/MeetupItem.module.css\n");
 
-function MeetupList(props) {
-    return /*#__PURE__*/ jsx_runtime_.jsx("ul", {
-        className: (MeetupList_module_default()).list,
-        children: props.meetups.map((meetup)=>/*#__PURE__*/ jsx_runtime_.jsx(meetups_MeetupItem, {
-                id: meetup.id,
-                image: meetup.image,
-                title: meetup.title,
-                address: meetup.address
-            }, meetup.id))
-    });
-}
-/* harmony default export */ const meetups_MeetupList = (MeetupList);
+/***/ }),
 
-;// CONCATENATED MODULE: ./pages/index.js
+/***/ "(pages-dir-node)/./components/meetups/MeetupList.js":
+/*!******************************************!*\
+  !*** ./components/meetups/MeetupList.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MeetupItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MeetupItem */ \"(pages-dir-node)/./components/meetups/MeetupItem.js\");\n/* harmony import */ var _MeetupList_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MeetupList.module.css */ \"(pages-dir-node)/./components/meetups/MeetupList.module.css\");\n/* harmony import */ var _MeetupList_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction MeetupList(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"ul\", {\n        className: (_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_2___default().list),\n        children: props.meetups.map((meetup)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_MeetupItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                id: meetup.id,\n                image: meetup.image,\n                title: meetup.title,\n                address: meetup.address\n            }, meetup.id, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupList.js\",\n                lineNumber: 8,\n                columnNumber: 9\n            }, this))\n    }, void 0, false, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/meetups/MeetupList.js\",\n        lineNumber: 6,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MeetupList);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBMaXN0LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBc0M7QUFDUTtBQUU5QyxTQUFTRSxXQUFXQyxLQUFLO0lBQ3ZCLHFCQUNFLDhEQUFDQztRQUFHQyxXQUFXSixvRUFBWTtrQkFDeEJFLE1BQU1JLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLENBQUNDLHVCQUNsQiw4REFBQ1QsbURBQVVBO2dCQUVUVSxJQUFJRCxPQUFPQyxFQUFFO2dCQUNiQyxPQUFPRixPQUFPRSxLQUFLO2dCQUNuQkMsT0FBT0gsT0FBT0csS0FBSztnQkFDbkJDLFNBQVNKLE9BQU9JLE9BQU87ZUFKbEJKLE9BQU9DLEVBQUU7Ozs7Ozs7Ozs7QUFTeEI7QUFFQSxpRUFBZVIsVUFBVUEsRUFBQyIsInNvdXJjZXMiOlsiL2hvbWUvZWxpYXNfYWthaC9GdWxsIFN0YWNrL2Zyb250ZW5kLWRldmVsb3BtZW50L1JFQUNUIENPTkNFUFRTL3JlYWN0LW1lZXR1cC1wcm9qZWN0LXBhZ2Utcm91dGUvY29tcG9uZW50cy9tZWV0dXBzL01lZXR1cExpc3QuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IE1lZXR1cEl0ZW0gZnJvbSBcIi4vTWVldHVwSXRlbVwiO1xuaW1wb3J0IGNsYXNzZXMgZnJvbSBcIi4vTWVldHVwTGlzdC5tb2R1bGUuY3NzXCI7XG5cbmZ1bmN0aW9uIE1lZXR1cExpc3QocHJvcHMpIHtcbiAgcmV0dXJuIChcbiAgICA8dWwgY2xhc3NOYW1lPXtjbGFzc2VzLmxpc3R9PlxuICAgICAge3Byb3BzLm1lZXR1cHMubWFwKChtZWV0dXApID0+IChcbiAgICAgICAgPE1lZXR1cEl0ZW1cbiAgICAgICAgICBrZXk9e21lZXR1cC5pZH1cbiAgICAgICAgICBpZD17bWVldHVwLmlkfVxuICAgICAgICAgIGltYWdlPXttZWV0dXAuaW1hZ2V9XG4gICAgICAgICAgdGl0bGU9e21lZXR1cC50aXRsZX1cbiAgICAgICAgICBhZGRyZXNzPXttZWV0dXAuYWRkcmVzc31cbiAgICAgICAgLz5cbiAgICAgICkpfVxuICAgIDwvdWw+XG4gICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IE1lZXR1cExpc3Q7XG4iXSwibmFtZXMiOlsiTWVldHVwSXRlbSIsImNsYXNzZXMiLCJNZWV0dXBMaXN0IiwicHJvcHMiLCJ1bCIsImNsYXNzTmFtZSIsImxpc3QiLCJtZWV0dXBzIiwibWFwIiwibWVldHVwIiwiaWQiLCJpbWFnZSIsInRpdGxlIiwiYWRkcmVzcyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/meetups/MeetupList.js\n");
 
+/***/ }),
 
+/***/ "(pages-dir-node)/./components/meetups/MeetupList.module.css":
+/*!**************************************************!*\
+  !*** ./components/meetups/MeetupList.module.css ***!
+  \**************************************************/
+/***/ ((module) => {
 
-const url = "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps";
-const client = new external_mongodb_.MongoClient(url);
-function HomePage(props) {
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("title", {
-                        children: "React MeetUps"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                        name: "description",
-                        content: "A List of Prominent React MeetUps"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(meetups_MeetupList, {
-                meetups: props.meetups
-            })
-        ]
-    });
-}
-//a function with reserved name getStaticProps use to handle page pre-rendering during project
-async function getStaticProps() {
-    //fetch data from ApI
-    await client.connect();
-    const db = client.db("meetups");
-    const meetups = await db.collection("meetups").find().toArray(); //convert fetched objects into an array;
-    console.log("these are meet up details:", meetups);
-    client.close();
-    return {
-        props: {
-            meetups: meetups.map((meetup)=>({
-                    title: meetup.title,
-                    address: meetup.address,
-                    image: meetup.image,
-                    id: meetup._id.toString()
-                }))
-        },
-        revalidate: 1
-    };
-}
-//a function that is use to regenerate a static page at every request or when data changes frequently
-// export async function getServerSideProps(context) {
-// //   const req = context.req;
-// //   const res = context.res;
-//   return {
-//     props: {
-//       meetups: DUMMY_MEETUPS,
-//     },
-//   };
-// }
-/* harmony default export */ const pages = (HomePage); //NOTE: with useEffect the component undergoes two render cycle before displaying the output to the client.
- // i.e the function component first render, after that the useEffect is executed causing the state to be updated.
- //the updated state causes the function component to re-render again with the updated value.
- // during the first render the loadedMeetups has an empty array as its value, while during the second render
- //loadedMeetups takes DUMMY_MEETUPS as its value, it's this updated state which is then outputed to ur screen,
- //if the file or detabase u want to fetch the data from actually contains a data. if no data then it will just render
- // a blank page on the screen indicating that ur database or file is empty.
- //in nextjs the value of loadedMeetups during the first render is what is taking and outputed during page pre-rendering.
- //getStaticProps is called by nextjs to ensure the handling of data at the server side during project build
- //it manages page pre-rendering to ensure that the output that is render to the client side is one that contains
- //the update data after the data has been fetched from the server-side.
- // it does not execute either at the server or client but only during project build for static pages.
- //codes in getServerSideProps runs only on the server side. and should be used only when u want to regenerate a page at every request
- //or when data changes frequently. or when we want to access the req or res object for further manipulation or use in our code
- //we export the getStaticProps and getServerSideProps since nextjs cannot automatically call them if they are not explicitly exported
- //thus, it enables to automatically call them during the project building.
- // getStaticProps and getServerSideProps runs during build up or over the server respectively
- //any module imported and used inside getStaticProps and getServerSideProps will not be included in the client bundle
- //getStaticProps will pre-render the user with the data that is received from the database
- //the code in getStaticProps will execute each time the page is regenerated and not for any coming request.
- //it also runs when we revalidate and during the build process.
+eval("// Exports\nmodule.exports = {\n\t\"list\": \"MeetupList_list__GmaKL\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBMaXN0Lm1vZHVsZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIi9ob21lL2VsaWFzX2FrYWgvRnVsbCBTdGFjay9mcm9udGVuZC1kZXZlbG9wbWVudC9SRUFDVCBDT05DRVBUUy9yZWFjdC1tZWV0dXAtcHJvamVjdC1wYWdlLXJvdXRlL2NvbXBvbmVudHMvbWVldHVwcy9NZWV0dXBMaXN0Lm1vZHVsZS5jc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwibGlzdFwiOiBcIk1lZXR1cExpc3RfbGlzdF9fR21hS0xcIlxufTtcbiJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/meetups/MeetupList.module.css\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./components/ui/Card.js":
+/*!*******************************!*\
+  !*** ./components/ui/Card.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Card.module.css */ \"(pages-dir-node)/./components/ui/Card.module.css\");\n/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Card_module_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction Card(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: (_Card_module_css__WEBPACK_IMPORTED_MODULE_1___default().card),\n        children: props.children\n    }, void 0, false, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/components/ui/Card.js\",\n        lineNumber: 4,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvdWkvQ2FyZC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBd0M7QUFFeEMsU0FBU0MsS0FBS0MsS0FBSztJQUNqQixxQkFBTyw4REFBQ0M7UUFBSUMsV0FBV0osOERBQVk7a0JBQUdFLE1BQU1JLFFBQVE7Ozs7OztBQUN0RDtBQUVBLGlFQUFlTCxJQUFJQSxFQUFDIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9jb21wb25lbnRzL3VpL0NhcmQuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9DYXJkLm1vZHVsZS5jc3MnO1xuXG5mdW5jdGlvbiBDYXJkKHByb3BzKSB7XG4gIHJldHVybiA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5jYXJkfT57cHJvcHMuY2hpbGRyZW59PC9kaXY+O1xufVxuXG5leHBvcnQgZGVmYXVsdCBDYXJkO1xuIl0sIm5hbWVzIjpbImNsYXNzZXMiLCJDYXJkIiwicHJvcHMiLCJkaXYiLCJjbGFzc05hbWUiLCJjYXJkIiwiY2hpbGRyZW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/ui/Card.js\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./components/ui/Card.module.css":
+/*!***************************************!*\
+  !*** ./components/ui/Card.module.css ***!
+  \***************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"card\": \"Card_card__k57D1\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2NvbXBvbmVudHMvdWkvQ2FyZC5tb2R1bGUuY3NzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9jb21wb25lbnRzL3VpL0NhcmQubW9kdWxlLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJjYXJkXCI6IFwiQ2FyZF9jYXJkX19rNTdEMVwiXG59O1xuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./components/ui/Card.module.css\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D! ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   getServerSideProps: () => (/* binding */ getServerSideProps),\n/* harmony export */   getStaticPaths: () => (/* binding */ getStaticPaths),\n/* harmony export */   getStaticProps: () => (/* binding */ getStaticProps),\n/* harmony export */   reportWebVitals: () => (/* binding */ reportWebVitals),\n/* harmony export */   routeModule: () => (/* binding */ routeModule),\n/* harmony export */   unstable_getServerProps: () => (/* binding */ unstable_getServerProps),\n/* harmony export */   unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),\n/* harmony export */   unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),\n/* harmony export */   unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),\n/* harmony export */   unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)\n/* harmony export */ });\n/* harmony import */ var next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/server/route-modules/pages/module.compiled */ \"(pages-dir-node)/./node_modules/next/dist/server/route-modules/pages/module.compiled.js\");\n/* harmony import */ var next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dist/server/route-kind */ \"(pages-dir-node)/./node_modules/next/dist/server/route-kind.js\");\n/* harmony import */ var next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dist/build/templates/helpers */ \"(pages-dir-node)/./node_modules/next/dist/build/templates/helpers.js\");\n/* harmony import */ var private_next_pages_document__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! private-next-pages/_document */ \"(pages-dir-node)/./node_modules/next/dist/pages/_document.js\");\n/* harmony import */ var private_next_pages_document__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(private_next_pages_document__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var private_next_pages_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! private-next-pages/_app */ \"(pages-dir-node)/./pages/_app.js\");\n/* harmony import */ var _pages_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/index.js */ \"(pages-dir-node)/./pages/index.js\");\n\n\n\n// Import the app and document modules.\n\n\n// Import the userland code.\n\n// Re-export the component (should be the default export).\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'default'));\n// Re-export methods.\nconst getStaticProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'getStaticProps');\nconst getStaticPaths = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'getStaticPaths');\nconst getServerSideProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'getServerSideProps');\nconst config = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'config');\nconst reportWebVitals = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'reportWebVitals');\n// Re-export legacy methods.\nconst unstable_getStaticProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticProps');\nconst unstable_getStaticPaths = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticPaths');\nconst unstable_getStaticParams = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getStaticParams');\nconst unstable_getServerProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getServerProps');\nconst unstable_getServerSideProps = (0,next_dist_build_templates_helpers__WEBPACK_IMPORTED_MODULE_2__.hoist)(_pages_index_js__WEBPACK_IMPORTED_MODULE_5__, 'unstable_getServerSideProps');\n// Create and export the route module that will be consumed.\nconst routeModule = new next_dist_server_route_modules_pages_module_compiled__WEBPACK_IMPORTED_MODULE_0__.PagesRouteModule({\n    definition: {\n        kind: next_dist_server_route_kind__WEBPACK_IMPORTED_MODULE_1__.RouteKind.PAGES,\n        page: \"/index\",\n        pathname: \"/\",\n        // The following aren't used in production.\n        bundlePath: '',\n        filename: ''\n    },\n    components: {\n        // default export might not exist when optimized for data only\n        App: private_next_pages_app__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n        Document: (private_next_pages_document__WEBPACK_IMPORTED_MODULE_3___default())\n    },\n    userland: _pages_index_js__WEBPACK_IMPORTED_MODULE_5__\n});\n\n//# sourceMappingURL=pages.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtcm91dGUtbG9hZGVyL2luZGV4LmpzP2tpbmQ9UEFHRVMmcGFnZT0lMkYmcHJlZmVycmVkUmVnaW9uPSZhYnNvbHV0ZVBhZ2VQYXRoPS4lMkZwYWdlcyUyRmluZGV4LmpzJmFic29sdXRlQXBwUGF0aD1wcml2YXRlLW5leHQtcGFnZXMlMkZfYXBwJmFic29sdXRlRG9jdW1lbnRQYXRoPXByaXZhdGUtbmV4dC1wYWdlcyUyRl9kb2N1bWVudCZtaWRkbGV3YXJlQ29uZmlnQmFzZTY0PWUzMCUzRCEiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBd0Y7QUFDaEM7QUFDRTtBQUMxRDtBQUN5RDtBQUNWO0FBQy9DO0FBQzZDO0FBQzdDO0FBQ0EsaUVBQWUsd0VBQUssQ0FBQyw0Q0FBUSxZQUFZLEVBQUM7QUFDMUM7QUFDTyx1QkFBdUIsd0VBQUssQ0FBQyw0Q0FBUTtBQUNyQyx1QkFBdUIsd0VBQUssQ0FBQyw0Q0FBUTtBQUNyQywyQkFBMkIsd0VBQUssQ0FBQyw0Q0FBUTtBQUN6QyxlQUFlLHdFQUFLLENBQUMsNENBQVE7QUFDN0Isd0JBQXdCLHdFQUFLLENBQUMsNENBQVE7QUFDN0M7QUFDTyxnQ0FBZ0Msd0VBQUssQ0FBQyw0Q0FBUTtBQUM5QyxnQ0FBZ0Msd0VBQUssQ0FBQyw0Q0FBUTtBQUM5QyxpQ0FBaUMsd0VBQUssQ0FBQyw0Q0FBUTtBQUMvQyxnQ0FBZ0Msd0VBQUssQ0FBQyw0Q0FBUTtBQUM5QyxvQ0FBb0Msd0VBQUssQ0FBQyw0Q0FBUTtBQUN6RDtBQUNPLHdCQUF3QixrR0FBZ0I7QUFDL0M7QUFDQSxjQUFjLGtFQUFTO0FBQ3ZCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLGFBQWEsOERBQVc7QUFDeEIsa0JBQWtCLG9FQUFnQjtBQUNsQyxLQUFLO0FBQ0wsWUFBWTtBQUNaLENBQUM7O0FBRUQiLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBQYWdlc1JvdXRlTW9kdWxlIH0gZnJvbSBcIm5leHQvZGlzdC9zZXJ2ZXIvcm91dGUtbW9kdWxlcy9wYWdlcy9tb2R1bGUuY29tcGlsZWRcIjtcbmltcG9ydCB7IFJvdXRlS2luZCB9IGZyb20gXCJuZXh0L2Rpc3Qvc2VydmVyL3JvdXRlLWtpbmRcIjtcbmltcG9ydCB7IGhvaXN0IH0gZnJvbSBcIm5leHQvZGlzdC9idWlsZC90ZW1wbGF0ZXMvaGVscGVyc1wiO1xuLy8gSW1wb3J0IHRoZSBhcHAgYW5kIGRvY3VtZW50IG1vZHVsZXMuXG5pbXBvcnQgKiBhcyBkb2N1bWVudCBmcm9tIFwicHJpdmF0ZS1uZXh0LXBhZ2VzL19kb2N1bWVudFwiO1xuaW1wb3J0ICogYXMgYXBwIGZyb20gXCJwcml2YXRlLW5leHQtcGFnZXMvX2FwcFwiO1xuLy8gSW1wb3J0IHRoZSB1c2VybGFuZCBjb2RlLlxuaW1wb3J0ICogYXMgdXNlcmxhbmQgZnJvbSBcIi4vcGFnZXMvaW5kZXguanNcIjtcbi8vIFJlLWV4cG9ydCB0aGUgY29tcG9uZW50IChzaG91bGQgYmUgdGhlIGRlZmF1bHQgZXhwb3J0KS5cbmV4cG9ydCBkZWZhdWx0IGhvaXN0KHVzZXJsYW5kLCAnZGVmYXVsdCcpO1xuLy8gUmUtZXhwb3J0IG1ldGhvZHMuXG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ2dldFN0YXRpY1Byb3BzJyk7XG5leHBvcnQgY29uc3QgZ2V0U3RhdGljUGF0aHMgPSBob2lzdCh1c2VybGFuZCwgJ2dldFN0YXRpY1BhdGhzJyk7XG5leHBvcnQgY29uc3QgZ2V0U2VydmVyU2lkZVByb3BzID0gaG9pc3QodXNlcmxhbmQsICdnZXRTZXJ2ZXJTaWRlUHJvcHMnKTtcbmV4cG9ydCBjb25zdCBjb25maWcgPSBob2lzdCh1c2VybGFuZCwgJ2NvbmZpZycpO1xuZXhwb3J0IGNvbnN0IHJlcG9ydFdlYlZpdGFscyA9IGhvaXN0KHVzZXJsYW5kLCAncmVwb3J0V2ViVml0YWxzJyk7XG4vLyBSZS1leHBvcnQgbGVnYWN5IG1ldGhvZHMuXG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFN0YXRpY1Byb3BzJyk7XG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGF0aHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFN0YXRpY1BhdGhzJyk7XG5leHBvcnQgY29uc3QgdW5zdGFibGVfZ2V0U3RhdGljUGFyYW1zID0gaG9pc3QodXNlcmxhbmQsICd1bnN0YWJsZV9nZXRTdGF0aWNQYXJhbXMnKTtcbmV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJQcm9wcyA9IGhvaXN0KHVzZXJsYW5kLCAndW5zdGFibGVfZ2V0U2VydmVyUHJvcHMnKTtcbmV4cG9ydCBjb25zdCB1bnN0YWJsZV9nZXRTZXJ2ZXJTaWRlUHJvcHMgPSBob2lzdCh1c2VybGFuZCwgJ3Vuc3RhYmxlX2dldFNlcnZlclNpZGVQcm9wcycpO1xuLy8gQ3JlYXRlIGFuZCBleHBvcnQgdGhlIHJvdXRlIG1vZHVsZSB0aGF0IHdpbGwgYmUgY29uc3VtZWQuXG5leHBvcnQgY29uc3Qgcm91dGVNb2R1bGUgPSBuZXcgUGFnZXNSb3V0ZU1vZHVsZSh7XG4gICAgZGVmaW5pdGlvbjoge1xuICAgICAgICBraW5kOiBSb3V0ZUtpbmQuUEFHRVMsXG4gICAgICAgIHBhZ2U6IFwiL2luZGV4XCIsXG4gICAgICAgIHBhdGhuYW1lOiBcIi9cIixcbiAgICAgICAgLy8gVGhlIGZvbGxvd2luZyBhcmVuJ3QgdXNlZCBpbiBwcm9kdWN0aW9uLlxuICAgICAgICBidW5kbGVQYXRoOiAnJyxcbiAgICAgICAgZmlsZW5hbWU6ICcnXG4gICAgfSxcbiAgICBjb21wb25lbnRzOiB7XG4gICAgICAgIC8vIGRlZmF1bHQgZXhwb3J0IG1pZ2h0IG5vdCBleGlzdCB3aGVuIG9wdGltaXplZCBmb3IgZGF0YSBvbmx5XG4gICAgICAgIEFwcDogYXBwLmRlZmF1bHQsXG4gICAgICAgIERvY3VtZW50OiBkb2N1bWVudC5kZWZhdWx0XG4gICAgfSxcbiAgICB1c2VybGFuZFxufSk7XG5cbi8vIyBzb3VyY2VNYXBwaW5nVVJMPXBhZ2VzLmpzLm1hcCJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(pages-dir-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/globals.css */ \"(pages-dir-node)/./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_layout_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout/Layout */ \"(pages-dir-node)/./components/layout/Layout.js\");\n\n\n\nfunction MyApp({ Component, pageProps }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_layout_Layout__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/_app.js\",\n            lineNumber: 7,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/_app.js\",\n        lineNumber: 6,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp); //MyApp is the root component or root file of the application. it is used to wrap all other components \n // that may be used in the application. Any changes we want to affect all our pages should be done here\n // Component => all the page components that will be rendered\n //pageProps => represents the props or values that will be passed to our page components\n //NOTE: Nextjs is all about filesystem routing.\n //for app router => only files or folders inside the app folder are considered routes\n //for page router => only files or folders inside the page folder are considered routes\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL3BhZ2VzL19hcHAuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUErQjtBQUVrQjtBQUNqRCxTQUFTQyxNQUFNLEVBQUVDLFNBQVMsRUFBRUMsU0FBUyxFQUFFO0lBQ3JDLHFCQUNFLDhEQUFDSCxpRUFBTUE7a0JBQ0wsNEVBQUNFO1lBQVcsR0FBR0MsU0FBUzs7Ozs7Ozs7Ozs7QUFHOUI7QUFFQSxpRUFBZUYsS0FBS0EsRUFBQyxDQUVyQix1R0FBdUc7Q0FDdkcsdUdBQXVHO0NBQ3ZHLDZEQUE2RDtDQUM3RCx3RkFBd0Y7Q0FFeEYsK0NBQStDO0NBQy9DLHFGQUFxRjtDQUNyRix1RkFBdUYiLCJzb3VyY2VzIjpbIi9ob21lL2VsaWFzX2FrYWgvRnVsbCBTdGFjay9mcm9udGVuZC1kZXZlbG9wbWVudC9SRUFDVCBDT05DRVBUUy9yZWFjdC1tZWV0dXAtcHJvamVjdC1wYWdlLXJvdXRlL3BhZ2VzL19hcHAuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiLi4vc3R5bGVzL2dsb2JhbHMuY3NzXCI7XG5cbmltcG9ydCBMYXlvdXQgZnJvbSBcIi4uL2NvbXBvbmVudHMvbGF5b3V0L0xheW91dFwiO1xuZnVuY3Rpb24gTXlBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSB7XG4gIHJldHVybiAoXG4gICAgPExheW91dD5cbiAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICA8L0xheW91dD5cbiAgKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgTXlBcHA7XG5cbi8vTXlBcHAgaXMgdGhlIHJvb3QgY29tcG9uZW50IG9yIHJvb3QgZmlsZSBvZiB0aGUgYXBwbGljYXRpb24uIGl0IGlzIHVzZWQgdG8gd3JhcCBhbGwgb3RoZXIgY29tcG9uZW50cyBcbi8vIHRoYXQgbWF5IGJlIHVzZWQgaW4gdGhlIGFwcGxpY2F0aW9uLiBBbnkgY2hhbmdlcyB3ZSB3YW50IHRvIGFmZmVjdCBhbGwgb3VyIHBhZ2VzIHNob3VsZCBiZSBkb25lIGhlcmVcbi8vIENvbXBvbmVudCA9PiBhbGwgdGhlIHBhZ2UgY29tcG9uZW50cyB0aGF0IHdpbGwgYmUgcmVuZGVyZWRcbi8vcGFnZVByb3BzID0+IHJlcHJlc2VudHMgdGhlIHByb3BzIG9yIHZhbHVlcyB0aGF0IHdpbGwgYmUgcGFzc2VkIHRvIG91ciBwYWdlIGNvbXBvbmVudHNcblxuLy9OT1RFOiBOZXh0anMgaXMgYWxsIGFib3V0IGZpbGVzeXN0ZW0gcm91dGluZy5cbi8vZm9yIGFwcCByb3V0ZXIgPT4gb25seSBmaWxlcyBvciBmb2xkZXJzIGluc2lkZSB0aGUgYXBwIGZvbGRlciBhcmUgY29uc2lkZXJlZCByb3V0ZXNcbi8vZm9yIHBhZ2Ugcm91dGVyID0+IG9ubHkgZmlsZXMgb3IgZm9sZGVycyBpbnNpZGUgdGhlIHBhZ2UgZm9sZGVyIGFyZSBjb25zaWRlcmVkIHJvdXRlc1xuIl0sIm5hbWVzIjpbIkxheW91dCIsIk15QXBwIiwiQ29tcG9uZW50IiwicGFnZVByb3BzIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(pages-dir-node)/./pages/_app.js\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   getStaticProps: () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"(pages-dir-node)/./node_modules/next/head.js\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_meetups_MeetupList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/meetups/MeetupList */ \"(pages-dir-node)/./components/meetups/MeetupList.js\");\n\n\n\n\nconst url = \"REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps\";\nconst client = new mongodb__WEBPACK_IMPORTED_MODULE_1__.MongoClient(url);\nfunction HomePage(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                        children: \"React MeetUps\"\n                    }, void 0, false, {\n                        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/index.js\",\n                        lineNumber: 15,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"description\",\n                        content: \"A List of Prominent React MeetUps\"\n                    }, void 0, false, {\n                        fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/index.js\",\n                        lineNumber: 16,\n                        columnNumber: 9\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/index.js\",\n                lineNumber: 14,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_meetups_MeetupList__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n                meetups: props.meetups\n            }, void 0, false, {\n                fileName: \"/home/elias_akah/Full Stack/frontend-development/REACT CONCEPTS/react-meetup-project-page-route/pages/index.js\",\n                lineNumber: 18,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n}\n//a function with reserved name getStaticProps use to handle page pre-rendering during project\nasync function getStaticProps() {\n    //fetch data from ApI\n    await client.connect();\n    const db = client.db(\"meetups\");\n    const meetups = await db.collection(\"meetups\").find().toArray(); //convert fetched objects into an array;\n    console.log(\"these are meet up details:\", meetups);\n    client.close();\n    return {\n        props: {\n            meetups: meetups.map((meetup)=>({\n                    title: meetup.title,\n                    address: meetup.address,\n                    image: meetup.image,\n                    id: meetup._id.toString()\n                }))\n        },\n        revalidate: 1\n    };\n}\n//a function that is use to regenerate a static page at every request or when data changes frequently\n// export async function getServerSideProps(context) {\n// //   const req = context.req;\n// //   const res = context.res;\n//   return {\n//     props: {\n//       meetups: DUMMY_MEETUPS,\n//     },\n//   };\n// }\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage); //NOTE: with useEffect the component undergoes two render cycle before displaying the output to the client.\n // i.e the function component first render, after that the useEffect is executed causing the state to be updated.\n //the updated state causes the function component to re-render again with the updated value.\n // during the first render the loadedMeetups has an empty array as its value, while during the second render\n //loadedMeetups takes DUMMY_MEETUPS as its value, it's this updated state which is then outputed to ur screen,\n //if the file or detabase u want to fetch the data from actually contains a data. if no data then it will just render\n // a blank page on the screen indicating that ur database or file is empty.\n //in nextjs the value of loadedMeetups during the first render is what is taking and outputed during page pre-rendering.\n //getStaticProps is called by nextjs to ensure the handling of data at the server side during project build\n //it manages page pre-rendering to ensure that the output that is render to the client side is one that contains\n //the update data after the data has been fetched from the server-side.\n // it does not execute either at the server or client but only during project build for static pages.\n //codes in getServerSideProps runs only on the server side. and should be used only when u want to regenerate a page at every request\n //or when data changes frequently. or when we want to access the req or res object for further manipulation or use in our code\n //we export the getStaticProps and getServerSideProps since nextjs cannot automatically call them if they are not explicitly exported\n //thus, it enables to automatically call them during the project building.\n // getStaticProps and getServerSideProps runs during build up or over the server respectively\n //any module imported and used inside getStaticProps and getServerSideProps will not be included in the client bundle\n //getStaticProps will pre-render the user with the data that is received from the database\n //the code in getStaticProps will execute each time the page is regenerated and not for any coming request.\n //it also runs when we revalidate and during the build process.\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL3BhZ2VzL2luZGV4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7QUFBc0M7QUFDVDtBQUU2QjtBQUUxRCxNQUFNRyxNQUNKO0FBRUYsTUFBTUMsU0FBUyxJQUFJSixnREFBV0EsQ0FBQ0c7QUFFL0IsU0FBU0UsU0FBU0MsS0FBSztJQUNyQixxQkFDRTs7MEJBQ0UsOERBQUNMLGtEQUFJQTs7a0NBQ0gsOERBQUNNO2tDQUFNOzs7Ozs7a0NBQ1AsOERBQUNDO3dCQUFLQyxNQUFPO3dCQUFjQyxTQUFVOzs7Ozs7Ozs7Ozs7MEJBRXZDLDhEQUFDUixzRUFBVUE7Z0JBQUNTLFNBQVNMLE1BQU1LLE9BQU87Ozs7Ozs7O0FBR3hDO0FBRUEsOEZBQThGO0FBQ3ZGLGVBQWVDO0lBQ3BCLHFCQUFxQjtJQUNyQixNQUFNUixPQUFPUyxPQUFPO0lBQ3BCLE1BQU1DLEtBQUtWLE9BQU9VLEVBQUUsQ0FBQztJQUNyQixNQUFNSCxVQUFVLE1BQU1HLEdBQUdDLFVBQVUsQ0FBQyxXQUFXQyxJQUFJLEdBQUdDLE9BQU8sSUFBSSx3Q0FBd0M7SUFFekdDLFFBQVFDLEdBQUcsQ0FBQyw4QkFBOEJSO0lBRTFDUCxPQUFPZ0IsS0FBSztJQUVaLE9BQU87UUFDTGQsT0FBTztZQUNMSyxTQUFTQSxRQUFRVSxHQUFHLENBQUMsQ0FBQ0MsU0FBWTtvQkFDaENmLE9BQU9lLE9BQU9mLEtBQUs7b0JBQ25CZ0IsU0FBU0QsT0FBT0MsT0FBTztvQkFDdkJDLE9BQU9GLE9BQU9FLEtBQUs7b0JBQ25CQyxJQUFJSCxPQUFPSSxHQUFHLENBQUNDLFFBQVE7Z0JBQ3pCO1FBQ0Y7UUFDQUMsWUFBWTtJQUNkO0FBQ0Y7QUFFQSxxR0FBcUc7QUFDckcsc0RBQXNEO0FBQ3RELGdDQUFnQztBQUNoQyxnQ0FBZ0M7QUFFaEMsYUFBYTtBQUNiLGVBQWU7QUFDZixnQ0FBZ0M7QUFDaEMsU0FBUztBQUNULE9BQU87QUFDUCxJQUFJO0FBRUosaUVBQWV2QixRQUFRQSxFQUFDLENBRXhCLDJHQUEyRztDQUMzRyxpSEFBaUg7Q0FDakgsNEZBQTRGO0NBQzVGLDRHQUE0RztDQUM1Ryw4R0FBOEc7Q0FDOUcscUhBQXFIO0NBQ3JILDJFQUEyRTtDQUUzRSx3SEFBd0g7Q0FFeEgsMkdBQTJHO0NBQzNHLGdIQUFnSDtDQUNoSCx1RUFBdUU7Q0FFdkUscUdBQXFHO0NBRXJHLHFJQUFxSTtDQUNySSw4SEFBOEg7Q0FFOUgscUlBQXFJO0NBQ3JJLDBFQUEwRTtDQUUxRSw2RkFBNkY7Q0FFN0YscUhBQXFIO0NBRXJILDBGQUEwRjtDQUMxRiwyR0FBMkc7Q0FDM0csK0RBQStEIiwic291cmNlcyI6WyIvaG9tZS9lbGlhc19ha2FoL0Z1bGwgU3RhY2svZnJvbnRlbmQtZGV2ZWxvcG1lbnQvUkVBQ1QgQ09OQ0VQVFMvcmVhY3QtbWVldHVwLXByb2plY3QtcGFnZS1yb3V0ZS9wYWdlcy9pbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gXCJtb25nb2RiXCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XG5cbmltcG9ydCBNZWV0dXBMaXN0IGZyb20gXCIuLi9jb21wb25lbnRzL21lZXR1cHMvTWVldHVwTGlzdFwiO1xuXG5jb25zdCB1cmwgPVxuICBcIm1vbmdvZGIrc3J2Oi8vZGF2aWRha2FoOjA4MDM4ODM4NjgxJTQwRGF2QGNsdXN0ZXIxLmRtOXNncHAubW9uZ29kYi5uZXQvP3JldHJ5V3JpdGVzPXRydWUmdz1tYWpvcml0eSZhcHBOYW1lPU1lZXRVcHNcIjtcblxuY29uc3QgY2xpZW50ID0gbmV3IE1vbmdvQ2xpZW50KHVybCk7XG5cbmZ1bmN0aW9uIEhvbWVQYWdlKHByb3BzKSB7XG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxIZWFkPlxuICAgICAgICA8dGl0bGU+UmVhY3QgTWVldFVwczwvdGl0bGU+XG4gICAgICAgIDxtZXRhIG5hbWUgPSBcImRlc2NyaXB0aW9uXCIgY29udGVudCA9IFwiQSBMaXN0IG9mIFByb21pbmVudCBSZWFjdCBNZWV0VXBzXCIgLz5cbiAgICAgIDwvSGVhZD5cbiAgICAgIDxNZWV0dXBMaXN0IG1lZXR1cHM9e3Byb3BzLm1lZXR1cHN9IC8+XG4gICAgPC8+XG4gICk7XG59XG5cbi8vYSBmdW5jdGlvbiB3aXRoIHJlc2VydmVkIG5hbWUgZ2V0U3RhdGljUHJvcHMgdXNlIHRvIGhhbmRsZSBwYWdlIHByZS1yZW5kZXJpbmcgZHVyaW5nIHByb2plY3RcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTdGF0aWNQcm9wcygpIHtcbiAgLy9mZXRjaCBkYXRhIGZyb20gQXBJXG4gIGF3YWl0IGNsaWVudC5jb25uZWN0KCk7XG4gIGNvbnN0IGRiID0gY2xpZW50LmRiKFwibWVldHVwc1wiKTtcbiAgY29uc3QgbWVldHVwcyA9IGF3YWl0IGRiLmNvbGxlY3Rpb24oXCJtZWV0dXBzXCIpLmZpbmQoKS50b0FycmF5KCk7IC8vY29udmVydCBmZXRjaGVkIG9iamVjdHMgaW50byBhbiBhcnJheTtcblxuICBjb25zb2xlLmxvZyhcInRoZXNlIGFyZSBtZWV0IHVwIGRldGFpbHM6XCIsIG1lZXR1cHMpO1xuXG4gIGNsaWVudC5jbG9zZSgpO1xuXG4gIHJldHVybiB7XG4gICAgcHJvcHM6IHtcbiAgICAgIG1lZXR1cHM6IG1lZXR1cHMubWFwKChtZWV0dXApID0+ICh7XG4gICAgICAgIHRpdGxlOiBtZWV0dXAudGl0bGUsXG4gICAgICAgIGFkZHJlc3M6IG1lZXR1cC5hZGRyZXNzLFxuICAgICAgICBpbWFnZTogbWVldHVwLmltYWdlLFxuICAgICAgICBpZDogbWVldHVwLl9pZC50b1N0cmluZygpLFxuICAgICAgfSkpLCAvL3JldHVybnMgYW4gYXJyYXkgb2Ygb2JqZWN0c1xuICAgIH0sXG4gICAgcmV2YWxpZGF0ZTogMSwgLy9lbnN1cmVzIHVyIHBhZ2UgaXMgcmVnZW5lcmF0ZWQgYWZ0ZXIgdGhlIG51bWJlciBvZiBzZWNzIGFzc2lnbmVkIHRvIHRoZSByZXZhbGlkYXQgcHJvcGVydHkgYWZ0ZXIgZGVwbG95bWVudFxuICB9O1xufVxuXG4vL2EgZnVuY3Rpb24gdGhhdCBpcyB1c2UgdG8gcmVnZW5lcmF0ZSBhIHN0YXRpYyBwYWdlIGF0IGV2ZXJ5IHJlcXVlc3Qgb3Igd2hlbiBkYXRhIGNoYW5nZXMgZnJlcXVlbnRseVxuLy8gZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcyhjb250ZXh0KSB7XG4vLyAvLyAgIGNvbnN0IHJlcSA9IGNvbnRleHQucmVxO1xuLy8gLy8gICBjb25zdCByZXMgPSBjb250ZXh0LnJlcztcblxuLy8gICByZXR1cm4ge1xuLy8gICAgIHByb3BzOiB7XG4vLyAgICAgICBtZWV0dXBzOiBEVU1NWV9NRUVUVVBTLFxuLy8gICAgIH0sXG4vLyAgIH07XG4vLyB9XG5cbmV4cG9ydCBkZWZhdWx0IEhvbWVQYWdlO1xuXG4vL05PVEU6IHdpdGggdXNlRWZmZWN0IHRoZSBjb21wb25lbnQgdW5kZXJnb2VzIHR3byByZW5kZXIgY3ljbGUgYmVmb3JlIGRpc3BsYXlpbmcgdGhlIG91dHB1dCB0byB0aGUgY2xpZW50LlxuLy8gaS5lIHRoZSBmdW5jdGlvbiBjb21wb25lbnQgZmlyc3QgcmVuZGVyLCBhZnRlciB0aGF0IHRoZSB1c2VFZmZlY3QgaXMgZXhlY3V0ZWQgY2F1c2luZyB0aGUgc3RhdGUgdG8gYmUgdXBkYXRlZC5cbi8vdGhlIHVwZGF0ZWQgc3RhdGUgY2F1c2VzIHRoZSBmdW5jdGlvbiBjb21wb25lbnQgdG8gcmUtcmVuZGVyIGFnYWluIHdpdGggdGhlIHVwZGF0ZWQgdmFsdWUuXG4vLyBkdXJpbmcgdGhlIGZpcnN0IHJlbmRlciB0aGUgbG9hZGVkTWVldHVwcyBoYXMgYW4gZW1wdHkgYXJyYXkgYXMgaXRzIHZhbHVlLCB3aGlsZSBkdXJpbmcgdGhlIHNlY29uZCByZW5kZXJcbi8vbG9hZGVkTWVldHVwcyB0YWtlcyBEVU1NWV9NRUVUVVBTIGFzIGl0cyB2YWx1ZSwgaXQncyB0aGlzIHVwZGF0ZWQgc3RhdGUgd2hpY2ggaXMgdGhlbiBvdXRwdXRlZCB0byB1ciBzY3JlZW4sXG4vL2lmIHRoZSBmaWxlIG9yIGRldGFiYXNlIHUgd2FudCB0byBmZXRjaCB0aGUgZGF0YSBmcm9tIGFjdHVhbGx5IGNvbnRhaW5zIGEgZGF0YS4gaWYgbm8gZGF0YSB0aGVuIGl0IHdpbGwganVzdCByZW5kZXJcbi8vIGEgYmxhbmsgcGFnZSBvbiB0aGUgc2NyZWVuIGluZGljYXRpbmcgdGhhdCB1ciBkYXRhYmFzZSBvciBmaWxlIGlzIGVtcHR5LlxuXG4vL2luIG5leHRqcyB0aGUgdmFsdWUgb2YgbG9hZGVkTWVldHVwcyBkdXJpbmcgdGhlIGZpcnN0IHJlbmRlciBpcyB3aGF0IGlzIHRha2luZyBhbmQgb3V0cHV0ZWQgZHVyaW5nIHBhZ2UgcHJlLXJlbmRlcmluZy5cblxuLy9nZXRTdGF0aWNQcm9wcyBpcyBjYWxsZWQgYnkgbmV4dGpzIHRvIGVuc3VyZSB0aGUgaGFuZGxpbmcgb2YgZGF0YSBhdCB0aGUgc2VydmVyIHNpZGUgZHVyaW5nIHByb2plY3QgYnVpbGRcbi8vaXQgbWFuYWdlcyBwYWdlIHByZS1yZW5kZXJpbmcgdG8gZW5zdXJlIHRoYXQgdGhlIG91dHB1dCB0aGF0IGlzIHJlbmRlciB0byB0aGUgY2xpZW50IHNpZGUgaXMgb25lIHRoYXQgY29udGFpbnNcbi8vdGhlIHVwZGF0ZSBkYXRhIGFmdGVyIHRoZSBkYXRhIGhhcyBiZWVuIGZldGNoZWQgZnJvbSB0aGUgc2VydmVyLXNpZGUuXG5cbi8vIGl0IGRvZXMgbm90IGV4ZWN1dGUgZWl0aGVyIGF0IHRoZSBzZXJ2ZXIgb3IgY2xpZW50IGJ1dCBvbmx5IGR1cmluZyBwcm9qZWN0IGJ1aWxkIGZvciBzdGF0aWMgcGFnZXMuXG5cbi8vY29kZXMgaW4gZ2V0U2VydmVyU2lkZVByb3BzIHJ1bnMgb25seSBvbiB0aGUgc2VydmVyIHNpZGUuIGFuZCBzaG91bGQgYmUgdXNlZCBvbmx5IHdoZW4gdSB3YW50IHRvIHJlZ2VuZXJhdGUgYSBwYWdlIGF0IGV2ZXJ5IHJlcXVlc3Rcbi8vb3Igd2hlbiBkYXRhIGNoYW5nZXMgZnJlcXVlbnRseS4gb3Igd2hlbiB3ZSB3YW50IHRvIGFjY2VzcyB0aGUgcmVxIG9yIHJlcyBvYmplY3QgZm9yIGZ1cnRoZXIgbWFuaXB1bGF0aW9uIG9yIHVzZSBpbiBvdXIgY29kZVxuXG4vL3dlIGV4cG9ydCB0aGUgZ2V0U3RhdGljUHJvcHMgYW5kIGdldFNlcnZlclNpZGVQcm9wcyBzaW5jZSBuZXh0anMgY2Fubm90IGF1dG9tYXRpY2FsbHkgY2FsbCB0aGVtIGlmIHRoZXkgYXJlIG5vdCBleHBsaWNpdGx5IGV4cG9ydGVkXG4vL3RodXMsIGl0IGVuYWJsZXMgdG8gYXV0b21hdGljYWxseSBjYWxsIHRoZW0gZHVyaW5nIHRoZSBwcm9qZWN0IGJ1aWxkaW5nLlxuXG4vLyBnZXRTdGF0aWNQcm9wcyBhbmQgZ2V0U2VydmVyU2lkZVByb3BzIHJ1bnMgZHVyaW5nIGJ1aWxkIHVwIG9yIG92ZXIgdGhlIHNlcnZlciByZXNwZWN0aXZlbHlcblxuLy9hbnkgbW9kdWxlIGltcG9ydGVkIGFuZCB1c2VkIGluc2lkZSBnZXRTdGF0aWNQcm9wcyBhbmQgZ2V0U2VydmVyU2lkZVByb3BzIHdpbGwgbm90IGJlIGluY2x1ZGVkIGluIHRoZSBjbGllbnQgYnVuZGxlXG5cbi8vZ2V0U3RhdGljUHJvcHMgd2lsbCBwcmUtcmVuZGVyIHRoZSB1c2VyIHdpdGggdGhlIGRhdGEgdGhhdCBpcyByZWNlaXZlZCBmcm9tIHRoZSBkYXRhYmFzZVxuLy90aGUgY29kZSBpbiBnZXRTdGF0aWNQcm9wcyB3aWxsIGV4ZWN1dGUgZWFjaCB0aW1lIHRoZSBwYWdlIGlzIHJlZ2VuZXJhdGVkIGFuZCBub3QgZm9yIGFueSBjb21pbmcgcmVxdWVzdC5cbi8vaXQgYWxzbyBydW5zIHdoZW4gd2UgcmV2YWxpZGF0ZSBhbmQgZHVyaW5nIHRoZSBidWlsZCBwcm9jZXNzLlxuIl0sIm5hbWVzIjpbIk1vbmdvQ2xpZW50IiwiSGVhZCIsIk1lZXR1cExpc3QiLCJ1cmwiLCJjbGllbnQiLCJIb21lUGFnZSIsInByb3BzIiwidGl0bGUiLCJtZXRhIiwibmFtZSIsImNvbnRlbnQiLCJtZWV0dXBzIiwiZ2V0U3RhdGljUHJvcHMiLCJjb25uZWN0IiwiZGIiLCJjb2xsZWN0aW9uIiwiZmluZCIsInRvQXJyYXkiLCJjb25zb2xlIiwibG9nIiwiY2xvc2UiLCJtYXAiLCJtZWV0dXAiLCJhZGRyZXNzIiwiaW1hZ2UiLCJpZCIsIl9pZCIsInRvU3RyaW5nIiwicmV2YWxpZGF0ZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./pages/index.js\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
+/***/ (() => {
+
 
 
 /***/ }),
 
-/***/ 8013:
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "mongodb":
+/*!**************************!*\
+  !*** external "mongodb" ***!
+  \**************************/
 /***/ ((module) => {
 
 "use strict";
@@ -247,27 +182,91 @@ module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ 968:
+/***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
+/*!**********************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages.runtime.dev.js" ***!
+  \**********************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/head");
+module.exports = require("next/dist/compiled/next-server/pages.runtime.dev.js");
 
 /***/ }),
 
-/***/ 1853:
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/router");
+module.exports = require("path");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!************************************!*\
+  !*** external "react/jsx-runtime" ***!
+  \************************************/
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ })
 
@@ -278,7 +277,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(7032));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc"], () => (__webpack_exec__("(pages-dir-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F&preferredRegion=&absolutePagePath=.%2Fpages%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();

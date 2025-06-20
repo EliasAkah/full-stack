@@ -12,7 +12,7 @@ function NewMeetupForm(props) {
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
 
-  function submitHandler(event) {
+  async function submitHandler(event) {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
@@ -27,7 +27,7 @@ function NewMeetupForm(props) {
       description: enteredDescription,
     };
 
-    props.onAddMeetup(meetupData);
+    await props.onAddMeetup(meetupData);
 
     router.push("/");
   }
