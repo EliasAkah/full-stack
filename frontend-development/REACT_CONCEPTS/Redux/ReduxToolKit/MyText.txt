@@ -1,0 +1,47 @@
+//CONNECTING CLASS COMPONENTS TO REDUX
+
+import { connect } from "react-redux";
+
+import classes from "./Counter.module.css";
+import { Component } from "react";
+
+class Counter extends Component {
+  incrementCounter() {
+    this.props.increment(); //calls the increment function passed as prop by the mapDispatchTOProps;
+  }
+
+  decrementCounter() {
+    this.props.decrement(); //calls the decrement function passed as prop by the mapDispatchTOProps;
+  }
+
+  toggleCounterHandler() {}
+
+  render() {
+    return (
+      <main className={classes.counter}>
+        <h1>Redux Counter</h1>
+        <div className={classes.value}>{this.props.counter}</div>
+        <div>
+          <button onClick={this.incrementCounter.bind(this)}>increment</button>
+          <button onClick={this.decrementCounter.bind(this)}>decrement</button>
+        </div>
+        <button onClick={this.toggleCounterHandler}>Toggle Counter</button>
+      </main>
+    );
+  }
+}
+
+const mapStateToprops = (state) => {
+  return {
+    counter: state.counter,
+  };
+};
+
+const mapDispatchToprops = (dispatch) => {
+  return {
+    increment: () => dispatch({ type: "increment" }),
+    decrement: () => dispatch({ type: "decrement" }),
+  };
+};
+
+export default connect(mapStateToprops, mapDispatchToprops)(Counter);

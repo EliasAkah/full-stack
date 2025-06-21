@@ -1,0 +1,81 @@
+{
+  "opinions": [
+    {
+      "id": 1742497425397,
+      "votes": 2,
+      "userName": "James Andrew",
+      "title": "Saint",
+      "body": "I love him because he was a good christian"
+    },
+    {
+      "id": 1742494007810,
+      "votes": 2,
+      "userName": "Saint ",
+      "title": "Anthony",
+      "body": "james"
+    },
+    {
+      "id": 1742493970465,
+      "votes": 2,
+      "userName": "EGo",
+      "title": "d,dndnd",
+      "body": "ddnm,nam,d,mdd"
+    },
+    {
+      "id": 1742493963368,
+      "votes": 3,
+      "userName": "EGo",
+      "title": "d,dndnd",
+      "body": "ddnm,nam,d,mdd"
+    },
+    {
+      "id": 1742493943475,
+      "votes": 0,
+      "userName": "EGo",
+      "title": "d,dndnd",
+      "body": "ddnm,nam,d,mdd"
+    },
+    {
+      "id": 1742493614913,
+      "votes": 0,
+      "userName": "david",
+      "title": "akah",
+      "body": "i love jesus and mary"
+    },
+    {
+      "id": 1742493611839,
+      "votes": 0,
+      "userName": "david",
+      "title": "akah",
+      "body": "i love jesus and mary"
+    },
+    {
+      "id": 1742489667803,
+      "votes": 0,
+      "userName": "sssss",
+      "title": "ssssss",
+      "body": "sssss"
+    },
+    {
+      "id": 1742489663194,
+      "votes": 0,
+      "userName": "sssss",
+      "title": "ssssss",
+      "body": "sssss"
+    },
+    {
+      "id": 1,
+      "userName": "Maximilian Schwarzmüller",
+      "title": "Do yourself a favor and learn React!",
+      "body": "React is an amazing JavaScript library!\n\nDespite all it's shortcomings.",
+      "votes": 0
+    },
+    {
+      "id": 2,
+      "userName": "Maximilian Schwarzmüller",
+      "title": "React has more depth than you might first think!",
+      "body": "React is a great library to learn, but it's not just about the basics. Dive deeper!\nFor example with this course!",
+      "votes": 0
+    }
+  ]
+}
