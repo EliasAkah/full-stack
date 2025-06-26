@@ -1,3 +1,4 @@
+// connecting the application to mysql2 database.
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
@@ -9,3 +10,4 @@ const pool = mysql.createPool({
 
 module.exports = pool.promise(); // exporting it as a default module.
 // it ensures that connection has been established before any code execution can be made through using async/await
+
