@@ -1,10 +1,12 @@
+// connecting the application to mysql2 database.
 const mysql = require("mysql2");
+require("dotenv").config();
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  database: "node_complete",
-  password: "08038838681",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
 });
 
 module.exports = pool.promise(); // exporting it as a default module.

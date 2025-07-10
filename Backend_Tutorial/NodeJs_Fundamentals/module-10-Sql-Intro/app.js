@@ -1,10 +1,12 @@
 const path = require("path");
-
 const express = require("express");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const errorController = require("./controllers/error");
 const db = require("./util/database");
+
+const port = process.env.DB_PORT;
 
 const app = express();
 
@@ -30,4 +32,4 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+app.listen(port);
