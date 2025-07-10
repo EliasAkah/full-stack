@@ -1,6 +1,10 @@
 import {MongoClient} from "mongodb";
+import dotenv from 'dotenv';
 
-const url = "mongodb+srv://davidakah1999:08038838681@nodeprojects.cn9hq.mongodb.net/?retryWrites=true&w=majority&appName=NodeProjects";
+dotenv.config();
+
+const url = process.env.MONGO_URI;
+const port  = process.env.PORT;
 const client = new MongoClient(url);
 
 async function run(){
