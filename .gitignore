@@ -9,7 +9,7 @@ dist/
 build/
 coverage/
 
-.envfull-stack.git/
+.full-stack
 .next/
 .env
 *.log
