@@ -30,12 +30,4 @@ const getDb = () => {
 exports.mongoConnect = mongoConnect;
 exports.getDb = getDb;
 
-// davidakah1999 08038838681
 
-// const { MongoClient } = require("mongodb");
-
-// const client = new MongoClient(url);
-
-// console.log("This is mongodb connect check", MongoClient.connect());
-
-// module.exports = client;
