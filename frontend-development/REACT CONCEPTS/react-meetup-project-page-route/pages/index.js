@@ -1,7 +1,11 @@
 import { MongoClient } from "mongodb";
 import Head from "next/head";
+import {dotenv} from "dotenv";
+
 
 import MeetupList from "../components/meetups/MeetupList";
+
+dotenv.config();
 
 function HomePage(props) {
   return (
@@ -19,7 +23,11 @@ function HomePage(props) {
 export async function getStaticProps() {
   //fetch data from ApI
   const client = new MongoClient(
+<<<<<<< HEAD
     "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
+=======
+    process.env.MONGO_URL
+>>>>>>> 5a5cd93 (.gitignore file)
   );
 
   try {

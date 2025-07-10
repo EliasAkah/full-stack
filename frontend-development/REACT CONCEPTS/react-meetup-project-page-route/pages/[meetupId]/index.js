@@ -1,8 +1,12 @@
 import { MongoClient, ObjectId } from "mongodb";
+import {dotenv} from "dotenv";
+
 
 import Head from "next/head";
-
 import MeetDetail from "../../components/meetups/MeetupDetail";
+
+dotenv.config();
+
 function MeetupDetails(props) {
   return (
     <>
@@ -25,7 +29,11 @@ function MeetupDetails(props) {
 export async function getStaticPaths() {
   //fetch data from the server side or ApI
   const client = new MongoClient(
+<<<<<<< HEAD
     "REMOVED_SECRET/?retryWrites=true&w=majority&appName=MeetUps"
+=======
+    process.env.MONGO_URL
+>>>>>>> 5a5cd93 (.gitignore file)
   );
 
   try {
