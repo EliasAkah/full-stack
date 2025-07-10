@@ -3,7 +3,7 @@ import Async from "./Async";
 
 describe("Async component", () => {
   test("render if list of items exist", async () => {
-    //creating a mock fetch function to avoid making an actual network request
+    //creating a mock fetch function to avoid making an actual network
     window.fetch = jest.fn();
     window.fetch.mockResolvedValueOnce({
       json: async () => [{ id: "p1", title: "First Post" }],

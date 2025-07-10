@@ -1,13 +1,16 @@
 import Todos from "./components/Todos";
+import NewTodo from "./components/NewTodo";
+import TodoContextProvider from "./components/TodoContextProvider";
 
 function App() {
   return (
-    <div className="App">
-      <Todos items = {["javascript", "typescript"]}>
-        <p>I love my world</p>
-      </Todos>
-    </div>
+    <TodoContextProvider>
+      <NewTodo />
+      <Todos />
+    </TodoContextProvider>
   );
 }
 
 export default App;
+
+//
