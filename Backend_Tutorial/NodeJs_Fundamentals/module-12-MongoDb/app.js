@@ -27,8 +27,7 @@ app.use((req, res, next) => {
   User.findById("686eb97126afade0a8730e6e")
     .then((user) => {
       //a new request property
-      req.user = user;
-      console.log(req);
+      req.user = new User(user.email, user.password, user.cart, user._id);
       next(); // ensuring we move over to the next middleware after this one.
     })
     .catch((err) => {
