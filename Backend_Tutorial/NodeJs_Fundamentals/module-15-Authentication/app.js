@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session); //return MongoDBStore constructor
+const crsf = require("csurf");
+const flash = require("connect-flash");
 
 dotenv.config();
 
@@ -20,6 +22,8 @@ const store = new MongoDBStore({
 
 app.set("view engine", "ejs");
 app.set("views", "views");
+
+const csrfProtection = crsf();
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
@@ -36,6 +40,9 @@ app.use(
   })
 );
 
+app.use(csrfProtection);
+app.use(flash());
+
 app.use((req, res, next) => {
   if (!req.session.user) {
     return next(); // move to the next middleware without creating req.user;
@@ -48,6 +55,12 @@ app.use((req, res, next) => {
     .catch((err) => console.log(err));
 });
 
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.session.isLoggedIn;
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
+
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
 app.use(authRoutes);
@@ -57,18 +70,6 @@ app.use(errorController.get404);
 mongoose
   .connect(process.env.MONGO_URL)
   .then((result) => {
-    User.findOne().then((user) => {
-      if (!user) {
-        const user = new User({
-          name: process.env.USER_NAME,
-          email: process.env.USER_EMAIL,
-          cart: {
-            items: [],
-          },
-        });
-        user.save();
-      }
-    });
     app.listen(process.env.PORT, () => {
       console.log("Server is running on port 3000");
     });

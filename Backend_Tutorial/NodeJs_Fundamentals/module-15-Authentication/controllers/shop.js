@@ -1,6 +1,20 @@
 const Product = require("../models/product");
 const Order = require("../models/order");
 
+exports.getIndex = (req, res, next) => {
+  Product.find()
+    .then((products) => {
+      res.render("shop/index", {
+        prods: products,
+        pageTitle: "Shop",
+        path: "/",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 exports.getProducts = (req, res, next) => {
   console.log(req.session.isLoggedIn);
   console.log(req.user);
@@ -31,21 +45,6 @@ exports.getProduct = (req, res, next) => {
       });
     })
     .catch((err) => console.log(err));
-};
-
-exports.getIndex = (req, res, next) => {
-  Product.find()
-    .then((products) => {
-      res.render("shop/index", {
-        prods: products,
-        pageTitle: "Shop",
-        path: "/",
-        isAuthenticated: req.session.isLoggedIn,
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 };
 
 exports.getCart = (req, res, next) => {
@@ -92,14 +91,13 @@ exports.postCartDeleteProduct = (req, res, next) => {
 exports.postOrder = (req, res, next) => {
   req.user
     .populate("cart.items.productId")
-    .execPopulate()
     .then((user) => {
       const products = user.cart.items.map((i) => {
         return { quantity: i.quantity, product: { ...i.productId._doc } };
       });
       const order = new Order({
         user: {
-          name: req.user.name,
+          email: req.user.email,
           userId: req.user,
         },
         products: products,
