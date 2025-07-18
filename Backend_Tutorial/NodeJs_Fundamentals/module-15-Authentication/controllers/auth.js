@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
 // const sendgridTransport = require("nodemailer-sendgrid-transport");
@@ -92,51 +93,57 @@ exports.postLogin = (req, res, next) => {
     });
 };
 
-// exports.postSignup = (req, res, next) => {
-//   const email = req.body.email;
-//   const password = req.body.password;
-//   const confirmPassword = req.body.confirmPassword;
+exports.getReset = (req, res, next) => {
+  let message = req.flash("error");
+  if (message) {
+    message = message[0];
+  } else {
+    message = null;
+  }
+  res.render("auth/reset", {
+    path: "/reset-password",
+    pageTitle: "Reset Password",
+    isAuthenticated: false,
+    errorMessage: message,
+  });
+};
 
-//   checking if the user already exists
-//     User.findOne({ email: email })
-//       .then((userDoc) => {
-//         if (userDoc) {
-//           req.flash("error", "email exists already");
-//           return res.redirect("/signup");
-//         }
-//         return bcrypt
-//           .hash(password, 12)
-//           .then((hashedPassword) => {
-//             //creating a new user
-//             const user = new User({
-//               email: email,
-//               password: hashedPassword,
-//               cart: { items: [] },
-//             });
+exports.postReset = (req, res, next) => {
+  crypto.randomBytes(32, (err, buffer) => {
+    if (err) {
+      console.log("token generation error", err);
+    }
+    const token = buffer.toString("hex");
 
-//             return user.save();
-//           })
-//           .then((result) => {
-//             return sgMail.send({
-//               to: email,
-//               from: '"ShopDetails" <no-reply@ShopDetails.com>',
-//               subject: "Signup succeeded",
-//               text: "Your signup was successful! Thank you for registering.",
-//               html: signupSuccessHtml,
-//             });
-//           })
-//           .then((response) => {
-//             console.log("response from sending mail", response);
-//             res.redirect("/login");
-//           })
-//           .catch((err) => {
-//             console.log("sending email error message:", err.message);
-//           });
-//       })
-//       .catch((err) => {
-//         console.log("user creation error", err.message);
-//       });
-//   };
+    User.findOne({ email: req.body.email })
+      .then((user) => {
+        if (!user) {
+          req.flash("error", "No account with that email found.");
+          return res.redirect("/reset-password");
+        }
+
+        user.resetToken = token;
+        user.resetTokenExpiration = Date.now() + 3600000;
+        return user.save();
+      })
+      .then((result) => {
+        return transporter.sendMail({
+          to: req.body.email,
+          from: "ShopDetails <no-reply@ShopDetails.com>",
+          Subject: "password reset",
+          html: `<p>You requested a password reset</p>
+          <p>Click this <a href="http://localhost:3000/reset-password/${token}">link</a> to set a new password</p>  `,
+        });
+      })
+      .then((transporterInfo) => {
+        console.log("token email sent: ", transporterInfo);
+        res.redirect("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+};
 
 exports.postSignup = (req, res, next) => {
   const email = req.body.email;
