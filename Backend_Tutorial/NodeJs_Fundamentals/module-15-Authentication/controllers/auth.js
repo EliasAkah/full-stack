@@ -1,6 +1,7 @@
 const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
+const postmark = require("postmark");
 // const sendgridTransport = require("nodemailer-sendgrid-transport");
 // const sgMail = require("@sendgrid/mail");
 const dotenv = require("dotenv");
@@ -12,6 +13,9 @@ const signupSuccessHtml = fs.readFileSync(
   "utf-8"
 );
 const User = require("../models/user");
+const client = new postmark.ServerClient(
+  "3425a584-e9df-4692-82b4-ecfc58fe1243"
+);
 
 //configuring sendgrid
 // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -22,14 +26,14 @@ dotenv.config();
 //   sendgridTransport({ auth: { api_key: process.env.SENDGRID_API_KEY } })
 // );
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
-  auth: {
-    user: "willy.gutmann@ethereal.email",
-    pass: "u37HKEQ2WMH9NMyCUY",
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.ethereal.email",
+//   port: 587,
+//   auth: {
+//     user: "willy.gutmann@ethereal.email",
+//     pass: "u37HKEQ2WMH9NMyCUY",
+//   },
+// });
 
 exports.getLogin = (req, res, next) => {
   let message = req.flash("error");
@@ -127,12 +131,14 @@ exports.postReset = (req, res, next) => {
         return user.save();
       })
       .then((result) => {
-        return transporter.sendMail({
-          to: req.body.email,
-          from: "ShopDetails <no-reply@ShopDetails.com>",
+        return client.sendEmail({
+          To: req.body.email,
+          From: "22btrcn341@jainuniversity.ac.in",
           Subject: "password reset",
-          html: `<p>You requested a password reset</p>
+          TextBody: `You requested a password reset`,
+          HtmlBody: `<p>You requested a password reset</p>
           <p>Click this <a href="http://localhost:3000/reset-password/${token}">link</a> to set a new password</p>  `,
+          MessageStream: "outbound",
         });
       })
       .then((transporterInfo) => {
@@ -143,6 +149,76 @@ exports.postReset = (req, res, next) => {
         console.log(err);
       });
   });
+};
+
+//Rendering the new password form
+exports.getNewPassword = (req, res, next) => {
+  const token = req.params.token;
+  User.findOne({ resetToken: token, resetTokenExpiration: { $gt: Date.now() } })
+    .then((user) => {
+      if (!user) {
+         req.flash("error", "No account with that token found.");
+      }
+
+      let message = req.flash("error");
+      if (message) {
+        message = message[0];
+      } else {
+        message = null;
+      }
+
+      res.render("auth/new-password", {
+        path: "/new-password",
+        pageTitle: "New Password",
+        errorMessage: message,
+        passwordToken: token,
+        userId: user._id.toString(),
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+exports.postNewPassword = (req, res, next) => {
+  const newPassword = req.body.password;
+  const userId = req.body.userId;
+  const token = req.body.passwordToken;
+  let resetUser;
+  User.findOne({
+    resetToken: token,
+    resetTokenExpiration: { $gt: Date.now() },
+    _id: userId,
+  })
+    .then((user) => {
+      if (!user) {
+        req.flash("error", "No account with that token found.");
+      }
+      resetUser = user;
+      //encrypting the new password
+      bcrypt
+        .hash(newPassword, 12)
+        .then((hashedPassword) => {
+          if (!resetUser) {
+            return;
+          }
+          resetUser.password = hashedPassword;
+          resetUser.resetToken = undefined;
+          resetUser.resetTokenExpiration = undefined;
+          return resetUser.save();
+        })
+        .then(() => {
+          console.log("Password Updated Successfully");
+          res.redirect("/login");
+        })
+        .catch((err) => {
+          console.log("Failed to Hash New Password Error", err);
+        });
+    })
+    .catch((err) => {
+      console.log("Failed to FIND USER", err);
+      return res.redirect("/reset-password");
+    });
 };
 
 exports.postSignup = (req, res, next) => {
@@ -170,12 +246,13 @@ exports.postSignup = (req, res, next) => {
           return user.save();
         })
         .then((result) => {
-          return transporter.sendMail({
-            to: email,
-            from: '"ShopDetails" <no-reply@ShopDetails.com>',
-            subject: "Signup succeeded",
-            text: "Your signup was successful! Thank you for registering.",
-            html: signupSuccessHtml,
+          return client.sendEmail({
+            To: email,
+            From: "22btrcn341@jainuniversity.ac.in",
+            Subject: "Successful signup",
+            TextBody: "Your signup was successful! Thank you for registering.",
+            HtmlBody: signupSuccessHtml,
+            MessageStream: "outbound",
           });
         })
         .then((transporterInfo) => {
