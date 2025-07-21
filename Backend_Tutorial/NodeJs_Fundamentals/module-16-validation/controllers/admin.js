@@ -8,6 +8,7 @@ exports.getAddProduct = (req, res, next) => {
     editing: false,
     isAuthenticated: req.session.isLoggedIn,
     errorMessage: "",
+    hasError: false,
     validationErrors: [],
     oldInput: {
       title: "",
@@ -18,7 +19,7 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 
-exports.postAddProduct = (req, res, next) => {
+exports.postAddProduct = (eq, res, next) => {
   const title = req.body.title;
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
@@ -32,8 +33,9 @@ exports.postAddProduct = (req, res, next) => {
       editing: false,
       isAuthenticated: req.session.isLoggedIn,
       errorMessage: errors.array()[0].msg,
+      hasError: true,
       validationErrors: errors.array(),
-      oldInput: {
+      product: {
         title: title,
         imageUrl: imageUrl,
         price: price,
@@ -78,6 +80,9 @@ exports.getProducts = (req, res, next) => {
 
 exports.getEditProduct = (req, res, next) => {
   const editMode = req.query.edit;
+
+  console.log("editMode of getEditProduct: ", editMode);
+
   if (!editMode) {
     return res.redirect("/");
   }
@@ -92,6 +97,7 @@ exports.getEditProduct = (req, res, next) => {
         path: "/admin/edit-product",
         editing: editMode,
         product: product,
+        hasError: false,
         isAuthenticated: req.session.isLoggedIn,
         errorMessage: "",
         validationErrors: [],
@@ -107,27 +113,24 @@ exports.postEditProduct = (req, res, next) => {
   const updatedImageUrl = req.body.imageUrl;
   const updatedDesc = req.body.description;
   const errors = validationResult(req);
-  const editMode = req.query.edit;
-
-  if (!editMode) {
-    return res.redirect("/");
-  }
 
   if (!errors.isEmpty()) {
-    return res.render("admin/edit-product", {
-      pageTitle: "Edit Product",
-      path: "/admin/edit-product",
-      editing: editMode,
-      isAuthenticated: req.session.isLoggedIn,
-      errorMessage: errors.array()[0].msg,
-      validationErrors: errors.array(),
-      oldInput: {
-        title: updatedTitle,
-        imageUrl: updatedImageUrl,
-        price: updatedPrice,
-        description: updatedDesc,
-      },
-    });
+    return Product.findById(prodId)
+      .then((product) =>
+        res.render("admin/edit-product", {
+          pageTitle: "Edit Product",
+          path: "/admin/edit-product",
+          editing: true,
+          product: product,
+          isAuthenticated: req.session.isLoggedIn,
+          errorMessage: errors.array()[0].msg,
+          validationErrors: errors.array(),
+          hasError: true,
+        })
+      )
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   Product.findById(prodId)
