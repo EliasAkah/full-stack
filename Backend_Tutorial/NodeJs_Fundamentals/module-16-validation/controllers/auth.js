@@ -29,54 +29,35 @@ exports.getLogin = (req, res, next) => {
     path: "/login",
     pageTitle: "Login",
     isAuthenticated: false,
+    oldInput: {},
     errorMessage: message,
-  });
-};
-
-exports.getSignup = (req, res, next) => {
-  let message = req.flash("error");
-  if (message) {
-    message = message[0];
-  } else {
-    message = null;
-  }
-
-  res.render("auth/signup", {
-    path: "/signup",
-    pageTitle: "Signup",
-    isAuthenticated: false,
-    errorMessage: message,
+    validationErrors: [],
   });
 };
 
 exports.postLogin = (req, res, next) => {
   const email = req.body.email;
-  const password = req.body.password;
-  User.findOne({ email: email })
-    .then((user) => {
-      //user can be null or undefined if no user is found and an object/document if found
-      if (!user) {
-        req.flash("error", "Invalid email or password.");
-        return res.redirect("/login");
-      }
+  const errors = validationResult(req);
+  console.log("validationResult: ", errors);
 
-      bcrypt.compare(password, user.password).then((doMatch) => {
-        //if password matches domatch = true if not domatch = false
-        if (doMatch) {
-          req.session.isLoggedIn = true;
-          req.session.user = user;
-          return req.session.save((err) => {
-            if (err) console.error(err);
-            res.redirect("/");
-          });
-        }
-        return res.redirect("/login");
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.redirect("/login");
+  if (!errors.isEmpty()) {
+    return res.render("auth/login", {
+      path: "/login",
+      pageTitle: "Login",
+      isAuthenticated: false,
+      oldInput: { email: email },
+      errorMessage: errors.array()[0].msg,
+      validationErros: errors.array(),
     });
+  } else {
+  }
+
+  req.session.isLoggedIn = true;
+  req.session.user = req.user;
+  return req.session.save((err) => {
+    if (err) console.error(err);
+    res.redirect("/");
+  });
 };
 
 exports.getReset = (req, res, next) => {
@@ -203,10 +184,27 @@ exports.postNewPassword = (req, res, next) => {
     });
 };
 
+exports.getSignup = (req, res, next) => {
+  let message = req.flash("error");
+  if (message) {
+    message = message[0];
+  } else {
+    message = null;
+  }
+
+  res.render("auth/signup", {
+    path: "/signup",
+    pageTitle: "Signup",
+    isAuthenticated: false,
+    oldInput: { email: "", password: "" },
+    errorMessage: message,
+    validationErros: [],
+  });
+};
+
 exports.postSignup = (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
-  const confirmPassword = req.body.confirmPassword;
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
@@ -215,49 +213,41 @@ exports.postSignup = (req, res, next) => {
       path: "/signup",
       pageTitle: "Signup",
       isAuthenticated: false,
+      oldInput: { email: email, password: password },
       errorMessage: errors.array()[0].msg,
+      validationErros: errors.array(),
     });
   }
 
   //checking if the user already exists
-  User.findOne({ email: email })
-    .then((userDoc) => {
-      if (userDoc) {
-        req.flash("error", "email exists already");
-        return res.redirect("/signup");
-      }
-      return bcrypt
-        .hash(password, 12)
-        .then((hashedPassword) => {
-          //creating a new user
-          const user = new User({
-            email: email,
-            password: hashedPassword,
-            cart: { items: [] },
-          });
+  bcrypt
+    .hash(password, 12)
+    .then((hashedPassword) => {
+      //creating a new user
+      const user = new User({
+        email: email,
+        password: hashedPassword,
+        cart: { items: [] },
+      });
 
-          return user.save();
-        })
-        .then((result) => {
-          return client.sendEmail({
-            To: email,
-            From: "22btrcn341@jainuniversity.ac.in",
-            Subject: "Successful signup",
-            TextBody: "Your signup was successful! Thank you for registering.",
-            HtmlBody: signupSuccessHtml,
-            MessageStream: "outbound",
-          });
-        })
-        .then((transporterInfo) => {
-          console.log("response from sending mail", transporterInfo);
-          res.redirect("/login");
-        })
-        .catch((err) => {
-          console.log("sending email error message:", err.message);
-        });
+      return user.save();
+    })
+    .then((result) => {
+      return client.sendEmail({
+        To: email,
+        From: "22btrcn341@jainuniversity.ac.in",
+        Subject: "Successful signup",
+        TextBody: "Your signup was successful! Thank you for registering.",
+        HtmlBody: signupSuccessHtml,
+        MessageStream: "outbound",
+      });
+    })
+    .then((transporterInfo) => {
+      console.log("response from sending mail", transporterInfo);
+      res.redirect("/login");
     })
     .catch((err) => {
-      console.log(err.message);
+      console.log("sending email error message:", err.message);
     });
 };
 
