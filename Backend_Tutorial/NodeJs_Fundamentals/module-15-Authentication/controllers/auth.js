@@ -157,7 +157,7 @@ exports.getNewPassword = (req, res, next) => {
   User.findOne({ resetToken: token, resetTokenExpiration: { $gt: Date.now() } })
     .then((user) => {
       if (!user) {
-         req.flash("error", "No account with that token found.");
+        req.flash("error", "No account with that token found.");
       }
 
       let message = req.flash("error");
@@ -274,9 +274,3 @@ exports.postLogout = (req, res, next) => {
     res.redirect("/");
   });
 };
-
-//ensuring that the page is redirected only after the session has been saved in the database
-// req.session.save((err) => {
-//   if (err) console.error(err);
-//   res.redirect("/");
-// });

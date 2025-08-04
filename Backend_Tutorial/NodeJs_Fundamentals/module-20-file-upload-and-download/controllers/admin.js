@@ -1,6 +1,7 @@
 const Product = require("../models/product");
 const { validationResult } = require("express-validator");
 const mongoose = require("mongoose");
+const fileHelper = require("../util/file"); //create an object we can use to access all helper functions inside file.js
 
 exports.getAddProducts = (req, res, next) => {
   console.log("checking isLogging for getAddProducts", req.session.isLoggedIn);
@@ -11,7 +12,7 @@ exports.getAddProducts = (req, res, next) => {
     errorMessage: "",
     hasError: false,
     validationErrors: [],
-    oldInput: {
+    product: {
       title: "",
       imageUrl: "",
       price: "",
@@ -50,9 +51,9 @@ exports.postAddProduct = (req, res, next) => {
       pageTitle: "Add Product",
       path: "/admin/add-product",
       editing: false,
-      errorMessage: errors.array()[0].msg,
+      errorMessage: "Attached file is not an image",
       hasError: true,
-      validationErrors: errors.array(),
+      validationErrors: [],
       product: {
         title: title,
         price: price,
@@ -192,6 +193,7 @@ exports.postEditProduct = (req, res, next) => {
       product.description = updatedDesc;
 
       if (image) {
+        fileHelper.deleteFile(product.imageUrl);
         product.imageUrl = image.path;
       }
 
@@ -209,7 +211,14 @@ exports.postEditProduct = (req, res, next) => {
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.deleteOne({ _id: prodId, userId: req.user._id })
+  Product.findById(prodId)
+    .then((product) => {
+      if (!product) {
+        return res.redirect("/admin/products");
+      }
+      fileHelper.deleteFile(product.imageUrl);
+      return Product.deleteOne({ _id: prodId, userId: req.user._id });
+    })
     .then(() => {
       console.log("DESTROYED PRODUCT");
       res.redirect("/admin/products");
