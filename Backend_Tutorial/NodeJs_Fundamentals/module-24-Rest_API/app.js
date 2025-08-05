@@ -1,8 +1,11 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
 const feedRoute = require("./routes/feed");
 
 const app = express();
+dotenv.config();
 
 app.use(express.json()); //ensures json files are automatically parsed
 app.use(express.urlencoded({ extended: true })); //ensures that
@@ -18,9 +21,16 @@ app.use((req, res, next) => {
 
 app.use("/feeds", feedRoute);
 
-app.listen(3000, () => {
-  console.log("I am running the server at port 3000");
-});
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then((req) => {
+    app.listen(8080, () => {
+      console.log("I am running the server at port 3000");
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*"); //allow any website/ domain
