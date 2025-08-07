@@ -10,6 +10,9 @@ dotenv.config();
 app.use(express.json()); //ensures json files are automatically parsed
 app.use(express.urlencoded({ extended: true })); //ensures that
 
+//creating a static file for every data request that starts from images
+app.use('/images', express.static('images'))
+
 //setting permission rules for which browsers is allowed to talk to your backend server
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -20,6 +23,14 @@ app.use((req, res, next) => {
 });
 
 app.use("/feeds", feedRoute);
+
+//creating the error middleware
+app.use((error, req, res, next) => {
+  const status = error.statusCode || 500;
+  const message = error.message;
+
+  res.status(status).json({ message: message });
+});
 
 mongoose
   .connect(process.env.MONGO_URL)
