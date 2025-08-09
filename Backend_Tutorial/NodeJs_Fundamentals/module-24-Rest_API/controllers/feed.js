@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const { validationResult } = require("express-validator");
 
 const Post = require("../model/posts");
+const User = require("../model/user");
 
 exports.getPosts = (req, res, next) => {
   const currentPage = req.query.page || 1;
@@ -13,6 +14,7 @@ exports.getPosts = (req, res, next) => {
   Post.find()
     .countDocuments()
     .then((count) => {
+      console.log("count: ", count);
       totalPosts = count;
       return Post.find()
         .skip((currentPage - 1) * postsPerPage)
@@ -25,19 +27,6 @@ exports.getPosts = (req, res, next) => {
             totalItems: totalPosts,
           });
         });
-    })
-    .catch((error) => {
-      if (!error.statusCode) {
-        error.statusCode = 500;
-      }
-      next(error);
-    });
-  Post.find()
-    .then((posts) => {
-      console.log(posts);
-      res
-        .status(200)
-        .json({ posts: posts, message: "Successfully fetched posts" });
     })
     .catch((error) => {
       if (!error.statusCode) {
@@ -73,23 +62,35 @@ exports.createPost = (req, res, next) => {
   console.log("ImageUrl path:", ImageUrl);
   const title = req.body.title;
   const content = req.body.content;
+  let creator;
 
+  console.log("req.userId: ", req.userId);
   const post = new Post({
     title: title,
     content: content,
     ImageUrl: ImageUrl,
-    creator: {
-      name: "David",
-    },
+    creator: req.userId,
   });
 
   post
     .save()
     .then((result) => {
-      console.log(result);
+      return User.findById(req.userId);
+    })
+    .then((user) => {
+      creator = user;
+      //pushing the post id to the user's posts array to upddat the user in the user collection
+      user.posts.push(post);
+      return user.save();
+    })
+    .then((result) => {
       res.status(201).json({
         message: "Successfully created a new post",
-        post: result,
+        post: post,
+        creator: {
+          _id: creator._id,
+          name: creator.name,
+        },
       });
     })
     .catch((error) => {
@@ -156,12 +157,18 @@ exports.updatePost = (req, res, next) => {
         error.statusCode = 404;
         throw error;
       }
-      console.log("ImageUrl path: ", ImageUrl);
-      console.log("post.ImageUrl Path: ", post.ImageUrl);
+
+      //checking if the creator of the post is the same as the user logged in
+      if (post.creator.toString() !== req.userId) {
+        const error = new Error("Not authorized");
+        error.statusCode = 403;
+        throw error;
+      }
       //comparing the new image path entered by the user and the previous image path from the database and
       if (ImageUrl !== post.ImageUrl) {
         clearImage(post.ImageUrl);
       }
+
       post.title = title;
       post.content = content;
       post.ImageUrl = ImageUrl;
@@ -190,6 +197,14 @@ exports.deletePost = (req, res, next) => {
         error.statusCode = 404;
         throw error;
       }
+
+      //checking if the creator of the post is the same as the user logged in
+      if (post.creator.toString() !== req.userId) {
+        const error = new Error("Not authorized");
+        error.statusCode = 403;
+        throw error;
+      }
+
       clearImage(post.ImageUrl);
 
       console.log(
@@ -197,7 +212,14 @@ exports.deletePost = (req, res, next) => {
         mongoose.Types.ObjectId.isValid(postId)
       );
 
-      return Post.findByIdAndRemove(postId);
+      return Post.findByIdAndDelete(postId);
+    })
+    .then((result) => {
+      return User.findById(req.userId);
+    })
+    .then((user) => {
+      user.posts.pull(postId);
+      return user.save();
     })
     .then((result) => {
       res.status(200).json({ message: "Deleted post" });

@@ -6,6 +6,8 @@ const multer = require("multer");
 const { v4: uuidv4 } = require("uuid");
 
 const feedRoute = require("./routes/feed");
+const authRoute = require("./routes/auth");
+const { errorMonitor } = require("events");
 
 const app = express();
 dotenv.config();
@@ -55,35 +57,27 @@ app.use((req, res, next) => {
 });
 
 app.use("/feeds", feedRoute);
+app.use("/auth", authRoute);
 
 //creating the error middleware
 app.use((error, req, res, next) => {
+  console.log("Error comes from middleware: ", error);
   const status = error.statusCode || 500;
   const message = error.message;
-
-  res.status(status).json({ message: message });
+  const data = error.data;
+  res.status(status).json({ message: message, data: data });
 });
 
 mongoose
   .connect(process.env.MONGO_URL)
   .then((req) => {
     app.listen(8080, () => {
-      console.log("I am running the server at port 3000");
+      console.log("I am running the server at port 8080");
     });
   })
   .catch((err) => {
     console.log(err);
   });
-
-
-
-
-
-
-
-
-
-  
 
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*"); //allow any website/ domain
