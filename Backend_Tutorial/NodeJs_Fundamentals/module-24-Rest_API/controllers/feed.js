@@ -7,34 +7,32 @@ const { validationResult } = require("express-validator");
 const Post = require("../model/posts");
 const User = require("../model/user");
 
-exports.getPosts = (req, res, next) => {
+exports.getPosts = async (req, res, next) => {
   const currentPage = req.query.page || 1;
   const postsPerPage = 2;
   let totalPosts;
-  Post.find()
-    .countDocuments()
-    .then((count) => {
-      console.log("count: ", count);
+
+  try{
+      const count = await Post.find().countDocuments()
+      
       totalPosts = count;
-      return Post.find()
+    const posts =  await Post.find().populate('creator')
         .skip((currentPage - 1) * postsPerPage)
         .limit(postsPerPage)
-        .then((posts) => {
-          console.log(posts);
-          res.status(200).json({
+
+                  res.status(200).json({
             posts: posts,
             message: "Successfully fetched posts",
             totalItems: totalPosts,
-          });
-        });
-    })
-    .catch((error) => {
-      if (!error.statusCode) {
+          })
+
+  }catch(error){
+          if (!error.statusCode) {
         error.statusCode = 500;
       }
       next(error);
-    });
-};
+    }
+  }
 
 exports.createPost = (req, res, next) => {
   //we are expected to collect the data that was entered inside the form and use it to create a new post object
@@ -245,3 +243,4 @@ const clearImage = (filePath) => {
     }
   });
 };
+
