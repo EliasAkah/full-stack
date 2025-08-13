@@ -1,38 +1,41 @@
 const path = require("path");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const io = require("../socket");
 
 const { validationResult } = require("express-validator");
 
 const Post = require("../model/posts");
 const User = require("../model/user");
+const { post } = require("../routes/feed");
 
 exports.getPosts = async (req, res, next) => {
   const currentPage = req.query.page || 1;
   const postsPerPage = 2;
   let totalPosts;
 
-  try{
-      const count = await Post.find().countDocuments()
-      
-      totalPosts = count;
-    const posts =  await Post.find().populate('creator')
-        .skip((currentPage - 1) * postsPerPage)
-        .limit(postsPerPage)
+  try {
+    const count = await Post.find().countDocuments();
+    totalPosts = count;
 
-                  res.status(200).json({
-            posts: posts,
-            message: "Successfully fetched posts",
-            totalItems: totalPosts,
-          })
+    const posts = await Post.find()
+      .populate("creator")
+      .sort({ createdAt: -1 })
+      .skip((currentPage - 1) * postsPerPage)
+      .limit(postsPerPage);
 
-  }catch(error){
-          if (!error.statusCode) {
-        error.statusCode = 500;
-      }
-      next(error);
+    res.status(200).json({
+      posts: posts,
+      message: "Successfully fetched posts",
+      totalItems: totalPosts,
+    });
+  } catch (error) {
+    if (!error.statusCode) {
+      error.statusCode = 500;
     }
+    next(error);
   }
+};
 
 exports.createPost = (req, res, next) => {
   //we are expected to collect the data that was entered inside the form and use it to create a new post object
@@ -82,6 +85,13 @@ exports.createPost = (req, res, next) => {
       return user.save();
     })
     .then((result) => {
+      io.getIO().emit("posts", {
+        action: "create",
+        post: {
+          ...post._doc,
+          creator: { _id: req.userId, name: creator.name },
+        },
+      });
       res.status(201).json({
         message: "Successfully created a new post",
         post: post,
@@ -149,6 +159,7 @@ exports.updatePost = (req, res, next) => {
   }
 
   Post.findById(postId)
+    .populate("creator")
     .then((post) => {
       if (!post) {
         const error = new Error("Could not find post");
@@ -157,7 +168,7 @@ exports.updatePost = (req, res, next) => {
       }
 
       //checking if the creator of the post is the same as the user logged in
-      if (post.creator.toString() !== req.userId) {
+      if (post.creator._id.toString() !== req.userId) {
         const error = new Error("Not authorized");
         error.statusCode = 403;
         throw error;
@@ -174,6 +185,8 @@ exports.updatePost = (req, res, next) => {
       return post.save(); //save the updated post to our mongoDB database
     })
     .then((result) => {
+      console.log("update post result: ", result);
+      io.getIO().emit("posts", { action: "update", post: result });
       res.status(200).json({ message: "Updated post", post: result });
     })
     .catch((error) => {
@@ -220,6 +233,7 @@ exports.deletePost = (req, res, next) => {
       return user.save();
     })
     .then((result) => {
+      io.getIO().emit("posts", { action: "delete", post: postId });
       res.status(200).json({ message: "Deleted post" });
     })
     .catch((error) => {
@@ -243,4 +257,3 @@ const clearImage = (filePath) => {
     }
   });
 };
-

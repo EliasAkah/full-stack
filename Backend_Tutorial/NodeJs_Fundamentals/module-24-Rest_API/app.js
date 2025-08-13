@@ -56,6 +56,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res, next) => {
+  res.send("Backend is running");
+  next();
+});
+
 app.use("/feeds", feedRoute);
 app.use("/auth", authRoute);
 
@@ -71,13 +76,29 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(process.env.MONGO_URL)
   .then((req) => {
-    app.listen(8080, () => {
+    const server = app.listen(8080, () => {
       console.log("I am running the server at port 8080");
+    });
+
+    const io = require("./socket.js").init(server);
+    io.on("connection", (socket) => {
+      console.log("Client connected");
+
+      socket.on("disconnect", () => {
+        console.log("Client disconnected:", socket.id);
+      });
     });
   })
   .catch((err) => {
     console.log(err);
   });
+
+/*, {
+      cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      },
+    }*/
 
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*"); //allow any website/ domain
